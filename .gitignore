@@ -1,0 +1,40 @@
+# FFmpeg binaries and documentation (development tools)
+ffmpeg/
+ffmpeg-*.zip
+*.exe
+*.dll
+
+# Large video files (compress before deployment)
+Projects/Videos/*.mp4
+about/videos/*.mp4
+*.mp4
+
+# Development files
+.vscode/
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Node modules (if any)
+node_modules/
+
+# Build outputs
+dist/
+build/
+*.min.css
+*.min.js
+
+# Temporary files
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

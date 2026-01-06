@@ -1,0 +1,12 @@
+{
+  "server": {
+    "baseDir": "./",
+    "directory": true
+  },
+  "files": [
+    "**/*.html",
+    "**/*.css",
+    "**/*.js"
+  ],
+  "startPath": "contact.html"
+}

@@ -1,0 +1,532 @@
+/* About page specific styles - Clean Grid Gallery */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #010418 0%, #001122 50%, #010418 100%);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Gallery Section */
+.gallery-section {
+    padding: 60px 20px;
+    text-align: center;
+    background: rgba(0, 17, 34, 0.8);
+    margin: 40px 0;
+}
+
+.gallery-section h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin: 0 0 80px 0;
+    background: linear-gradient(135deg, #00e5ff, #0077ff, #ff6b6b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+/* Category Headers */
+.gallery-category-header {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin: 40px 0 20px 0;
+    padding: 30px;
+    background: rgba(0, 229, 255, 0.08);
+    border: 2px solid rgba(0, 229, 255, 0.3);
+    border-radius: 15px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.gallery-category-header h3 {
+    font-size: clamp(1.8rem, 3.5vw, 2.2rem);
+    color: #00e5ff;
+    margin: 0 0 10px 0;
+    font-weight: 700;
+}
+
+.gallery-category-header p {
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    color: rgba(224, 247, 250, 0.8);
+    margin: 0;
+    font-style: italic;
+}
+
+/* Gallery Container - Responsive Grid for PC */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 25px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Gallery Items - Responsive Cards */
+.gallery-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(0, 229, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 229, 255, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 480px;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 48px rgba(0, 229, 255, 0.3);
+    border-color: rgba(0, 229, 255, 0.5);
+}
+
+/* Responsive Image Container - Enhanced Focus and Fitting */
+.gallery-image-container {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+    background: transparent !important;
+    border: 2px solid rgba(0, 229, 255, 0.3);
+    border-bottom: none;
+}
+
+/* Enhanced Image Quality - Perfect Focus and Fitting */
+.gallery-image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    transition: transform 0.3s ease;
+    image-rendering: -webkit-optimize-contrast !important;
+    image-rendering: optimize-contrast !important;
+    filter: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    border-radius: 0;
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.05);
+}
+
+/* Enhanced responsive breakpoints for perfect image focus and fitting */
+@media (min-width: 1200px) {
+    .gallery-image-container {
+        height: 320px !important;
+    }
+    
+    .gallery-image {
+        object-fit: cover !important;
+        object-position: center !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .gallery-image-container {
+        height: 260px !important;
+    }
+    
+    .gallery-image {
+        object-fit: cover !important;
+        object-position: center !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-image-container {
+        height: 240px !important;
+    }
+    
+    .gallery-image {
+        object-fit: cover !important;
+        object-position: center !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-image-container {
+        height: 220px !important;
+        width: 100% !important;
+        max-width: 350px !important;
+        margin: 0 auto !important;
+    }
+    
+    .gallery-image {
+        object-fit: cover !important;
+        object-position: center !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+/* Force all images to maintain focus and proper fitting */
+.gallery-item img,
+.gallery-image {
+    object-fit: cover !important;
+    object-position: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    image-rendering: -webkit-optimize-contrast !important;
+    image-rendering: optimize-contrast !important;
+    filter: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+/* Specific fixes for problem images like Personal Excellence */
+.gallery-item:nth-child(18) .gallery-image, /* Personal Excellence */
+.gallery-item:nth-child(19) .gallery-image, /* Continued Achievement */
+.gallery-item:nth-child(20) .gallery-image, /* Peak Performance */
+.gallery-item:nth-child(21) .gallery-image { /* Sustained Excellence */
+    object-fit: cover !important;
+    object-position: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    filter: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Content Area */
+.gallery-content {
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.gallery-content h3 {
+    font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+    color: #00e5ff;
+    margin: 0 0 15px 0;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.gallery-description {
+    font-size: clamp(0.9rem, 1.6vw, 1rem);
+    color: rgba(224, 247, 250, 0.9);
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+    flex: 1;
+}
+
+/* Meta Information - Fixed positioning */
+.gallery-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-top: auto;
+}
+
+.gallery-category {
+    padding: 5px 12px;
+    background: rgba(0, 229, 255, 0.2);
+    color: #00e5ff;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    text-align: center;
+}
+
+.gallery-tags {
+    padding: 4px 10px;
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(224, 247, 250, 0.7);
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Action Buttons */
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 229, 255, 0.8), transparent);
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #00e5ff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.gallery-action-btn:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+
+/* Specific overrides for About page gallery images */
+.about-section .gallery-image,
+.gallery-section .gallery-image,
+.gallery-image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background: transparent !important;
+}
+
+/* Ensure gallery image containers have proper dimensions */
+.gallery-image-container {
+    position: relative !important;
+    width: 100% !important;
+    height: 280px !important;
+    display: block !important;
+    overflow: hidden !important;
+}
+
+/* Force visibility of gallery items */
+.gallery-item {
+    display: flex !important;
+    flex-direction: column !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.gallery-item .gallery-image-container {
+    display: block !important;
+    visibility: visible !important;
+}
+
+.gallery-item .gallery-image {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Alternating Layout */
+.gallery-item:nth-child(even) {
+    direction: rtl;
+}
+
+.gallery-item:nth-child(even) .gallery-content {
+    direction: ltr;
+}
+
+/* PC View Enhancements */
+@media (min-width: 1200px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+        gap: 30px;
+        max-width: 1600px;
+    }
+    
+    .gallery-item {
+        min-height: 520px;
+    }
+    
+    .gallery-image-container {
+        height: 320px;
+    }
+    
+    .gallery-content {
+        padding: 25px;
+    }
+    
+    .gallery-content h3 {
+        font-size: 1.4rem;
+    }
+    
+    .gallery-description {
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+}
+
+/* Desktop View Optimizations */
+@media (min-width: 1400px) {
+    .gallery-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 35px;
+    }
+    
+    .gallery-section {
+        padding: 80px 40px;
+    }
+}
+
+/* Tablet View */
+@media (max-width: 992px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 25px;
+    }
+    
+    .gallery-item {
+        min-height: 460px;
+    }
+    
+    .gallery-image-container {
+        height: 260px;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .gallery-section {
+        padding: 40px 15px;
+    }
+    
+    .gallery-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 10px;
+    }
+    
+    .gallery-item {
+        min-height: 420px;
+    }
+    
+    .gallery-image-container {
+        height: 240px;
+    }
+    
+    .gallery-category-header {
+        padding: 25px 20px;
+        margin: 30px 0 15px 0;
+    }
+    
+    .gallery-content {
+        padding: 20px 15px 15px 15px;
+    }
+    
+    .gallery-content h3 {
+        font-size: clamp(1.1rem, 2vw, 1.4rem);
+    }
+}
+
+/* Small Mobile View */
+@media (max-width: 480px) {
+    .gallery-section {
+        padding: 30px 10px;
+    }
+    
+    .gallery-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 5px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .gallery-item {
+        min-height: 380px;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    
+    .gallery-image-container {
+        height: 220px;
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    
+    .gallery-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .gallery-category-header {
+        padding: 20px 15px;
+        margin: 20px 0 10px 0;
+        max-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .gallery-category-header h3 {
+        font-size: clamp(1.2rem, 3.5vw, 1.6rem);
+    }
+    
+    .gallery-category-header p {
+        font-size: clamp(0.85rem, 2.8vw, 0.95rem);
+    }
+    
+    .gallery-content {
+        padding: 0 12px 12px 12px;
+    }
+    
+    .gallery-content h3 {
+        font-size: clamp(1rem, 2.5vw, 1.2rem);
+        margin-bottom: clamp(8px, 2vw, 12px);
+    }
+    
+    .gallery-description {
+        font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+        line-height: 1.4;
+        margin-bottom: clamp(12px, 3vw, 16px);
+    }
+    
+    .gallery-category {
+        padding: clamp(4px, 1.5vw, 6px) clamp(8px, 2.5vw, 10px);
+        font-size: clamp(0.7rem, 2vw, 0.75rem);
+    }
+    
+    .gallery-tags {
+        padding: clamp(3px, 1vw, 4px) clamp(6px, 2vw, 8px);
+        font-size: clamp(0.65rem, 1.8vw, 0.7rem);
+    }
+}
+
+/* Fix conflicts with main Style.css gallery styles */
+@media (min-width: 769px) {
+    .gallery-section .gallery-container {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)) !important;
+        gap: 25px !important;
+    }
+    
+    .gallery-section .gallery-item {
+        background: rgba(255, 255, 255, 0.05) !important;
+        border: 2px solid rgba(0, 229, 255, 0.2) !important;
+        border-radius: 15px !important;
+        box-shadow: 0 8px 32px rgba(0, 229, 255, 0.1) !important;
+        transition: all 0.3s ease !important;
+        overflow: hidden !important;
+        display: flex !important;
+        flex-direction: column !important;
+        height: auto !important;
+        min-height: 480px !important;
+    }
+}

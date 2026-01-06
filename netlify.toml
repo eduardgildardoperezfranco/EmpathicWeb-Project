@@ -1,0 +1,78 @@
+[build]
+  publish = "."
+  command = "echo 'No build step required'"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "https://empathicweb.netlify.app/*"
+  to = "https://empathicweb.netlify.app/:splat"
+  status = 200
+  force = true
+
+[dev]
+  command = "npm run dev"
+  port = 8888
+
+# Netlify Forms configuration
+[build.processing]
+  skip_processing = false
+
+# Form notifications
+[[redirects]]
+  from = "/contact.html"
+  to = "/contact.html?success=true"
+  status = 200
+  conditions = {Role = ["admin"]}
+
+# Email notifications for contact form
+[[netlify.forms]]
+  name = "contact"
+  fields = ["name", "email", "phone", "company", "country", "goal", "contact-method", "message", "quotation-total", "quotation-breakdown", "project_id", "certificate_id", "certificate_data"]
+  [[netlify.forms.notifications]]
+    type = "email"
+    to = "eduardgildardoperezfranco@empathicweb.online"
+    from = "noreply@empathicweb.netlify.app"
+    subject = "New EmpathicWeb Project Inquiry - {{ .Name }}"
+    [[netlify.forms.notifications]]
+      type = "email"
+      to = "eduardgildardoperezfranco@empathicweb.online"
+      from = "noreply@empathicweb.netlify.app"
+      subject = "New EmpathicWeb Project Inquiry - {{ .Name }}"
+
+# WhatsApp integration (webhook for future enhancement)
+[[netlify.forms]]
+  name = "contact"
+  [[netlify.forms.notifications]]
+    type = "webhook"
+    url = "https://api.netlify.com/webhooks/notify"  # Placeholder for WhatsApp service integration
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://forms.netlify.com; frame-src 'self'"
+
+# Form-specific headers
+[[headers]]
+  for = "/contact.html"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://forms.netlify.com; form-action 'self' https://forms.netlify.com"
