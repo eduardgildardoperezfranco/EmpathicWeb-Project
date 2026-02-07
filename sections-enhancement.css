@@ -1,0 +1,217 @@
+/* Content Sections Enhancement Styles */
+
+/* Section Separators */
+.section-divider {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(0, 168, 255, 0.3), transparent);
+    margin: 4rem 0;
+    position: relative;
+}
+
+.section-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(0, 229, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+}
+
+/* Enhanced Content Sections */
+.content-section {
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(0, 168, 255, 0.15);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.content-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, rgba(0, 168, 255, 0.2), transparent);
+}
+
+/* Section Header Enhancement */
+.section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+    position: relative;
+}
+
+.section-header h2 {
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    background: linear-gradient(135deg, rgba(0, 168, 255, 0.15), rgba(0, 229, 255, 0.15));
+    border-radius: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.section-header h2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border: 2px solid rgba(0, 229, 255, 0.3);
+    border-radius: 35px;
+    z-index: -1;
+}
+
+/* Content Paragraph Enhancement */
+.content-section p {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Connection Message Enhancement */
+.connection-message {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--glow-color-2);
+    font-weight: 500;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, rgba(0, 168, 255, 0.1), rgba(0, 229, 255, 0.1));
+    border-radius: 15px;
+    display: inline-block;
+    margin-top: 1rem;
+    box-shadow: 0 0 15px rgba(0, 168, 255, 0.3);
+}
+
+/* Contact Section Enhancement */
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.contact-info {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0, 168, 255, 0.05);
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Social Links Enhancement */
+.social-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+}
+
+.social-links li {
+    display: flex;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(0, 168, 255, 0.2);
+    border-radius: 15px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: rgba(0, 168, 255, 0.1);
+    border-color: rgba(0, 229, 255, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0, 168, 255, 0.3);
+}
+
+.social-links i {
+    font-size: 1.5rem;
+    color: var(--glow-color-2);
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover i {
+    color: var(--glow-color-1);
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-section {
+        padding: 2rem 1.5rem;
+        margin: 1.5rem 0;
+    }
+
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .section-header h2 {
+        padding: 0.4rem 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    .content-section p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .social-links {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .social-links a {
+        padding: 0.875rem;
+    }
+
+    .social-links i {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-section {
+        padding: 1.5rem 1rem;
+        margin: 1rem 0;
+    }
+
+    .section-header h2 {
+        padding: 0.3rem 1.25rem;
+        font-size: 1.3rem;
+    }
+
+    .social-links {
+        grid-template-columns: 1fr;
+    }
+
+    .connection-message {
+        font-size: 1rem;
+        padding: 0.875rem 1.5rem;
+    }
+}

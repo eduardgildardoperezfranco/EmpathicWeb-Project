@@ -9,6 +9,7 @@ const translations = {
     'nav.home': 'Home',
     'nav.about': 'About',
     'nav.projects': 'Projects',
+    'nav.services': 'Services',
     'nav.contact': 'Contact',
     'nav.logo': 'EmpathicWeb',
 
@@ -166,6 +167,7 @@ const translations = {
     'nav.home': 'Inicio',
     'nav.about': 'Acerca de',
     'nav.projects': 'Proyectos',
+    'nav.services': 'Servicios',
     'nav.contact': 'Contacto',
     'nav.logo': 'EmpathicWeb',
 
@@ -325,6 +327,7 @@ const translations = {
     'nav.home': 'Accueil',
     'nav.about': 'À propos',
     'nav.projects': 'Projets',
+    'nav.services': 'Services',
     'nav.contact': 'Contact',
     'nav.logo': 'EmpathicWeb',
     'title': 'EmpathicWeb',
@@ -469,7 +472,7 @@ const translations = {
     'video.fallback2': " balise vidéo.",
     'video.download': 'Veuillez télécharger la <a href="assets/Logo/Video_3d-brain.mp4" download="Video_3d-brain.mp4">vidéo</a> pour la regarder.',
     'noscript.message': 'JavaScript est désactivé. Les fonctionnalités interactives sont limitées.',
-    
+
     // Language selection
     'lang.title': 'Choisissez votre langue / Choose your language',
     'lang.description': 'Sélectionnez la langue de votre préférence : / Select your preferred language:',

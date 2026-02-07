@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupAccessibilityFeatures();
   setupPerformanceOptimizations();
   setupAdvancedImageLoading();
+  // setupMobileNavbar() - Replaced by enhanced-navigation.js
 });
 
 function setupContactHints() {
@@ -696,6 +697,10 @@ function loadImage(img) {
   };
   tempImg.src = src;
 }
+
+// Mobile Navbar Functionality - Replaced by enhanced-navigation.js
+// The setupMobileNavbar() function has been replaced by the enhanced-navigation.js module
+// which provides comprehensive dropdown functionality, accessibility compliance, and responsive design.
 
 // Initialize enhanced animations
 document.addEventListener('DOMContentLoaded', setupEnhancedAnimations);

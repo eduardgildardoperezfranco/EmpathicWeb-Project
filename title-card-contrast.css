@@ -1,0 +1,169 @@
+/* Title and Card Color Contrast Enhancement
+ * Improves visual hierarchy by differentiating title colors from card backgrounds
+ */
+
+/* ============================================
+   ENHANCED TITLE COLORS - Distinct from Cards
+   ============================================ */
+
+/* Home Page 3D Title */
+.title-3d {
+    background: linear-gradient(135deg, #00E5FF 0%, #00B8D4 50%, #0097A7 100%) !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    text-shadow: none !important;
+    filter: drop-shadow(0 0 15px rgba(0, 229, 255, 0.5)) !important;
+}
+
+/* Home Page Hero Navigation Titles */
+.hero-nav-content h3 {
+    color: #00e5ff !important;
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.6), 0 0 20px rgba(0, 119, 255, 0.4) !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* Main Section Titles - Enhanced Gradient */
+.gallery-section h2,
+.video-section h2,
+.section-title {
+    background: linear-gradient(135deg, #00e5ff 0%, #0077ff 50%, #00a8ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+    filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.3));
+    position: relative;
+}
+
+/* Card Titles - Distinct from Card Background */
+.gallery-content h3,
+.gallery-item h3,
+.video-item h3,
+.card h3,
+.project-card h3 {
+    color: #00e5ff !important;
+    text-shadow: 0 0 8px rgba(0, 229, 255, 0.4), 0 0 16px rgba(0, 119, 255, 0.3);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Category Headers - Enhanced Visibility */
+.gallery-category-header h3 {
+    color: #00e5ff !important;
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.5), 0 0 20px rgba(0, 119, 255, 0.4);
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* ============================================
+   ENHANCED CARD BACKGROUNDS - Better Contrast
+   ============================================ */
+
+/* Gallery Items - Darker Background for Title Contrast */
+.gallery-item,
+.gallery-card,
+.video-item,
+.card,
+.project-card {
+    background: rgba(1, 4, 24, 0.85) !important;
+    border: 2px solid rgba(0, 229, 255, 0.25);
+    box-shadow:
+        0 8px 32px rgba(0, 229, 255, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Card Hover Effects - Enhanced */
+.gallery-item:hover,
+.gallery-card:hover,
+.video-item:hover,
+.card:hover,
+.project-card:hover {
+    background: rgba(1, 4, 24, 0.9) !important;
+    border-color: rgba(0, 229, 255, 0.5);
+    box-shadow:
+        0 12px 48px rgba(0, 229, 255, 0.3),
+        0 0 20px rgba(0, 229, 255, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* ============================================
+   ENHANCED CONTENT TEXT - Better Readability
+   ============================================ */
+
+/* Card Descriptions */
+.gallery-description,
+.video-summary,
+.card p,
+.project-card p {
+    color: rgba(224, 247, 250, 0.95) !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   ENHANCED CATEGORY HEADERS
+   ============================================ */
+
+.gallery-category-header {
+    background: rgba(0, 17, 34, 0.9) !important;
+    border: 2px solid rgba(0, 229, 255, 0.4);
+    box-shadow:
+        0 4px 16px rgba(0, 229, 255, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* ============================================
+   ENHANCED IMAGE CONTAINERS
+   ============================================ */
+
+.gallery-image-container {
+    background: rgba(0, 17, 34, 0.6) !important;
+    border: 2px solid rgba(0, 229, 255, 0.3);
+}
+
+/* ============================================
+   RESPONSIVE ENHANCEMENTS
+   ============================================ */
+
+@media (max-width: 768px) {
+
+    /* Enhanced Title Visibility on Mobile */
+    .gallery-section h2,
+    .video-section h2,
+    .section-title {
+        filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.4));
+    }
+
+    /* Card Titles - Mobile */
+    .gallery-content h3,
+    .gallery-item h3,
+    .video-item h3,
+    .card h3,
+    .project-card h3 {
+        text-shadow: 0 0 6px rgba(0, 229, 255, 0.5), 0 0 12px rgba(0, 119, 255, 0.4);
+    }
+}
+
+/* ============================================
+   ADDITIONAL ENHANCEMENTS
+   ============================================ */
+
+/* Section Backgrounds - Enhanced Contrast */
+.gallery-section,
+.video-section {
+    background: rgba(0, 17, 34, 0.85) !important;
+    border: 1px solid rgba(0, 229, 255, 0.25);
+}
+
+/* Video Items - Special Enhancement */
+.video-item {
+    background: rgba(1, 4, 24, 0.88) !important;
+}
+
+.video-item h3 {
+    color: #00e5ff !important;
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.5), 0 0 20px rgba(0, 119, 255, 0.4);
+}

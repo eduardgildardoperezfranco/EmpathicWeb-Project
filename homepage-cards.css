@@ -1,0 +1,170 @@
+/* ============================================
+   HOMEPAGE NAVIGATION CARDS
+   Underground theme with glass effects
+   ============================================ */
+
+.page-cards-section {
+    padding: 4rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-cards-section .section-header h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--glow-color-2);
+    text-shadow: 0 0 15px rgba(0, 229, 255, 0.6);
+    margin-bottom: 3rem;
+}
+
+.page-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.page-card {
+    background: linear-gradient(135deg, rgba(1, 4, 24, 0.85) 0%, rgba(0, 17, 34, 0.85) 50%, rgba(1, 4, 24, 0.85) 100%);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+    box-shadow: 0 4px 20px rgba(0, 168, 255, 0.1);
+}
+
+.page-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 229, 255, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.page-card:hover::before {
+    opacity: 1;
+}
+
+.page-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: rgba(0, 229, 255, 0.5);
+    box-shadow:
+        0 8px 30px rgba(0, 168, 255, 0.3),
+        0 0 20px rgba(0, 229, 255, 0.2);
+    background: linear-gradient(135deg, rgba(0, 17, 34, 0.9) 0%, rgba(1, 4, 24, 0.9) 50%, rgba(0, 17, 34, 0.9) 100%);
+}
+
+.page-card-icon {
+    font-size: 3.5rem;
+    color: var(--glow-color-2);
+    margin-bottom: 1.5rem;
+    display: block;
+    filter: drop-shadow(0 0 15px rgba(0, 229, 255, 0.5));
+    transition: all 0.3s ease;
+}
+
+.page-card:hover .page-card-icon {
+    transform: scale(1.1) rotateY(10deg);
+    filter: drop-shadow(0 0 25px rgba(0, 229, 255, 0.8));
+}
+
+.page-card-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--glow-color-2);
+    margin-bottom: 1rem;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.4);
+    transition: all 0.3s ease;
+}
+
+.page-card:hover .page-card-title {
+    text-shadow: 0 0 20px rgba(0, 229, 255, 0.8);
+    color: #00e5ff;
+}
+
+.page-card-description {
+    font-size: 1rem;
+    color: rgba(224, 247, 250, 0.8);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.page-card:hover .page-card-description {
+    color: rgba(224, 247, 250, 1);
+}
+
+.page-card-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--glow-color-2);
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid rgba(0, 168, 255, 0.4);
+    border-radius: 8px;
+    background: rgba(0, 168, 255, 0.1);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.page-card:hover .page-card-cta {
+    background: rgba(0, 168, 255, 0.2);
+    border-color: rgba(0, 229, 255, 0.6);
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(0, 168, 255, 0.3);
+}
+
+.page-card-cta i {
+    transition: transform 0.3s ease;
+}
+
+.page-card:hover .page-card-cta i {
+    transform: translateX(5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .page-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .page-card-icon {
+        font-size: 3rem;
+    }
+
+    .page-card-title {
+        font-size: 1.5rem;
+    }
+
+    .page-cards-section .section-header h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-card {
+        padding: 1.5rem;
+    }
+
+    .page-card-icon {
+        font-size: 2.5rem;
+    }
+}

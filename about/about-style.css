@@ -19,11 +19,39 @@ body {
 .gallery-section h2 {
     font-size: clamp(2.5rem, 5vw, 4rem);
     margin: 0 0 80px 0;
-    background: linear-gradient(135deg, #00e5ff, #0077ff, #ff6b6b);
+    background: linear-gradient(135deg, #00E5FF, #00B8D4, #0097A7);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 800;
+    animation: aboutTitleFloat 10s ease-in-out infinite;
+}
+
+@keyframes aboutTitleFloat {
+
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }
+
+    20% {
+        transform: translateX(12px) translateY(-12px);
+    }
+
+    40% {
+        transform: translateX(-10px) translateY(-8px);
+    }
+
+    60% {
+        transform: translateX(8px) translateY(0px);
+    }
+
+    80% {
+        transform: translateX(-6px) translateY(-10px);
+    }
+
+    100% {
+        transform: translateX(0px) translateY(0px);
+    }
 }
 
 /* Category Headers */
@@ -120,7 +148,7 @@ body {
     .gallery-image-container {
         height: 320px !important;
     }
-    
+
     .gallery-image {
         object-fit: cover !important;
         object-position: center !important;
@@ -133,7 +161,7 @@ body {
     .gallery-image-container {
         height: 260px !important;
     }
-    
+
     .gallery-image {
         object-fit: cover !important;
         object-position: center !important;
@@ -146,7 +174,7 @@ body {
     .gallery-image-container {
         height: 240px !important;
     }
-    
+
     .gallery-image {
         object-fit: cover !important;
         object-position: center !important;
@@ -162,7 +190,7 @@ body {
         max-width: 350px !important;
         margin: 0 auto !important;
     }
-    
+
     .gallery-image {
         object-fit: cover !important;
         object-position: center !important;
@@ -187,10 +215,14 @@ body {
 }
 
 /* Specific fixes for problem images like Personal Excellence */
-.gallery-item:nth-child(18) .gallery-image, /* Personal Excellence */
-.gallery-item:nth-child(19) .gallery-image, /* Continued Achievement */
-.gallery-item:nth-child(20) .gallery-image, /* Peak Performance */
-.gallery-item:nth-child(21) .gallery-image { /* Sustained Excellence */
+.gallery-item:nth-child(18) .gallery-image,
+/* Personal Excellence */
+.gallery-item:nth-child(19) .gallery-image,
+/* Continued Achievement */
+.gallery-item:nth-child(20) .gallery-image,
+/* Peak Performance */
+.gallery-item:nth-child(21) .gallery-image {
+    /* Sustained Excellence */
     object-fit: cover !important;
     object-position: center !important;
     width: 100% !important;
@@ -348,23 +380,23 @@ body {
         gap: 30px;
         max-width: 1600px;
     }
-    
+
     .gallery-item {
         min-height: 520px;
     }
-    
+
     .gallery-image-container {
         height: 320px;
     }
-    
+
     .gallery-content {
         padding: 25px;
     }
-    
+
     .gallery-content h3 {
         font-size: 1.4rem;
     }
-    
+
     .gallery-description {
         font-size: 1.1rem;
         line-height: 1.7;
@@ -377,7 +409,7 @@ body {
         grid-template-columns: repeat(3, 1fr);
         gap: 35px;
     }
-    
+
     .gallery-section {
         padding: 80px 40px;
     }
@@ -389,11 +421,11 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: 25px;
     }
-    
+
     .gallery-item {
         min-height: 460px;
     }
-    
+
     .gallery-image-container {
         height: 260px;
     }
@@ -404,30 +436,30 @@ body {
     .gallery-section {
         padding: 40px 15px;
     }
-    
+
     .gallery-container {
         grid-template-columns: 1fr;
         gap: 20px;
         padding: 10px;
     }
-    
+
     .gallery-item {
         min-height: 420px;
     }
-    
+
     .gallery-image-container {
         height: 240px;
     }
-    
+
     .gallery-category-header {
         padding: 25px 20px;
         margin: 30px 0 15px 0;
     }
-    
+
     .gallery-content {
         padding: 20px 15px 15px 15px;
     }
-    
+
     .gallery-content h3 {
         font-size: clamp(1.1rem, 2vw, 1.4rem);
     }
@@ -438,7 +470,7 @@ body {
     .gallery-section {
         padding: 30px 10px;
     }
-    
+
     .gallery-container {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -446,27 +478,27 @@ body {
         max-width: 100%;
         margin: 0 auto;
     }
-    
+
     .gallery-item {
         min-height: 380px;
         max-width: 350px;
         margin: 0 auto;
     }
-    
+
     .gallery-image-container {
         height: 220px;
         width: 100%;
         max-width: 350px;
         margin: 0 auto;
     }
-    
+
     .gallery-image {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: center;
     }
-    
+
     .gallery-category-header {
         padding: 20px 15px;
         margin: 20px 0 10px 0;
@@ -474,35 +506,35 @@ body {
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     .gallery-category-header h3 {
         font-size: clamp(1.2rem, 3.5vw, 1.6rem);
     }
-    
+
     .gallery-category-header p {
         font-size: clamp(0.85rem, 2.8vw, 0.95rem);
     }
-    
+
     .gallery-content {
         padding: 0 12px 12px 12px;
     }
-    
+
     .gallery-content h3 {
         font-size: clamp(1rem, 2.5vw, 1.2rem);
         margin-bottom: clamp(8px, 2vw, 12px);
     }
-    
+
     .gallery-description {
         font-size: clamp(0.8rem, 2.5vw, 0.9rem);
         line-height: 1.4;
         margin-bottom: clamp(12px, 3vw, 16px);
     }
-    
+
     .gallery-category {
         padding: clamp(4px, 1.5vw, 6px) clamp(8px, 2.5vw, 10px);
         font-size: clamp(0.7rem, 2vw, 0.75rem);
     }
-    
+
     .gallery-tags {
         padding: clamp(3px, 1vw, 4px) clamp(6px, 2vw, 8px);
         font-size: clamp(0.65rem, 1.8vw, 0.7rem);
@@ -516,7 +548,7 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)) !important;
         gap: 25px !important;
     }
-    
+
     .gallery-section .gallery-item {
         background: rgba(255, 255, 255, 0.05) !important;
         border: 2px solid rgba(0, 229, 255, 0.2) !important;

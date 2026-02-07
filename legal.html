@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,21 +17,25 @@
             margin: 0;
             padding: 0;
         }
+
         .legal-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
         }
+
         .legal-header {
             text-align: center;
             margin-bottom: 2rem;
         }
+
         .legal-header h1 {
             font-family: var(--font-family-display);
             color: var(--glow-color-2);
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
         }
+
         .legal-section {
             margin-bottom: 2rem;
             background: rgba(1, 4, 24, 0.75);
@@ -38,18 +43,23 @@
             border-radius: 12px;
             padding: 1.5rem;
         }
+
         .legal-section h2 {
             font-family: var(--font-family-display);
             color: var(--glow-color-2);
             margin-bottom: 1rem;
         }
-        .legal-section p, .legal-section ul {
+
+        .legal-section p,
+        .legal-section ul {
             line-height: 1.6;
             color: rgba(224, 247, 250, 0.85);
         }
+
         .legal-section ul {
             padding-left: 1.5rem;
         }
+
         .back-button {
             display: block;
             margin: 2rem auto;
@@ -68,12 +78,14 @@
             text-align: center;
             width: fit-content;
         }
+
         .back-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 20px rgba(0, 168, 255, 0.4);
         }
     </style>
 </head>
+
 <body>
     <div class="legal-container">
         <header class="legal-header">
@@ -83,12 +95,16 @@
 
         <section class="legal-section">
             <h2>Copyright Notice</h2>
-            <p>All content on this website, including text, images, graphics, logos, and code, is the property of Eduard Gildardo Pérez Franco and is protected by international copyright laws. Unauthorized use, reproduction, or distribution is prohibited.</p>
+            <p>All content on this website, including text, images, graphics, logos, and code, is the property of Eduard
+                Gildardo Pérez Franco and is protected by international copyright laws. Unauthorized use, reproduction,
+                or distribution is prohibited.</p>
         </section>
 
         <section class="legal-section">
             <h2>Privacy Policy</h2>
-            <p>We respect your privacy and are committed to protecting your personal information. This website collects minimal data necessary for contact forms and does not share information with third parties without consent.</p>
+            <p>We respect your privacy and are committed to protecting your personal information. This website collects
+                minimal data necessary for contact forms and does not share information with third parties without
+                consent.</p>
             <ul>
                 <li><strong>Data Collection:</strong> Only information provided voluntarily through contact forms.</li>
                 <li><strong>Data Usage:</strong> Used solely for responding to inquiries and providing services.</li>
@@ -98,15 +114,18 @@
 
         <section class="legal-section">
             <h2>Terms of Service</h2>
-            <p>By using this website, you agree to use it for lawful purposes only. Services are provided "as is" with no warranties. Eduard Gildardo Pérez Franco is not liable for any damages arising from website use.</p>
+            <p>By using this website, you agree to use it for lawful purposes only. Services are provided "as is" with
+                no warranties. Eduard Gildardo Pérez Franco is not liable for any damages arising from website use.</p>
         </section>
 
         <section class="legal-section">
             <h2>International Laws Compliance</h2>
             <p>This website complies with international standards including:</p>
             <ul>
-                <li><strong>GDPR (General Data Protection Regulation):</strong> EU regulation for data protection and privacy.</li>
-                <li><strong>CCPA (California Consumer Privacy Act):</strong> US privacy rights for California residents.</li>
+                <li><strong>GDPR (General Data Protection Regulation):</strong> EU regulation for data protection and
+                    privacy.</li>
+                <li><strong>CCPA (California Consumer Privacy Act):</strong> US privacy rights for California residents.
+                </li>
                 <li><strong>Berne Convention:</strong> International copyright treaty.</li>
                 <li><strong>WIPO Copyright Treaty:</strong> Digital rights management.</li>
             </ul>
@@ -116,7 +135,8 @@
             <h2>Colombian Laws Compliance</h2>
             <p>As a Colombian entity, this website adheres to Colombian legislation:</p>
             <ul>
-                <li><strong>Ley 1581 de 2012 (Protección de Datos Personales):</strong> Colombian data protection law requiring consent for data processing.</li>
+                <li><strong>Ley 1581 de 2012 (Protección de Datos Personales):</strong> Colombian data protection law
+                    requiring consent for data processing.</li>
                 <li><strong>Ley 1266 de 2008:</strong> Habeas Data law protecting personal data rights.</li>
                 <li><strong>Ley 23 de 1982:</strong> Colombian copyright law.</li>
                 <li><strong>Decreto 1377 de 2013:</strong> Regulations for personal data protection.</li>
@@ -131,5 +151,32 @@
 
         <button class="back-button" onclick="history.back()">Back to Previous Page</button>
     </div>
+
+    <!-- Footer Navigation -->
+    <footer class="footer">
+        <div class="footer-content">
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="about/about.html"><i class="fas fa-user"></i> <span>About</span></a></li>
+                    <li><a href="Projects/projects.html"><i class="fas fa-project-diagram"></i>
+                            <span>Projects</span></a></li>
+                    <li><a href="services-catalog.html"><i class="fas fa-shield-alt"></i> <span>Services</span></a></li>
+                    <li><a href="cv.html"><i class="fas fa-file-alt"></i> <span>CV</span></a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> <span>Contact</span></a></li>
+                </ul>
+            </nav>
+
+            <div class="footer-info">
+                <p class="footer-copyright">© 2025 Eduard Gildardo Pérez Franco. All rights reserved.</p>
+                <p class="footer-links">
+                    <a href="legal.html">Legal Information</a>
+                    <span class="footer-separator">•</span>
+                    <span class="footer-version">Version 0.1.1</span>
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>

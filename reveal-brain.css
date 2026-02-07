@@ -1,0 +1,202 @@
+/* Reveal Brain Animation - Hide Only Large Blocking Cards
+ * This file hides only the largest cards that block the brain animation
+ * while preserving all smaller content cards and navbar functionality
+ */
+
+/* ============================================
+   HIDE LARGE HERO NAV CARDS (Home Page)
+   ============================================ */
+
+/* Hide the entire hero-nav section with large cards */
+.hero-nav-section,
+.hero-nav-grid,
+.hero-nav-card {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Hide quick navigation if present */
+.quick-nav {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* ============================================
+   HIDE ENTIRE NAVBAR AND DROPDOWN MENU
+   ============================================ */
+
+/* Hide the entire navbar */
+.navbar {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Hide nav container */
+.nav-container {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Hide nav menu (both active and inactive) */
+.nav-menu,
+.nav-menu.active {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Hide hamburger menu button */
+.hamburger {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Hide all navbar-related elements */
+.nav-item,
+.nav-link,
+.nav-menu .nav-item,
+.nav-menu .nav-link,
+.nav-menu.active .nav-item,
+.nav-menu.active .nav-link,
+.nav-menu.active .nav-link:hover,
+.nav-menu.active .nav-link.active {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* ============================================
+   ENSURE BRAIN ANIMATION IS VISIBLE
+   ============================================ */
+
+/* Ensure brain container is visible and properly positioned */
+#brain-container {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 5 !important;
+    margin-top: 2rem !important;
+}
+
+/* Adjust title container to make room for brain */
+.title-container {
+    margin-bottom: 1rem !important;
+    z-index: 10 !important;
+    position: relative !important;
+}
+
+/* ============================================
+   PRESERVE ALL SMALLER CONTENT CARDS
+   ============================================ */
+
+/* Keep all content sections visible */
+.content,
+.content-section {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Keep project cards visible (these contain information) */
+.project-card {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Keep service cards visible (these contain information) */
+.service-card {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Keep gallery cards visible */
+.gallery-card,
+.gallery-item {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Keep video cards visible */
+.video-item {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Keep social cards visible */
+.social-card {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Keep contact cards visible */
+.contact-card {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* ============================================
+   OPTIMIZE FOR BRAIN ANIMATION VISIBILITY
+   ============================================ */
+
+/* Reduce padding on main content sections to show more brain */
+.content-section {
+    padding: 2rem 1.5rem !important;
+    margin: 1.5rem 0 !important;
+}
+
+/* Make sections more transparent to show brain through */
+.content-section,
+.project-card,
+.service-card {
+    background: rgba(255, 255, 255, 0.02) !important;
+    backdrop-filter: blur(5px) !important;
+    -webkit-backdrop-filter: blur(5px) !important;
+}
+
+/* Ensure text is readable over brain animation */
+.content-section p,
+.project-card p,
+.service-card p {
+    background: rgba(1, 4, 24, 0.7) !important;
+    padding: 1rem !important;
+    border-radius: 10px !important;
+    margin: 1rem 0 !important;
+}
