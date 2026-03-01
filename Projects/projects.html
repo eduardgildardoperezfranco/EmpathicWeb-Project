@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="../Style.css">
     <link rel="stylesheet" href="projects-style.css">
     <link rel="stylesheet" href="../social-cards-enhancement.css">
+    <!-- Cross-Browser Responsive Fixes (Safari, macOS, iOS, Firefox, Edge) -->
+    <link rel="stylesheet" href="../css/cross-browser-fixes.css">
     <!-- Font Awesome for social media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -53,15 +55,28 @@
         </div>
     </nav>
 
-    <!-- WhatsApp Floating Button -->
+    <!-- WhatsApp Floating Button - Chat Experience -->
     <div class="whatsapp-container">
         <div class="whatsapp-icon">
-            <a href="https://wa.me/573108005004" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/573108005004?text=Hi! I'm interested in your services. Can we chat?" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-whatsapp"></i>
             </a>
         </div>
         <div class="whatsapp-popup">
-            <p>I have cognition but I can not guess, talk with me!!!</p>
+            <button class="whatsapp-popup-close" onclick="this.parentElement.classList.add('closed')">&times;</button>
+            <div class="whatsapp-popup-header">
+                <div class="whatsapp-popup-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div>
+                    <div class="whatsapp-popup-name">EmpathicWeb</div>
+                    <div class="whatsapp-popup-status">Online</div>
+                </div>
+            </div>
+            <p>Hi there! 👋 Let's chat about your project</p>
+            <a href="https://wa.me/573108005004?text=Hi! I'm interested in your services. Can we chat?" target="_blank" rel="noopener noreferrer" class="whatsapp-popup-cta">
+                <i class="fab fa-whatsapp"></i> Chat now
+            </a>
         </div>
     </div>
 
@@ -438,20 +453,6 @@
 
                     <div class="gallery-card">
                         <div class="gallery-image-container">
-                            <img src="Images/project5.jpg" alt="Project5" class="gallery-image" loading="lazy">
-                        </div>
-                        <div class="gallery-content">
-                            <h3>Regional Security Coordination Center</h3>
-                            <p class="gallery-description">Designed and established a regional security coordination
-                                center serving multiple municipalities and coordinating response to security incidents
-                                across a 50,000 square kilometer area. Implemented advanced communication systems,
-                                threat monitoring technologies, and coordinated responses reducing average incident
-                                response time by 60%.</p>
-                        </div>
-                    </div>
-
-                    <div class="gallery-card">
-                        <div class="gallery-image-container">
                             <img src="Images/project5.jpg" alt="Cybersecurity Infrastructure Development"
                                 class="gallery-image" loading="lazy">
                         </div>
@@ -749,6 +750,12 @@
                             data-i18n="social.tiktok">Connect</a>
                     </div>
                     <div class="social-card">
+                        <i class="fab fa-youtube"></i>
+                        <h3>YouTube</h3>
+                        <a href="https://www.youtube.com/@EduardGildardoPerezFrancq" target="_blank" rel="noopener noreferrer"
+                            data-i18n="social.youtube">Connect</a>
+                    </div>
+                    <div class="social-card">
                         <i class="fas fa-envelope"></i>
                         <h3>Email</h3>
                         <a href="mailto:eduardgildardoperezfranco@empathicweb.online?subject=EmpathicWeb%20Projects%20Page%20Inquiry"
@@ -777,11 +784,15 @@
             </nav>
 
             <div class="footer-info">
-                <p class="footer-copyright">© 2025 Eduard Gildardo Pérez Franco. All rights reserved.</p>
+                <p class="footer-copyright">© 2026 Eduard Gildardo Pérez Franco. All rights reserved.</p>
                 <p class="footer-links">
                     <a href="../legal.html">Legal Information</a>
                     <span class="footer-separator">•</span>
-                    <span class="footer-version">Version 0.1.1</span>
+                    <span class="footer-version" title="SemVer: Major.Minor.Patch | 0=Major features, 3=Feature updates, 0=Bug fixes">v0.3.0</span>
+                    <span class="footer-separator">•</span>
+                    <span class="footer-updated">Updated: March 2026</span>
+                    <span class="footer-separator">•</span>
+                    <span class="footer-build">Static Build</span>
                 </p>
             </div>
         </div>
@@ -791,8 +802,6 @@
     <script src="../enhanced-navigation.js"></script>
     <script src="../Script.js"></script>
     <script src="../navbar-highlight.js"></script>
-    <script src="../elegant-dropdown.js"></script>
-    <link rel="stylesheet" href="../elegant-enhancements.css">
     <link rel="stylesheet" href="../title-card-contrast.css">
 
 </body>

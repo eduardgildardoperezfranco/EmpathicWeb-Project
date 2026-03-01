@@ -88,6 +88,8 @@
     </script>
 
     <link rel="stylesheet" href="Style.css">
+    <!-- Cross-Browser Responsive Fixes (Safari, macOS, iOS, Firefox, Edge) -->
+    <link rel="stylesheet" href="css/cross-browser-fixes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Services Catalog Specific Styles */
@@ -410,15 +412,33 @@
         </div>
     </nav>
 
-    <!-- WhatsApp Floating Button -->
+    <!-- Background Video -->
+    <video id="bg-video" autoplay muted loop playsinline preload="metadata" poster="assets/Logo/Logo_3d-brain.png">
+        <source src="assets/Logo/VideoLogo_3d-brain.mp4" type="video/mp4">
+    </video>
+
+    <!-- WhatsApp Floating Button - Chat Experience -->
     <div class="whatsapp-container">
         <div class="whatsapp-icon">
-            <a href="https://wa.me/573108005004" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/573108005004?text=Hi! I'm interested in your services. Can we chat?" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-whatsapp"></i>
             </a>
         </div>
         <div class="whatsapp-popup">
-            <p>I have cognition but I can not guess, talk with me!!!</p>
+            <button class="whatsapp-popup-close" onclick="this.parentElement.classList.add('closed')">&times;</button>
+            <div class="whatsapp-popup-header">
+                <div class="whatsapp-popup-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div>
+                    <div class="whatsapp-popup-name">EmpathicWeb</div>
+                    <div class="whatsapp-popup-status">Online</div>
+                </div>
+            </div>
+            <p>Hi there! 👋 Let's chat about your project</p>
+            <a href="https://wa.me/573108005004?text=Hi! I'm interested in your services. Can we chat?" target="_blank" rel="noopener noreferrer" class="whatsapp-popup-cta">
+                <i class="fab fa-whatsapp"></i> Chat now
+            </a>
         </div>
     </div>
 
@@ -942,6 +962,58 @@
                     </a>
                 </div>
             </div>
+
+            <!-- Connect With Us Section -->
+            <div class="catalog-cta" style="margin-top: 40px;">
+                <h3><i class="fas fa-share-alt"></i> Connect With Us</h3>
+                <p>Follow us on social media for updates, insights, and to start a conversation about your next project.</p>
+                <div class="social-connect-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin-top: 30px; max-width: 900px; margin-left: auto; margin-right: auto;">
+                    <a href="mailto:eduardgildardoperezfranco@empathicweb.online" class="social-connect-card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(0,168,255,0.2); text-decoration: none; transition: all 0.3s ease;">
+                        <i class="fas fa-envelope" style="font-size: 2rem; color: #00E5FF; margin-bottom: 10px;"></i>
+                        <span style="color: #E0F7FA; font-size: 0.9rem;">Email</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/eduard-perez-331470b7/" target="_blank" rel="noopener noreferrer" class="social-connect-card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(0,168,255,0.2); text-decoration: none; transition: all 0.3s ease;">
+                        <i class="fab fa-linkedin" style="font-size: 2rem; color: #0077B5; margin-bottom: 10px;"></i>
+                        <span style="color: #E0F7FA; font-size: 0.9rem;">LinkedIn</span>
+                    </a>
+                    <a href="https://wa.me/573108005004" target="_blank" rel="noopener noreferrer" class="social-connect-card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(0,168,255,0.2); text-decoration: none; transition: all 0.3s ease;">
+                        <i class="fab fa-whatsapp" style="font-size: 2rem; color: #25D366; margin-bottom: 10px;"></i>
+                        <span style="color: #E0F7FA; font-size: 0.9rem;">WhatsApp</span>
+                    </a>
+                    <a href="https://www.facebook.com/EduardGildardoPerezFranco" target="_blank" rel="noopener noreferrer" class="social-connect-card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(0,168,255,0.2); text-decoration: none; transition: all 0.3s ease;">
+                        <i class="fab fa-facebook" style="font-size: 2rem; color: #1877F2; margin-bottom: 10px;"></i>
+                        <span style="color: #E0F7FA; font-size: 0.9rem;">Facebook</span>
+                    </a>
+                    <a href="https://www.instagram.com/eduardgildardoperezfranco" target="_blank" rel="noopener noreferrer" class="social-connect-card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(0,168,255,0.2); text-decoration: none; transition: all 0.3s ease;">
+                        <i class="fab fa-instagram" style="font-size: 2rem; color: #E4405F; margin-bottom: 10px;"></i>
+                        <span style="color: #E0F7FA; font-size: 0.9rem;">Instagram</span>
+                    </a>
+                    <a href="https://x.com/FEgpf" target="_blank" rel="noopener noreferrer" class="social-connect-card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(0,168,255,0.2); text-decoration: none; transition: all 0.3s ease;">
+                        <i class="fab fa-twitter" style="font-size: 2rem; color: #1DA1F2; margin-bottom: 10px;"></i>
+                        <span style="color: #E0F7FA; font-size: 0.9rem;">Twitter/X</span>
+                    </a>
+                    <a href="https://github.com/eduardgildardoperezfranco/EmpathicWeb" target="_blank" rel="noopener noreferrer" class="social-connect-card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(0,168,255,0.2); text-decoration: none; transition: all 0.3s ease;">
+                        <i class="fab fa-github" style="font-size: 2rem; color: #6e5494; margin-bottom: 10px;"></i>
+                        <span style="color: #E0F7FA; font-size: 0.9rem;">GitHub</span>
+                    </a>
+                    <a href="https://www.tiktok.com/@eduardg.perezfranco" target="_blank" rel="noopener noreferrer" class="social-connect-card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(0,168,255,0.2); text-decoration: none; transition: all 0.3s ease;">
+                        <i class="fab fa-tiktok" style="font-size: 2rem; color: #00f2ea; margin-bottom: 10px;"></i>
+                        <span style="color: #E0F7FA; font-size: 0.9rem;">TikTok</span>
+                    </a>
+                    <a href="https://www.youtube.com/@EduardGildardoPerezFrancq" target="_blank" rel="noopener noreferrer" class="social-connect-card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(0,168,255,0.2); text-decoration: none; transition: all 0.3s ease;">
+                        <i class="fab fa-youtube" style="font-size: 2rem; color: #FF0000; margin-bottom: 10px;"></i>
+                        <span style="color: #E0F7FA; font-size: 0.9rem;">YouTube</span>
+                    </a>
+                </div>
+                <style>
+                    .social-connect-card:hover {
+                        transform: translateY(-5px);
+                        box-shadow: 0 10px 30px rgba(0, 168, 255, 0.3);
+                        border-color: var(--glow-color-1);
+                        background: rgba(0, 168, 255, 0.1);
+                    }
+                </style>
+            </div>
         </section>
     </div>
 
@@ -960,11 +1032,15 @@
             </nav>
 
             <div class="footer-info">
-                <p class="footer-copyright">© 2025 Eduard Gildardo Pérez Franco. All rights reserved.</p>
+                <p class="footer-copyright">© 2026 Eduard Gildardo Pérez Franco. All rights reserved.</p>
                 <p class="footer-links">
                     <a href="legal.html">Legal Information</a>
                     <span class="footer-separator">•</span>
-                    <span class="footer-version">Version 0.1.1</span>
+                    <span class="footer-version" title="SemVer: Major.Minor.Patch | 0=Major features, 3=Feature updates, 0=Bug fixes">v0.3.0</span>
+                    <span class="footer-separator">•</span>
+                    <span class="footer-updated">Updated: March 2026</span>
+                    <span class="footer-separator">•</span>
+                    <span class="footer-build">Static Build</span>
                 </p>
             </div>
         </div>
@@ -975,9 +1051,7 @@
     <script src="Script.js"></script>
     <script src="enhanced-navigation.js"></script>
     <script src="navbar-highlight.js"></script>
-    <script src="elegant-dropdown.js"></script>
     <link rel="stylesheet" href="enhanced-navigation.css">
-    <link rel="stylesheet" href="elegant-enhancements.css">
     <link rel="stylesheet" href="title-card-contrast.css">
 </body>
 

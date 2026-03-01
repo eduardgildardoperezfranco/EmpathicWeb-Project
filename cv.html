@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="version" content="0.2.0">
+    <meta name="version" content="0.3.0">
     <title>CV - Eduard Gildardo Pérez Franco</title>
     <link rel="icon" type="image/png" href="assets/Logo/Logo_3d-brain.png">
     <link rel="stylesheet" href="enhanced-navigation.css">
     <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="sections-enhancement.css">
+    <!-- Cross-Browser Responsive Fixes (Safari, macOS, iOS, Firefox, Edge) -->
+    <link rel="stylesheet" href="css/cross-browser-fixes.css">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -29,306 +32,1207 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html#home" class="nav-logo">
-                EmpathicWeb
+                <video src="assets/Logo/VideoLogo_3d-brain.mp4" class="nav-logo-img" autoplay muted loop playsinline aria-hidden="true"></video>
+                <span>EmpathicWeb</span>
             </a>
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="index.html#about" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="index.html#projects" class="nav-link">Projects</a></li>
-                <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+            <ul class="nav-menu" id="nav-menu" role="menubar">
+                <li class="nav-item" role="none"><a href="index.html#home" class="nav-link" role="menuitem">Home</a></li>
+                <li class="nav-item" role="none"><a href="about/about.html" class="nav-link" role="menuitem">About</a></li>
+                <li class="nav-item" role="none"><a href="Projects/projects.html" class="nav-link" role="menuitem">Projects</a></li>
+                <li class="nav-item" role="none"><a href="services-catalog.html" class="nav-link" role="menuitem">Services</a></li>
+                <li class="nav-item" role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
             </ul>
-            <div class="hamburger" id="hamburger">
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu" aria-haspopup="true">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
+
+    <!-- WhatsApp Floating Button - Chat Experience -->
+    <div class="whatsapp-container">
+        <div class="whatsapp-icon">
+            <a href="https://wa.me/573108005004?text=Hi! I'm interested in your services. Can we chat?" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+        <div class="whatsapp-popup">
+            <button class="whatsapp-popup-close" onclick="this.parentElement.classList.add('closed')">&times;</button>
+            <div class="whatsapp-popup-header">
+                <div class="whatsapp-popup-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div>
+                    <div class="whatsapp-popup-name">EmpathicWeb</div>
+                    <div class="whatsapp-popup-status">Online</div>
+                </div>
+            </div>
+            <p>Hi there! 👋 Let's chat about your project</p>
+            <a href="https://wa.me/573108005004?text=Hi! I'm interested in your services. Can we chat?" target="_blank" rel="noopener noreferrer" class="whatsapp-popup-cta">
+                <i class="fab fa-whatsapp"></i> Chat now
+            </a>
+        </div>
+    </div>
 
     <div class="container" id="cv">
         <header class="title-container">
             <h1 class="title-3d parallax-element">CV</h1>
         </header>
-        <div class="cv-grid">
-            <div class="cv-left">
-                <section id="profile" class="profile-section content parallax-element">
-                    <img src="Me.png" alt="Eduard Gildardo Pérez Franco" class="foto">
-                    <h2>Perfil Ocupacional</h2>
-                    <p>Elite Executive Protection & Security Specialist
-                        Counter-Terrorism | Defensive & Evasive Driving | Explosive Risk Mitigation | Bilingual
-                        (English–Spanish)
-                        Elite Executive Protection and Security Specialist formed through a progressive, doctrine-based
-                        security
-                        trajectory that integrates military engineering, counter-terrorism, explosive risk management,
-                        humanitarian operations, and executive protection, developed across Colombian National Army
-                        institutions, Military Engineering Schools, Ministry of Defense programs, and internationally
-                        aligned
-                        private security academies.
-                        The professional foundation originates in formal military training within the Colombian National
-                        Army,
-                        where specialization in urban combat and counter-guerrilla operations established operational
-                        discipline,
-                        situational dominance, and tactical decision-making in asymmetric threat environments. This
-                        phase provided
-                        early exposure to non-linear conflict dynamics, irregular warfare, and population-centered
-                        security challenges—
-                        core competencies later transferred to executive and diplomatic protection contexts.
-                        Advanced formation as a Military Engineering Specialist in Explosives and Demolitions (E.X.D.E.)
-                        introduced a high-risk technical and ethical domain: the controlled handling, analysis, and
-                        neutralization of
-                        explosive threats. This training historically responds to Colombia’s long-standing internal
-                        conflict and positioned
-                        the professional to understand explosive devices not only as weapons, but as systems, including
-                        initiation
-                        methods, blast effects, structural impact, and prevention strategies. Subsequent certifications
-                        in commercial
-                        explosives for mining and civil works expanded this knowledge into civilian infrastructure
-                        protection and
-                        industrial risk environments.
-                        Training in Humanitarian Demining and Mine Action, reinforced through peace operations
-                        institutes and
-                        Ministry of Defense programs, marked a critical transition from purely kinetic roles to
-                        human-centered security
-                        and post-conflict operations. This formation emphasizes international humanitarian principles,
-                        civilian
-                        protection, and long-term risk reduction—competencies directly applicable to diplomatic
-                        missions, NGOs, and
-                        high-responsibility executive environments operating in fragile states.
-                        Specialized seminars in underwater blasting techniques and continuous updates in explosives
-                        management
-                        reflect exposure to complex engineering scenarios, reinforcing analytical thinking, procedural
-                        discipline, and
-                        compliance with strict safety and accountability standards. Complementary training through
-                        INDUMIL
-                        (Colombian Military Industry) in night defense systems, surveillance, and early-warning
-                        technologies
-                        strengthened expertise in integrated security systems, bridging physical protection with
-                        technological enablers.
-                        Parallel to military engineering formation, advanced preparation in anti-terrorism prevention
-                        against explosive
-                        devices and anti-personnel mines consolidated a preventive mindset: identifying indicators,
-                        disrupting attack
-                        planning cycles, and implementing layered protection models rather than reactive force. This
-                        doctrine underpins
-                        modern executive protection and diplomatic security frameworks.
-                        Transitioning into private and executive security, formal certification as Executive Protection
-                        Agent (Escolta)—
-                        including basic, advanced, and recurrent training—expanded operational scope to
-                        principal-centered protection,
-                        discretion, mobility planning, and close-protection ethics. Specialization in defensive and
-                        evasive driving,
-                        including armored and high-performance vehicles, reflects training developed in response to
-                        kidnapping,
-                        ambush, and urban attack patterns historically present in Latin America, now globally relevant
-                        in executive risk
-                        management.
-                        Additional specialization in protection of high-profile individuals (PMI), tactical motorbike
-                        operations, and
-                        security supervision reflects readiness to operate within complex protection teams, coordinate
-                        movements, and
-                        manage risk across dynamic environments without escalating threat visibility.
-                        Medical certifications in tactical medicine, basic life support, and pre-hospital emergency care
-                        (APH) add a
-                        critical survivability layer, enabling immediate medical intervention during attacks, accidents,
-                        or medical
-                        emergencies—an essential competency in modern close-protection doctrine.
-                        Formally recognized as a Victim of the Armed and Political Conflict in Colombia, a condition
-                        rooted in
-                        decades of national political disorder and internal violence. This status is not incidental but
-                        formative, reinforcing
-                        a deep ethical commitment to the protection of life, civilian security, and conflict-sensitive
-                        operations. It
-                        provides lived understanding of political violence, civilian vulnerability, and the long-term
-                        consequences of
-                        insecurity—an experiential asset in diplomatic, humanitarian, and high-responsibility protection
-                        roles.
-                        Complementing operational formation, advanced professional education through the systems
-                        thinking, and
-                        applied technology contributes a strategic, analytical, and architecture-oriented mindset. This
-                        education
-                        strengthens adaptability to technology-integrated security ecosystems, intelligence-informed
-                        planning, and
-                        future-oriented risk mitigation without limiting professional identity to a technical role.
-                        Bilingual professional with experience in multinational, corporate, diplomatic, and
-                        high-exposure
-                        environments, delivering ethically grounded, intelligence-driven, and discreet security
-                        solutions aligned with
-                        international best practices, human-security principles, and executive-level expectations. .</p>
-                </section>
+        
+        <!-- Modern CV Layout -->
+        <div class="cv-modern-grid">
+            <!-- Left Column -->
+            <div class="cv-sidebar">
+                <!-- Profile Card with Picture -->
+                <div class="cv-card profile-card">
+                    <div class="profile-picture-container">
+                        <div class="profile-picture-frame">
+                            <img src="assets/Logo/Yo_2026.png" alt="Eduard Gildardo Pérez Franco" class="profile-picture">
+                            <div class="profile-picture-glow"></div>
+                        </div>
+                        <div class="profile-status">
+                            <span class="status-indicator"></span>
+                            <a href="https://wa.me/573108005004?text=Hi,%20I%20saw%20your%20CV%20and%20I'm%20interested%20in%20contacting%20you" target="_blank" rel="noopener noreferrer" class="whatsapp-link">
+                                <i class="fab fa-whatsapp"></i> Available for Work
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-icon"><i class="fas fa-user-graduate"></i></div>
+                    <h2>The Human Behind The Professional</h2>
+                    <p class="card-intro">
+                        I am someone who has walked through darkness and chosen to bring light. As a recognized victim of Colombia's armed conflict, I carry not scars, but wisdom.
+                    </p>
+                    <div class="quality-grid">
+                        <div class="quality-chip"><i class="fas fa-heart"></i> Compassionate</div>
+                        <div class="quality-chip"><i class="fas fa-hands-helping"></i> Humble</div>
+                        <div class="quality-chip"><i class="fas fa-users"></i> Empathetic</div>
+                        <div class="quality-chip"><i class="fas fa-shield-alt"></i> Protective</div>
+                        <div class="quality-chip"><i class="fas fa-brain"></i> Learner</div>
+                        <div class="quality-chip"><i class="fas fa-handshake"></i> Integrity</div>
+                    </div>
+                </div>
 
-                <section id="personal" class="content parallax-element">
-                    <h2>Datos Personales</h2>
-                    <ul>
-                        <li><strong>Fecha de nacimiento:</strong> 27 de Octubre 1985</li>
-                        <li><strong>Lugar de nacimiento:</strong> Bogotá (Colombia)</li>
-                        <li><strong>Cédula de ciudadanía:</strong> 80.876.280 de Bogotá</li>
-                        <li><strong>Libreta militar:</strong> 80.876.280 Primera Clase.</li>
-                        <li><strong>Licencia de Conducción:</strong> C2, B2, A2.</li>
-                        <li><strong>Estado Civil:</strong> Soltero, sin hijos.</li>
-                        <li><strong>Disponibilidad para viajar:</strong> Sí</li>
-                        <li><strong>Vehículo:</strong> No</li>
-                    </ul>
-                </section>
+                <!-- Personal Info Card -->
+                <div class="cv-card">
+                    <div class="card-icon"><i class="fas fa-id-card"></i></div>
+                    <h2>Personal Information</h2>
+                    <div class="info-list">
+                        <div class="info-item"><span class="info-label"><i class="fas fa-birthday-cake"></i> Date of Birth</span><span>October 27, 1985</span></div>
+                        <div class="info-item"><span class="info-label"><i class="fas fa-map-marker-alt"></i> Place</span><span>Bogotá, Colombia</span></div>
+                        <div class="info-item"><span class="info-label"><i class="fas fa-id-card"></i> ID Card</span><span>80.876.280</span></div>
+                        <div class="info-item"><span class="info-label"><i class="fas fa-book"></i> Military</span><span>Primera Clase</span></div>
+                        <div class="info-item"><span class="info-label"><i class="fas fa-car"></i> License</span><span>C2, B2, A2</span></div>
+                        <div class="info-item"><span class="info-label"><i class="fas fa-ring"></i> Status</span><span>Single</span></div>
+                        <div class="info-item"><span class="info-label"><i class="fas fa-plane"></i> Travel</span><span>Available</span></div>
+                    </div>
+                </div>
 
-                <section id="references" class="content parallax-element">
-                    <h2>Referencias Personales</h2>
-                    <ul>
-                        <li><strong>Jhon Fredy Botero</strong> - Arrendador Apto - Tel: 3002692076</li>
-                        <li><strong>Mayor Alvaro Pinzon</strong> - Comandante Esquema del defensor del pueblo - Tel:
-                            3045468721</li>
-                        <li><strong>Edelberto Diaz Funcionario</strong> - UNP - Tel: 3142109405</li>
-                    </ul>
-                </section>
+                <!-- Languages Card -->
+                <div class="cv-card">
+                    <div class="card-icon"><i class="fas fa-globe"></i></div>
+                    <h2>Languages</h2>
+                    <div class="language-list">
+                        <div class="language-item"><span class="flag">🇨🇴</span> Spanish <span class="level">Native</span></div>
+                        <div class="language-item"><span class="flag">🇺🇸</span> English <span class="level">Professional (SENA L13)</span></div>
+                    </div>
+                </div>
+
+                <!-- References Card -->
+                <div class="cv-card">
+                    <div class="card-icon"><i class="fas fa-user-friends"></i></div>
+                    <h2>References</h2>
+                    <div class="reference-list">
+                        <div class="reference-item"><strong>Jhon Fredy Botero</strong><span>Landlord</span><a href="tel:3002692076">3002692076</a></div>
+                        <div class="reference-item"><strong>Maj. Alvaro Pinzon</strong><span>Commander</span><a href="tel:3045468721">3045468721</a></div>
+                        <div class="reference-item"><strong>Edelberto Diaz</strong><span>UNP Official</span><a href="tel:3142109405">3142109405</a></div>
+                    </div>
+                </div>
             </div>
 
-            <div class="cv-right">
-                <!-- Container for the 3D Brain -->
-                <div id="brain-container" class="parallax-element"></div>
+            <!-- Main Content -->
+            <div class="cv-main">
+                <!-- Summary Card -->
+                <div class="cv-card summary-card">
+                    <div class="card-icon"><i class="fas fa-briefcase"></i></div>
+                    <h2>Professional Summary</h2>
+                    <p>Strategic professional with a unique trajectory from high-risk security operations to technology development. My background in executive protection and military engineering—where precision, threat assessment, and rapid decision-making were daily necessities—now fuels my approach to software architecture and web solutions.</p>
+                    <p style="margin-top: 0.8rem;">I apply the same discipline from protecting lives to building secure, resilient applications. Understanding human behavior in dangerous environments gave me profound insight into user needs, privacy concerns, and trust—skills that translate directly into creating digital experiences people feel safe using.</p>
+                    <p style="margin-top: 0.8rem;">Bilingual professional (Spanish/English) offering a rare combination: operational experience in high-stakes environments combined with modern web development skills. Whether protecting information systems or protecting people, my commitment remains the same—anticipation, vigilance, and unwavering reliability.</p>
+                </div>
 
-                <section id="education" class="content parallax-element">
-                    <h2>Educación y Aptitudes</h2>
-                    <h3>Primaria</h3>
-                    <p>Escuela Nueva Río Azul - Básica primaria - Pijao Quindío</p>
-                    <h3>Secundaria</h3>
-                    <p>Departamental Nacionalizado - Bachiller Académico - San Bernardo Cundinamarca - 2002</p>
-                    <h3>Superior</h3>
-                    <p>Universidad de los Andes - Desarrollo Web Front-End con HTML, CSS y Javascript - 2025</p>
-                    <p>Colsubsidio - Curso De Fundamentos De Lenguajes De Programación - 2025</p>
-                    <p>SENA - ENGLISH DOES WORK - NIVEL 13</p>
-                    <h3>Programas que manejo</h3>
-                    <p>Word, Excel, Access, Power Point, Multimedia, C++, Html, Mantenimiento, IOS, Android, Windows,
-                        HTML, CSS, JavaScript.</p>
-                </section>
+                <!-- Skills Card -->
+                <div class="cv-card">
+                    <div class="card-icon"><i class="fas fa-cogs"></i></div>
+                    <h2>Core Competencies</h2>
+                    <div class="skills-section">
+                        <h3><i class="fas fa-shield-alt"></i> Security & Protection</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Executive Protection</span>
+                            <span class="skill-tag">Threat Assessment</span>
+                            <span class="skill-tag">Risk Mitigation</span>
+                            <span class="skill-tag">Close Protection</span>
+                            <span class="skill-tag">Security Planning</span>
+                            <span class="skill-tag">Surveillance Detection</span>
+                        </div>
+                    </div>
+                    <div class="skills-section">
+                        <h3><i class="fas fa-tools"></i> Technical & Tactical</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">E.X.D.E.</span>
+                            <span class="skill-tag">Demining</span>
+                            <span class="skill-tag">Defensive Driving</span>
+                            <span class="skill-tag">Armored Vehicles</span>
+                            <span class="skill-tag">Tactical Medicine</span>
+                            <span class="skill-tag">Urban Combat</span>
+                        </div>
+                    </div>
+                    <div class="skills-section">
+                        <h3><i class="fas fa-laptop-code"></i> Technical Tools</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MS Office</span>
+                            <span class="skill-tag">HTML/CSS/JS</span>
+                            <span class="skill-tag">Web Development</span>
+                            <span class="skill-tag">Security Systems</span>
+                        </div>
+                    </div>
+                </div>
 
-                <section id="courses" class="content parallax-element">
-                    <h2>Cursos</h2>
-                    <ul>
-                        <li>Seminario de Desminado Humanitario - Junta Interamericana de Defensa - 2025</li>
-                        <li>Crossmedia + AMI + IA - Ministerio de Tecnologías de la Información y las Comunicaciones -
-                            2025</li>
-                        <li>IA generativa para emprendedores - Emprendimiento Digital - 2025</li>
-                        <li>Reentrenamiento Escoltas - SWAT Bodyguards - 2023 & 2025</li>
-                        <li>Validación de destrezas en la conducción de vehículos de carga y pasajeros - Ministerio de
-                            Transporte - 2023</li>
-                        <li>Seminario de atención al cliente - El Halcon S.A.S. - 2025</li>
-                        <li>Univercomp. Sistemas Básicos - 270 Horas.</li>
-                        <li>Ejército Nacional - Especialista en Combate Urbano, Contraguerrilla.</li>
-                        <li>Ejército Nacional - E.X.D.E. Explosivos y Demoliciones</li>
-                        <li>Escuela de Ingenieros Militares - Manejo de explosivos comerciales en minería y obras
-                            civiles</li>
-                        <li>Escuela de Ingenieros Militares - Desminado Humanitario</li>
-                        <li>Escuela de Ingenieros Militares - Seminario en Técnicas de voladuras Subacuáticas.</li>
-                        <li>Instituto para la formación de Operaciones de Paz - Acción de Minas.</li>
-                        <li>Industria militar Fábrica de explosivos Antonio Ricaurte - Instalación, Mantenimiento y
-                            operación de sistemas de Defensa, Alerta y Apoyo nocturno.</li>
-                        <li>Ministerio de Defensa - Programa de información y concientización de la contaminación de
-                            artefactos explosivos</li>
-                        <li>Academia de seguridad SAFUKA - Introducción a la Vigilancia y Seguridad Privada (Vencido)
-                        </li>
-                        <li>Academia Internacional de Artes Marciales - Curso Avanzado de Defensa Personal y Seguridad
-                            Integral</li>
-                        <li>Ejército Nacional Escuela De Ingenieros Militares - Curso básico de prevención de terrorismo
-                            contra artefactos explosivos y minas antipersona.</li>
-                        <li>Industria Militar (Indumil) Antonio Ricaurte - Prevención del terrorismo con Artefactos
-                            Explosivos</li>
-                        <li>Escuela de Capacitación y Entrenamiento en Seguridad Privada (CISEP) - Básico Escolta.</li>
-                        <li>Escuela de Capacitación y Entrenamiento en Seguridad Privada - Fundamentación Supervisores.
-                        </li>
-                        <li>Enfermeros militares - Soporte vital básico, medicina táctica y proveedor APH.</li>
-                        <li>Enfermeros militares - Medicina táctica.</li>
-                        <li>Enfermeros militares - Proveedor APH.</li>
-                        <li>Escuela de Ingenieros Militares - Actualización curso manejo de explosivos 01/2015</li>
-                        <li>Escuela de seguridad Colombo latina - Reentrenamiento escolta y supervisor 07/2015</li>
-                        <li>Escuela de seguridad Colombo latina - Técnicas evasivas en pavimento</li>
-                        <li>Escuela de seguridad Colombo latina - Medios tecnológicos 10/2015</li>
-                        <li>SWAT Bodyguards y Centro de Alto Rendimiento - Especialización escolta 12/02/17 seminario de
-                            motos, jefes de seguridad, y profundización en armamento, Especialización en protección a
-                            PMI.</li>
-                        <li>SWAT Bodyguards y Centro de Alto Rendimiento - Reentrenamiento escoltas febrero 20 del 2018
-                        </li>
-                        <li>SWAT Bodyguards y Centro de Alto Rendimiento - Reentrenamiento escoltas 2019</li>
-                        <li>SWAT Bodyguards y Centro de Alto Rendimiento - Especialización escolta Manejo defensivo y
-                            evasivo de vehículos blindados.</li>
-                    </ul>
-                </section>
+                <!-- Education Card -->
+                <div class="cv-card">
+                    <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h2>Education</h2>
+                    <div class="education-timeline">
+                        <div class="edu-item">
+                            <div class="edu-year">2025</div>
+                            <div class="edu-content">
+                                <h4>Universidad de los Andes</h4>
+                                <p>Front-End Web Development (HTML, CSS, JavaScript)</p>
+                            </div>
+                        </div>
+                        <div class="edu-item">
+                            <div class="edu-year">2025</div>
+                            <div class="edu-content">
+                                <h4>Colsubsidio</h4>
+                                <p>Programming Fundamentals</p>
+                            </div>
+                        </div>
+                        <div class="edu-item">
+                            <div class="edu-year">2025</div>
+                            <div class="edu-content">
+                                <h4>SENA</h4>
+                                <p>English Does Work - Level 13</p>
+                            </div>
+                        </div>
+                        <div class="edu-item">
+                            <div class="edu-year">2002</div>
+                            <div class="edu-content">
+                                <h4>Departamental Nacionalizado</h4>
+                                <p>Academic Bachelor - San Bernardo Cundinamarca</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                <section id="experience" class="content parallax-element">
-                    <h2>Experiencia Laboral</h2>
-                    <div class="job-entry">
-                        <h4>Teleperformance - Av el Dorado 92-32 Parque conecta</h4>
-                        <p><strong>Cargo:</strong> Asesor Bilingüe Stripe</p>
-                        <p><strong>Jefe Inmediato:</strong> Omar Daniel Guevara Castro - Tel: 6014049080</p>
-                        <p><strong>Tiempo de servicio:</strong> 21/08/2024 hasta 02/01/2025 (5 meses)</p>
-                        <p><strong>Motivo del Retiro:</strong> Estuve en teleperformance por mejorar mi nivel de ingles.
-                        </p>
+                <!-- Experience Card -->
+                <div class="cv-card">
+                    <div class="card-icon"><i class="fas fa-history"></i></div>
+                    <h2>Professional Experience</h2>
+                    <div class="experience-timeline">
+                        <div class="exp-item">
+                            <div class="exp-header">
+                                <h4>Teleperformance - Bogotá</h4>
+                                <span class="exp-period">Aug 2024 - Jan 2025</span>
+                            </div>
+                            <p class="exp-role"><i class="fas fa-user-tie"></i> Bilingual Advisor (Stripe)</p>
+                            <p class="exp-reason"><i class="fas fa-info-circle"></i> Left for English improvement</p>
+                        </div>
+                        <div class="exp-item">
+                            <div class="exp-header">
+                                <h4>Guardianes y Allaiance - Bogotá</h4>
+                                <span class="exp-period">Jan 2022 - May 2022 / Dec 2023 - Jul 2024</span>
+                            </div>
+                            <p class="exp-role"><i class="fas fa-user-shield"></i> Bilingual Executive Protection Agent</p>
+                            <p class="exp-reason"><i class="fas fa-info-circle"></i> Policy changes at UNP</p>
+                        </div>
+                        <div class="exp-item">
+                            <div class="exp-header">
+                                <h4>Omnitempus - Bogotá</h4>
+                                <span class="exp-period">3 months</span>
+                            </div>
+                            <p class="exp-role"><i class="fas fa-user-shield"></i> Bilingual Executive Protection Agent</p>
+                        </div>
+                        <div class="exp-item">
+                            <div class="exp-header">
+                                <h4>VISE LTDA - Bogotá</h4>
+                                <span class="exp-period">Nov 2020 - Jan 2021</span>
+                            </div>
+                            <p class="exp-role"><i class="fas fa-user-shield"></i> Executive Protection Agent</p>
+                        </div>
+                        <div class="exp-item">
+                            <div class="exp-header">
+                                <h4>Isvi Ltda. - Bogotá</h4>
+                                <span class="exp-period">18 months</span>
+                            </div>
+                            <p class="exp-role"><i class="fas fa-user-shield"></i> Executive Protection Agent</p>
+                        </div>
+                        <div class="exp-item">
+                            <div class="exp-header">
+                                <h4>Ipervola S.A.S. - Bogotá</h4>
+                                <span class="exp-period">3 months</span>
+                            </div>
+                            <p class="exp-role"><i class="fas fa-bomb"></i> Blasting Supervisor</p>
+                        </div>
+                        <div class="exp-item">
+                            <div class="exp-header">
+                                <h4>Servisión - Bogotá</h4>
+                                <span class="exp-period">7 months</span>
+                            </div>
+                            <p class="exp-role"><i class="fas fa-route"></i> T.R.L - Line Runner Technician</p>
+                        </div>
+                        <div class="exp-item">
+                            <div class="exp-header">
+                                <h4>Espertron Ltda. - Huila</h4>
+                                <span class="exp-period">10 months</span>
+                            </div>
+                            <p class="exp-role"><i class="fas fa-hands-helping"></i> Commercial Demining</p>
+                        </div>
+                        <div class="exp-item military">
+                            <div class="exp-header">
+                                <h4>Colombian National Army</h4>
+                                <span class="exp-period">2 years, 8 months</span>
+                            </div>
+                            <p class="exp-role"><i class="fas fa-medal"></i> Military Service & Officer Training</p>
+                            <p class="exp-note"><i class="fas fa-exclamation-triangle"></i> Victim of Armed Conflict</p>
+                        </div>
                     </div>
-                    <div class="job-entry">
-                        <h4>Guardianes y Allaiance - Av. Suba Nro. 91-15</h4>
-                        <p><strong>Cargo:</strong> Escolta Bilingüe</p>
-                        <p><strong>Jefe Inmediato:</strong> Diego Pineda o Dra. Juanita - Tel: 6017561930</p>
-                        <p><strong>Tiempo de servicio:</strong> 25 de enero del 2022 - MAYO 2022 - Diciembre 2023 -
-                            julio 2024</p>
-                        <p><strong>Motivo del Retiro:</strong> Empalme con presidente Petro cambio de normatividad y
-                            políticas en la U.N.P. Y Cambio de razón social de Guardianes.</p>
+                </div>
+
+                <!-- Certifications Card - Grid Layout -->
+                <div class="cv-card certifications-grid-card">
+                    <div class="card-icon"><i class="fas fa-certificate"></i></div>
+                    <h2>Certifications & Training</h2>
+                    
+                    <div class="cert-grid">
+                        <div class="cert-category">
+                            <div class="cert-header"><span class="cert-year">2025</span></div>
+                            <ul class="cert-tags">
+                                <li><i class="fas fa-hands-helping"></i> Humanitarian Demining - JID</li>
+                                <li><i class="fas fa-robot"></i> Crossmedia + AMI + IA - Ministerio TIC</li>
+                                <li><i class="fas fa-brain"></i> Gen AI for Entrepreneurs</li>
+                                <li><i class="fas fa-users"></i> Customer Service - El Halcon</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cert-category">
+                            <div class="cert-header"><span class="cert-year">2023</span></div>
+                            <ul class="cert-tags">
+                                <li><i class="fas fa-shield-alt"></i> EP Recertification - SWAT</li>
+                                <li><i class="fas fa-car"></i> Vehicle Driving - MinTransporte</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cert-category military">
+                            <div class="cert-header"><i class="fas fa-medal"></i> Military Training</div>
+                            <ul class="cert-tags">
+                                <li><i class="fas fa-crosshairs"></i> Urban Combat & Counter-Guerrilla</li>
+                                <li><i class="fas fa-bomb"></i> E.X.D.E. - Explosives & Demolitions</li>
+                                <li><i class="fas fa-hard-hat"></i> Commercial Explosives - Mining & Civil</li>
+                                <li><i class="fas fa-hands-helping"></i> Humanitarian Demining</li>
+                                <li><i class="fas fa-water"></i> Underwater Blasting Techniques</li>
+                                <li><i class="fas fa-shield-virus"></i> Anti-Terrorism Prevention</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cert-category security">
+                            <div class="cert-header"><i class="fas fa-user-shield"></i> Security Certifications</div>
+                            <ul class="cert-tags">
+                                <li><i class="fas fa-id-badge"></i> Executive Protection Agent - CISEP</li>
+                                <li><i class="fas fa-tasks"></i> Supervisor Fundamentals - CISEP</li>
+                                <li><i class="fas fa-star"></i> PMI - SWAT Bodyguards</li>
+                                <li><i class="fas fa-car-side"></i> Defensive Driving (Armored) - SWAT</li>
+                                <li><i class="fas fa-motorcycle"></i> Tactical Motorcycle Operations</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cert-category medical">
+                            <div class="cert-header"><i class="fas fa-heartbeat"></i> Medical</div>
+                            <ul class="cert-tags">
+                                <li><i class="fas fa-first-aid"></i> Basic Life Support</li>
+                                <li><i class="fas fa-user-md"></i> Tactical Medicine</li>
+                                <li><i class="fas fa-ambulance"></i> APH Provider</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="job-entry">
-                        <h4>Omnitempus - Cr 12ª# 79-12</h4>
-                        <p><strong>Cargo:</strong> Escolta Bilingüe</p>
-                        <p><strong>Jefe Inmediato:</strong> Ingrid Quintero Rubio - Tel: 6016110529</p>
-                        <p><strong>Tiempo de servicio:</strong> Tres meses</p>
-                        <p><strong>Motivo del Retiro:</strong> Contrato por tres meses termino fijo.</p>
-                    </div>
-                    <div class="job-entry">
-                        <h4>Honor - Cra. 7 N° 75-01</h4>
-                        <p><strong>Cargo:</strong> Conductor Escolta Bilingüe</p>
-                        <p><strong>Tiempo de servicio:</strong> 30 de junio de 2021 - 02 de julio de 2021</p>
-                    </div>
-                    <div class="job-entry">
-                        <h4>VISE LTDA - Calle 6D No. 4-42</h4>
-                        <p><strong>Cargo:</strong> Escolta</p>
-                        <p><strong>Tiempo de servicio:</strong> 19/11/2020 - 29/01/2021</p>
-                        <p><strong>Motivo del Retiro:</strong> Termino Fijo</p>
-                    </div>
-                    <div class="job-entry">
-                        <h4>Isvi Ltda. - Cr 21 Nro. 62-38</h4>
-                        <p><strong>Cargo:</strong> Escolta</p>
-                        <p><strong>Jefe Inmediato:</strong> Martin Tacan - Tel: 0312481903</p>
-                        <p><strong>Tiempo de servicio:</strong> 18 meses</p>
-                        <p><strong>Motivo del Retiro:</strong> Termino de contrato por Obra o Labor.</p>
-                    </div>
-                    <div class="job-entry">
-                        <h4>Ipervola S.A.S. - CL 17 54-45 Puente Aranda</h4>
-                        <p><strong>Cargo:</strong> Supervisor de Voladura</p>
-                        <p><strong>Jefe Inmediato:</strong> Fabio Franco - Tel: 0318057035-0314650950</p>
-                        <p><strong>Tiempo de servicio:</strong> 3 meses y 3 días</p>
-                        <p><strong>Motivo del retiro:</strong> Termino de obra civil y vencimiento del cupo de
-                            explosivos en Indumil.</p>
-                    </div>
-                    <div class="job-entry">
-                        <h4>Servisión subcontratista de Pacific Rubiales - Cl 25ª #31-28</h4>
-                        <p><strong>Cargo:</strong> T.R.L técnico Re corredor de línea</p>
-                        <p><strong>Jefe Inmediato:</strong> Ing. Rubiela - Tel: 0312697473</p>
-                        <p><strong>Tiempo de servicio:</strong> 7 meses 6 días</p>
-                        <p><strong>Motivo del retiro:</strong> Por baja del galón del petróleo recorte de personal.</p>
-                    </div>
-                    <div class="job-entry">
-                        <h4>Espertron Ltda. - Cl 28 #8f-11 Neiva Huila</h4>
-                        <p><strong>Cargo:</strong> Desminado Comercial</p>
-                        <p><strong>Jefe Inmediato:</strong> Manfred Martínez o Gustavo Aguilera - Tel: (608)
-                            8723400-3204059589-3143584289</p>
-                        <p><strong>Tiempo de servicio:</strong> 10 meses</p>
-                        <p><strong>Motivo del Retiro:</strong> Termino del proyectos sísmicos Uribe Meta y villa Garzón
-                            putumayo.</p>
-                    </div>
-                    <div class="job-entry">
-                        <h4>Ejército Nacional - CENAE, Tolemaida y BIGUP</h4>
-                        <p><strong>Cargo:</strong> Alumno Escuela de Suboficiales y servicio Militar</p>
-                        <p><strong>Jefe Inmediato:</strong> C.T. García Nieto</p>
-                        <p><strong>Tiempo de servicio:</strong> 2 años, 8 meses</p>
-                        <p><strong>Motivo del retiro:</strong> Opciones de trabajo.</p>
-                    </div>
-                </section>
+                </div>
             </div>
+        </div>
+        
+        <!-- Certificate Gallery Section -->
+        <section id="certifications-gallery" class="certifications-section parallax-element">
+                <div class="section-header">
+                    <h2>Certifications & Degrees</h2>
+                    <p class="section-subtitle">Proof of Continuous Learning & Professional Growth</p>
+                </div>
+                
+                <div class="certifications-grid">
+                    <!-- Military Engineering -->
+                    <div class="cert-card">
+                        <div class="cert-image-container">
+                            <img src="assets/certifications/military-engineering.jpg" alt="Military Engineering Certification" class="cert-image" onerror="this.style.display='none'">
+                            <div class="cert-placeholder">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                        </div>
+                        <div class="cert-content">
+                            <h3>Military Engineering Specialist</h3>
+                            <p class="cert-issuer">Colombian National Army - School of Military Engineers</p>
+                            <p class="cert-description">Advanced training in explosives and demolitions (E.X.D.E.), providing expertise in controlled blast operations, explosive device handling, and infrastructure protection.</p>
+                            <span class="cert-year">Certified</span>
+                        </div>
+                    </div>
+
+                    <!-- Executive Protection -->
+                    <div class="cert-card">
+                        <div class="cert-image-container">
+                            <img src="assets/certifications/executive-protection.jpg" alt="Executive Protection Certification" class="cert-image" onerror="this.style.display='none'">
+                            <div class="cert-placeholder">
+                                <i class="fas fa-user-shield"></i>
+                            </div>
+                        </div>
+                        <div class="cert-content">
+                            <h3>Executive Protection Agent</h3>
+                            <p class="cert-issuer">CISEP - Security Training Center</p>
+                            <p class="cert-description">Comprehensive training in close protection operations, threat assessment, VIP security protocols, and defensive driving for high-risk environments.</p>
+                            <span class="cert-year">Certified</span>
+                        </div>
+                    </div>
+
+                    <!-- Humanitarian Demining -->
+                    <div class="cert-card">
+                        <div class="cert-image-container">
+                            <img src="assets/certifications/demining.jpg" alt="Humanitarian Demining Certification" class="cert-image" onerror="this.style.display='none'">
+                            <div class="cert-placeholder">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                        </div>
+                        <div class="cert-content">
+                            <h3>Humanitarian Demining</h3>
+                            <p class="cert-issuer">School of Military Engineers & Ministry of Defense</p>
+                            <p class="cert-description">Specialized training in landmine clearance and explosive remnants of war (ERW) clearance, contributing to making Colombia safer for civilians.</p>
+                            <span class="cert-year">Certified</span>
+                        </div>
+                    </div>
+
+                    <!-- Tactical Medicine -->
+                    <div class="cert-card">
+                        <div class="cert-image-container">
+                            <img src="assets/certifications/tactical-medicine.jpg" alt="Tactical Medicine Certification" class="cert-image" onerror="this.style.display='none'">
+                            <div class="cert-placeholder">
+                                <i class="fas fa-first-aid"></i>
+                            </div>
+                        </div>
+                        <div class="cert-content">
+                            <h3>Tactical Medicine & APH</h3>
+                            <p class="cert-issuer">Military Medical Corps</p>
+                            <p class="cert-description">Advanced pre-hospital emergency care and tactical medicine certification, enabling immediate medical response in crisis situations.</p>
+                            <span class="cert-year">Certified</span>
+                        </div>
+                    </div>
+
+                    <!-- Defensive Driving -->
+                    <div class="cert-card">
+                        <div class="cert-image-container">
+                            <img src="assets/certifications/defensive-driving.jpg" alt="Defensive Driving Certification" class="cert-image" onerror="this.style.display='none'">
+                            <div class="cert-placeholder">
+                                <i class="fas fa-car"></i>
+                            </div>
+                        </div>
+                        <div class="cert-content">
+                            <h3>Defensive & Evasive Driving</h3>
+                            <p class="cert-issuer">SWAT Bodyguards - High Performance Center</p>
+                            <p class="cert-description">Expert training in armored vehicle operations, high-speed evasive maneuvers, and defensive driving techniques for executive protection.</p>
+                            <span class="cert-year">Certified</span>
+                        </div>
+                    </div>
+
+                    <!-- Counter-Terrorism -->
+                    <div class="cert-card">
+                        <div class="cert-image-container">
+                            <img src="assets/certifications/counter-terrorism.jpg" alt="Counter-Terrorism Certification" class="cert-image" onerror="this.style.display='none'">
+                            <div class="cert-placeholder">
+                                <i class="fas fa-shield-virus"></i>
+                            </div>
+                        </div>
+                        <div class="cert-content">
+                            <h3>Counter-Terrorism Prevention</h3>
+                            <p class="cert-issuer">Colombian Ministry of Defense</p>
+                            <p class="cert-description">Training in anti-terrorism strategies, explosive device prevention, and threat mitigation for critical infrastructure protection.</p>
+                            <span class="cert-year">Certified</span>
+                        </div>
+                    </div>
+
+                    <!-- Web Development -->
+                    <div class="cert-card">
+                        <div class="cert-image-container">
+                            <img src="assets/certifications/web-development.jpg" alt="Web Development Certification" class="cert-image" onerror="this.style.display='none'">
+                            <div class="cert-placeholder">
+                                <i class="fas fa-code"></i>
+                            </div>
+                        </div>
+                        <div class="cert-content">
+                            <h3>Front-End Web Development</h3>
+                            <p class="cert-issuer">Universidad de los Andes</p>
+                            <p class="cert-description">Professional training in HTML, CSS, and JavaScript, bridging technical security expertise with modern digital development skills.</p>
+                            <span class="cert-year">2025</span>
+                        </div>
+                    </div>
+
+                    <!-- English Certification -->
+                    <div class="cert-card">
+                        <div class="cert-image-container">
+                            <img src="assets/certifications/english.jpg" alt="English Certification" class="cert-image" onerror="this.style.display='none'">
+                            <div class="cert-placeholder">
+                                <i class="fas fa-language"></i>
+                            </div>
+                        </div>
+                        <div class="cert-content">
+                            <h3>English Does Work - Level 13</h3>
+                            <p class="cert-issuer">SENA - National Learning Service</p>
+                            <p class="cert-description">Advanced English language proficiency, enabling effective communication in international and multicultural environments.</p>
+                            <span class="cert-year">2025</span>
+                        </div>
+                    </div>
+
+                    <!-- Teledeteccion y Drones -->
+                    <div class="cert-card">
+                        <div class="cert-image-container">
+                            <svg class="drone-logo" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="droneGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#00e5ff"/>
+                                        <stop offset="100%" style="stop-color:#00a8ff"/>
+                                    </linearGradient>
+                                    <filter id="droneGlow" x="-50%" y="-50%" width="200%" height="200%">
+                                        <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                                        <feMerge>
+                                            <feMergeNode in="coloredBlur"/>
+                                            <feMergeNode in="SourceGraphic"/>
+                                        </feMerge>
+                                    </filter>
+                                </defs>
+                                <!-- Center body -->
+                                <ellipse cx="60" cy="60" rx="18" ry="12" fill="url(#droneGrad)" filter="url(#droneGlow)"/>
+                                <ellipse cx="60" cy="60" rx="10" ry="6" fill="#010418"/>
+                                <!-- Arms -->
+                                <line x1="35" y1="45" x2="85" y2="75" stroke="url(#droneGrad)" stroke-width="4" stroke-linecap="round"/>
+                                <line x1="85" y1="45" x2="35" y2="75" stroke="url(#droneGrad)" stroke-width="4" stroke-linecap="round"/>
+                                <!-- Rotors -->
+                                <circle cx="30" cy="40" r="14" fill="none" stroke="url(#droneGrad)" stroke-width="2" opacity="0.6">
+                                    <animateTransform attributeName="transform" type="rotate" from="0 30 40" to="360 30 40" dur="1s" repeatCount="indefinite"/>
+                                </circle>
+                                <circle cx="90" cy="40" r="14" fill="none" stroke="url(#droneGrad)" stroke-width="2" opacity="0.6">
+                                    <animateTransform attributeName="transform" type="rotate" from="360 90 40" to="0 90 40" dur="1s" repeatCount="indefinite"/>
+                                </circle>
+                                <circle cx="30" cy="80" r="14" fill="none" stroke="url(#droneGrad)" stroke-width="2" opacity="0.6">
+                                    <animateTransform attributeName="transform" type="rotate" from="0 30 80" to="360 30 80" dur="1s" repeatCount="indefinite"/>
+                                </circle>
+                                <circle cx="90" cy="80" r="14" fill="none" stroke="url(#droneGrad)" stroke-width="2" opacity="0.6">
+                                    <animateTransform attributeName="transform" type="rotate" from="360 90 80" to="0 90 80" dur="1s" repeatCount="indefinite"/>
+                                </circle>
+                                <!-- Rotor centers -->
+                                <circle cx="30" cy="40" r="5" fill="url(#droneGrad)"/>
+                                <circle cx="90" cy="40" r="5" fill="url(#droneGrad)"/>
+                                <circle cx="30" cy="80" r="5" fill="url(#droneGrad)"/>
+                                <circle cx="90" cy="80" r="5" fill="url(#droneGrad)"/>
+                                <!-- Camera/sensor -->
+                                <rect x="55" y="55" width="10" height="8" rx="2" fill="url(#droneGrad)" filter="url(#droneGlow)"/>
+                                <circle cx="60" cy="59" r="2" fill="#010418"/>
+                            </svg>
+                        </div>
+                        <div class="cert-content">
+                            <h3>Teledetección y Drones</h3>
+                            <p class="cert-issuer">Ministerio TIC - Colombia <span style="font-size: 0.8em; opacity: 0.7;">| Powered by Esri</span></p>
+                            <p class="cert-description">Advanced training in remote sensing technologies and drone operations for security, surveillance, and reconnaissance applications. Includes practical implementation of aerial monitoring systems using Esri GIS technologies for spatial analysis and mapping.</p>
+                            <span class="cert-year">2026</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="cert-note">
+                    <em><i class="fas fa-info-circle"></i> Browse the complete certificate archive below using navigation arrows or thumbnail strip. Use keyboard arrows (← →) for quick navigation.</em>
+                </p>
+                
+                <!-- Full Certificate Gallery with Extracted Images -->
+                <div class="full-certificate-gallery">
+                    <!-- Secure Terminal Header -->
+                    <div class="secure-terminal-header gallery-terminal">
+                        <div class="terminal-status">
+                            <span class="status-dot blink"></span>
+                            <span class="status-text">SECURE VIEWING MODE // CERTIFICATES ARCHIVE</span>
+                        </div>
+                        <div class="terminal-id">DOC-ID: 80876280-CERTS</div>
+                    </div>
+                    
+                    <h3 style="margin-top: 1rem; text-align: center;">Complete Certificate Archive</h3>
+                    <p class="section-subtitle">94 certificates from original CV document - Updated March 2026 - Authorized Viewing Only</p>
+                    
+                    <!-- Secure Gallery Container -->
+                    <div class="gallery-secure-frame">
+                        <!-- Corner Accents -->
+                        <div class="corner top-left"></div>
+                        <div class="corner top-right"></div>
+                        <div class="corner bottom-left"></div>
+                        <div class="corner bottom-right"></div>
+                        
+                        <!-- Scanline Overlay -->
+                        <div class="scanline-overlay"></div>
+                        
+                        <!-- Gallery Navigation -->
+                        <div class="gallery-nav">
+                            <button id="gallery-prev" class="gallery-btn terminal-btn"><i class="fas fa-chevron-left"></i> PREV</button>
+                            <span class="gallery-info"><span class="page-info">CERTIFICATE <span id="gallery-current">1</span> / <span id="gallery-total">93</span></span></span>
+                            <button id="gallery-next" class="gallery-btn terminal-btn">NEXT <i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        
+                        <!-- Main Gallery Display with Security -->
+                        <div class="gallery-main secure-gallery">
+                            <div class="gallery-image-container" id="gallery-image-container">
+                                <img id="gallery-image" src="assets/certifications/certificate_page_1.png" alt="Certificate Page 1" 
+                                     ondragstart="return false;" onselectstart="return false;" oncontextmenu="return false;">
+                                <!-- Screenshot Prevention Overlay -->
+                                <div class="screenshot-guard" oncontextmenu="return false;"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Thumbnail Strip -->
+                        <div class="gallery-thumbnails" id="gallery-thumbnails" oncontextmenu="return false;">
+                            <!-- Thumbnails will be generated by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <!-- Security Footer -->
+                    <div class="secure-footer gallery-secure-footer">
+                        <p><i class="fas fa-shield-alt"></i> RESTRICTED: Certificate viewing authorized for CV review only. Downloading, screenshots, and copying prohibited. All access is logged.</p>
+                    </div>
+                </div>
+                
+                <!-- Modern CV CSS -->
+                <style>
+                .cv-modern-grid {
+                    display: grid;
+                    grid-template-columns: 320px 1fr;
+                    gap: 2rem;
+                    max-width: 1400px;
+                    margin: 0 auto;
+                    padding: 1rem;
+                }
+                @media (max-width: 1024px) {
+                    .cv-modern-grid { grid-template-columns: 280px 1fr; gap: 1.5rem; }
+                }
+                @media (max-width: 768px) {
+                    .cv-modern-grid { grid-template-columns: 1fr; }
+                }
+                .cv-sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+                .cv-main { display: flex; flex-direction: column; gap: 1.5rem; }
+                
+                /* Profile Picture Glassmorphism */
+                .profile-picture-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-bottom: 1rem;
+                }
+                .profile-picture-frame {
+                    position: relative;
+                    width: 140px;
+                    height: 140px;
+                    border-radius: 50%;
+                    padding: 4px;
+                    background: linear-gradient(135deg, rgba(0, 229, 255, 0.6), rgba(0, 168, 255, 0.8), rgba(0, 100, 200, 0.6));
+                    box-shadow: 
+                        0 0 20px rgba(0, 168, 255, 0.4),
+                        0 0 40px rgba(0, 168, 255, 0.2),
+                        inset 0 0 20px rgba(255, 255, 255, 0.1);
+                }
+                .profile-picture {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    border: 3px solid rgba(1, 4, 24, 0.9);
+                }
+                .profile-picture-glow {
+                    position: absolute;
+                    top: -5px;
+                    left: -5px;
+                    right: -5px;
+                    bottom: -5px;
+                    border-radius: 50%;
+                    background: linear-gradient(135deg, #00e5ff, #00a8ff, #0077ff);
+                    filter: blur(15px);
+                    opacity: 0.3;
+                    z-index: -1;
+                    animation: profileGlow 3s ease-in-out infinite;
+                }
+                @keyframes profileGlow {
+                    0%, 100% { opacity: 0.3; transform: scale(1); }
+                    50% { opacity: 0.5; transform: scale(1.05); }
+                }
+                .profile-status {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    margin-top: 0.8rem;
+                    font-size: 0.8rem;
+                    color: #00e5ff;
+                    background: rgba(0, 20, 40, 0.6);
+                    padding: 0.4rem 1rem;
+                    border-radius: 20px;
+                    border: 1px solid rgba(0, 168, 255, 0.3);
+                    backdrop-filter: blur(5px);
+                }
+                .profile-status a.whatsapp-link {
+                    color: #25D366;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.4rem;
+                    transition: all 0.3s ease;
+                    font-size: 0.75rem;
+                }
+                .profile-status a.whatsapp-link:hover {
+                    transform: scale(1.05);
+                }
+                .profile-status a.whatsapp-link i {
+                    font-size: 0.85rem;
+                    color: #25D366;
+                }
+                .status-indicator {
+                    width: 8px;
+                    height: 8px;
+                    background: #00ff88;
+                    border-radius: 50%;
+                    box-shadow: 0 0 10px #00ff88;
+                    animation: statusPulse 2s ease-in-out infinite;
+                }
+                @keyframes statusPulse {
+                    0%, 100% { opacity: 1; }
+                    50% { opacity: 0.5; }
+                }
+                
+                .cv-card {
+                    background: rgba(0, 168, 255, 0.05);
+                    border: 1px solid rgba(0, 168, 255, 0.2);
+                    border-radius: 16px;
+                    padding: 1.5rem;
+                    transition: all 0.3s ease;
+                }
+                .cv-card:hover {
+                    border-color: rgba(0, 168, 255, 0.5);
+                    box-shadow: 0 8px 32px rgba(0, 168, 255, 0.15);
+                    transform: translateY(-2px);
+                }
+                .cv-card h2 {
+                    font-size: 1.3rem;
+                    color: var(--primary-color, #00a8ff);
+                    margin-bottom: 1rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                }
+                .card-icon {
+                    width: 40px;
+                    height: 40px;
+                    background: linear-gradient(135deg, #00a8ff, #0097e6);
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.2rem;
+                    color: white;
+                    margin-bottom: 1rem;
+                }
+                .card-intro {
+                    font-size: 0.95rem;
+                    line-height: 1.6;
+                    color: var(--text-color, #ccc);
+                    margin-bottom: 1rem;
+                }
+                .quality-grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 0.5rem;
+                }
+                .quality-chip {
+                    background: rgba(0, 168, 255, 0.1);
+                    border: 1px solid rgba(0, 168, 255, 0.2);
+                    border-radius: 8px;
+                    padding: 0.5rem;
+                    font-size: 0.8rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.4rem;
+                    transition: all 0.3s ease;
+                }
+                .quality-chip:hover {
+                    background: rgba(0, 168, 255, 0.2);
+                    transform: scale(1.02);
+                }
+                .quality-chip i { color: #00a8ff; }
+                .info-list { display: flex; flex-direction: column; gap: 0.6rem; }
+                .info-item {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0.5rem;
+                    background: rgba(0, 0, 0, 0.2);
+                    border-radius: 8px;
+                    font-size: 0.85rem;
+                }
+                .info-label { color: #00a8ff; display: flex; align-items: center; gap: 0.5rem; }
+                .language-list { display: flex; flex-direction: column; gap: 0.8rem; }
+                .language-item {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.8rem;
+                    padding: 0.6rem;
+                    background: rgba(0, 0, 0, 0.2);
+                    border-radius: 8px;
+                }
+                .language-item .flag { font-size: 1.3rem; }
+                .language-item .level {
+                    margin-left: auto;
+                    background: rgba(0, 168, 255, 0.2);
+                    padding: 0.2rem 0.6rem;
+                    border-radius: 12px;
+                    font-size: 0.75rem;
+                    color: #00a8ff;
+                }
+                .reference-list { display: flex; flex-direction: column; gap: 0.8rem; }
+                .reference-item {
+                    padding: 0.6rem;
+                    background: rgba(0, 0, 0, 0.2);
+                    border-radius: 8px;
+                }
+                .reference-item strong { display: block; color: #fff; font-size: 0.9rem; }
+                .reference-item span { font-size: 0.8rem; color: #888; }
+                .reference-item a {
+                    display: block;
+                    font-size: 0.8rem;
+                    color: #00a8ff;
+                    margin-top: 0.2rem;
+                }
+                .summary-card p {
+                    font-size: 1rem;
+                    line-height: 1.7;
+                    color: var(--text-color, #ccc);
+                }
+                .skills-section { margin-bottom: 1.2rem; }
+                .skills-section:last-child { margin-bottom: 0; }
+                .skills-section h3 {
+                    font-size: 0.95rem;
+                    color: #00a8ff;
+                    margin-bottom: 0.6rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                }
+                .skill-tags {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 0.5rem;
+                }
+                .skill-tag {
+                    background: linear-gradient(135deg, rgba(0, 168, 255, 0.2), rgba(0, 151, 230, 0.1));
+                    border: 1px solid rgba(0, 168, 255, 0.3);
+                    padding: 0.4rem 0.8rem;
+                    border-radius: 20px;
+                    font-size: 0.8rem;
+                    transition: all 0.3s ease;
+                }
+                .skill-tag:hover {
+                    background: linear-gradient(135deg, rgba(0, 168, 255, 0.3), rgba(0, 151, 230, 0.2));
+                    transform: translateY(-2px);
+                }
+                .education-timeline { display: flex; flex-direction: column; gap: 1rem; }
+                .edu-item {
+                    display: flex;
+                    gap: 1rem;
+                    padding: 0.8rem;
+                    background: rgba(0, 0, 0, 0.2);
+                    border-radius: 10px;
+                    border-left: 3px solid #00a8ff;
+                }
+                .edu-year {
+                    background: rgba(0, 168, 255, 0.2);
+                    padding: 0.3rem 0.6rem;
+                    border-radius: 6px;
+                    font-size: 0.8rem;
+                    font-weight: bold;
+                    color: #00a8ff;
+                    white-space: nowrap;
+                }
+                .edu-content h4 { font-size: 0.95rem; margin-bottom: 0.2rem; }
+                .edu-content p { font-size: 0.8rem; color: #888; }
+                .experience-timeline { display: flex; flex-direction: column; gap: 1rem; }
+                .exp-item {
+                    padding: 1rem;
+                    background: rgba(0, 0, 0, 0.2);
+                    border-radius: 10px;
+                    border-left: 3px solid #00a8ff;
+                    transition: all 0.3s ease;
+                }
+                .exp-item:hover { background: rgba(0, 0, 0, 0.3); }
+                .exp-item.military { border-left-color: #e74c3c; }
+                .exp-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.5rem; flex-wrap: wrap; }
+                .exp-header h4 { font-size: 1rem; color: #fff; }
+                .exp-period {
+                    background: rgba(0, 168, 255, 0.15);
+                    padding: 0.2rem 0.5rem;
+                    border-radius: 12px;
+                    font-size: 0.75rem;
+                    color: #00a8ff;
+                }
+                .exp-role { font-size: 0.85rem; color: #aaa; display: flex; align-items: center; gap: 0.5rem; margin: 0.3rem 0; }
+                .exp-role i { color: #00a8ff; }
+                .exp-reason { font-size: 0.8rem; color: #777; font-style: italic; display: flex; align-items: center; gap: 0.4rem; }
+                .exp-note { font-size: 0.8rem; color: #e74c3c; display: flex; align-items: center; gap: 0.4rem; margin-top: 0.5rem; }
+                .cert-section { margin-bottom: 1.2rem; }
+                .cert-section:last-child { margin-bottom: 0; }
+                .cert-section h3 {
+                    font-size: 0.9rem;
+                    color: #00a8ff;
+                    margin-bottom: 0.5rem;
+                    padding-bottom: 0.3rem;
+                    border-bottom: 1px solid rgba(0, 168, 255, 0.2);
+                }
+                .cert-list { list-style: none; padding: 0; }
+                .cert-list li {
+                    font-size: 0.8rem;
+                    padding: 0.4rem 0;
+                    color: #bbb;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 0.5rem;
+                }
+                .cert-list li:before {
+                    content: "▹";
+                    color: #00a8ff;
+                }
+                .certifications-grid-card { padding: 1.5rem; }
+                .cert-grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 1rem;
+                    margin-top: 1rem;
+                }
+                @media (max-width: 900px) {
+                    .cert-grid { grid-template-columns: 1fr; }
+                }
+                .drone-logo {
+                    width: 140px;
+                    height: 140px;
+                    filter: drop-shadow(0 0 10px rgba(0, 168, 255, 0.5));
+                }
+                .cert-category {
+                    background: rgba(0, 0, 0, 0.2);
+                    border-radius: 12px;
+                    padding: 1rem;
+                    border: 1px solid rgba(0, 168, 255, 0.15);
+                }
+                .cert-category.military { border-left: 3px solid #e67e22; }
+                .cert-category.security { border-left: 3px solid #9b59b6; }
+                .cert-category.medical { border-left: 3px solid #e74c3c; }
+                .cert-header {
+                    font-size: 0.9rem;
+                    font-weight: bold;
+                    color: #00a8ff;
+                    margin-bottom: 0.8rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                }
+                .cert-year {
+                    background: rgba(0, 168, 255, 0.2);
+                    padding: 0.2rem 0.6rem;
+                    border-radius: 12px;
+                    font-size: 0.8rem;
+                }
+                .cert-tags {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.4rem;
+                }
+                .cert-tags li {
+                    font-size: 0.75rem;
+                    color: #ccc;
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 0.5rem;
+                    line-height: 1.4;
+                }
+                .cert-tags li i {
+                    color: #00a8ff;
+                    margin-top: 2px;
+                    flex-shrink: 0;
+                }
+                .cert-category.military .cert-tags li i { color: #e67e22; }
+                .cert-category.security .cert-tags li i { color: #9b59b6; }
+                .cert-category.medical .cert-tags li i { color: #e74c3c; }
+                </style>
+                
+                <style>
+                .full-certificate-gallery {
+                    margin-top: 3rem;
+                    padding: 0;
+                    background: linear-gradient(135deg, rgba(1, 4, 24, 0.15) 0%, rgba(0, 20, 50, 0.1) 100%);
+                    backdrop-filter: blur(8px);
+                    -webkit-backdrop-filter: blur(8px);
+                    border-radius: 20px;
+                    border: 1px solid rgba(0, 168, 255, 0.15);
+                    box-shadow: 
+                        0 0 20px rgba(0, 168, 255, 0.05),
+                        inset 0 0 30px rgba(0, 168, 255, 0.02);
+                }
+                .gallery-terminal {
+                    background: linear-gradient(90deg, rgba(0, 20, 40, 0.25), rgba(0, 40, 80, 0.2));
+                    backdrop-filter: blur(5px);
+                    -webkit-backdrop-filter: blur(5px);
+                    padding: 12px 20px;
+                    border-radius: 18px 18px 0 0;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border: 1px solid rgba(0, 168, 255, 0.15);
+                    border-bottom: none;
+                }
+                .gallery-secure-frame {
+                    position: relative;
+                    background: linear-gradient(135deg, rgba(1, 4, 24, 0.1) 0%, rgba(0, 20, 50, 0.08) 100%);
+                    backdrop-filter: blur(5px);
+                    -webkit-backdrop-filter: blur(5px);
+                    border: 1px solid rgba(0, 168, 255, 0.15);
+                    border-radius: 0 0 10px 10px;
+                    padding: 1.5rem;
+                    overflow: hidden;
+                    box-shadow: 
+                        inset 0 0 20px rgba(0, 168, 255, 0.03),
+                        0 0 15px rgba(0, 168, 255, 0.05);
+                }
+                .gallery-secure-footer {
+                    margin-top: 0;
+                    border-radius: 0 0 10px 10px;
+                    background: linear-gradient(90deg, rgba(0, 20, 40, 0.2), rgba(0, 40, 80, 0.15));
+                    backdrop-filter: blur(5px);
+                    -webkit-backdrop-filter: blur(5px);
+                    border: 1px solid rgba(0, 168, 255, 0.15);
+                    border-top: none;
+                }
+                .gallery-nav {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1.5rem;
+                    margin: 1rem 0;
+                    position: relative;
+                    z-index: 20;
+                }
+                .gallery-btn {
+                    padding: 0.75rem 1.5rem;
+                    background: linear-gradient(135deg, #00a8ff, #0097e6);
+                    color: white;
+                    border: none;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    font-weight: bold;
+                    transition: all 0.3s ease;
+                    font-family: 'Orbitron', monospace;
+                    font-size: 0.85rem;
+                }
+                .gallery-btn:hover {
+                    background: linear-gradient(135deg, #0097e6, #00a8ff);
+                    transform: translateY(-2px);
+                    box-shadow: 0 5px 20px rgba(0, 168, 255, 0.4);
+                }
+                .gallery-btn:disabled {
+                    opacity: 0.4;
+                    cursor: not-allowed;
+                    transform: none;
+                }
+                .gallery-info {
+                    font-size: 1rem;
+                    color: #00a8ff;
+                    font-weight: bold;
+                    font-family: 'OCR A Std', monospace;
+                }
+                .gallery-main {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 1rem 0;
+                    position: relative;
+                    z-index: 5;
+                }
+                .secure-gallery {
+                    position: relative;
+                    z-index: 5;
+                }
+                .gallery-image-container {
+                    position: relative;
+                    max-width: 100%;
+                    max-height: 500px;
+                    overflow: hidden;
+                    border-radius: 15px;
+                    box-shadow: 
+                        0 10px 30px rgba(0, 0, 0, 0.2),
+                        inset 0 0 20px rgba(0, 168, 255, 0.03);
+                    background: linear-gradient(135deg, rgba(0, 20, 50, 0.15) 0%, rgba(0, 10, 30, 0.1) 100%);
+                    border: 1px solid rgba(0, 168, 255, 0.1);
+                }
+                .gallery-image-container img {
+                    max-width: 100%;
+                    max-height: 500px;
+                    width: auto;
+                    height: auto;
+                    object-fit: contain;
+                    display: block;
+                    user-select: none;
+                    -webkit-user-drag: none;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                }
+                .screenshot-guard {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    pointer-events: none;
+                    z-index: 10;
+                    background: transparent;
+                }
+                .gallery-thumbnails {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 6px;
+                    margin: 1rem 0;
+                    max-height: 120px;
+                    overflow-y: auto;
+                    padding: 10px;
+                    position: relative;
+                    z-index: 15;
+                    background: rgba(0, 20, 50, 0.15);
+                    backdrop-filter: blur(3px);
+                    -webkit-backdrop-filter: blur(3px);
+                    border-radius: 10px;
+                    border: 1px solid rgba(0, 168, 255, 0.1);
+                }
+                .gallery-thumbnails img {
+                    width: 70px;
+                    height: 50px;
+                    object-fit: cover;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    border: 2px solid transparent;
+                    transition: all 0.2s ease;
+                    opacity: 0.5;
+                    user-select: none;
+                    -webkit-user-drag: none;
+                    background: rgba(0, 10, 30, 0.5);
+                }
+                .gallery-thumbnails img:hover,
+                .gallery-thumbnails img.active {
+                    border-color: #00a8ff;
+                    opacity: 1;
+                    transform: scale(1.15);
+                    box-shadow: 0 0 15px rgba(0, 168, 255, 0.4);
+                }
+                .gallery-download {
+                    display: none;
+                }
+                </style>
+                
+                <script>
+                (function() {
+                    const totalCertificates = 94;
+                    let currentCertificate = 1;
+                    
+                    const galleryImage = document.getElementById('gallery-image');
+                    const galleryCurrent = document.getElementById('gallery-current');
+                    const galleryTotal = document.getElementById('gallery-total');
+                    const galleryThumbnails = document.getElementById('gallery-thumbnails');
+                    const prevBtn = document.getElementById('gallery-prev');
+                    const nextBtn = document.getElementById('gallery-next');
+                    
+                    galleryTotal.textContent = totalCertificates;
+                    updateButtons();
+                    
+                    // Generate thumbnails with lazy loading
+                    for (let i = 1; i <= totalCertificates; i++) {
+                        const thumb = document.createElement('img');
+                        thumb.src = 'assets/certifications/certificate_page_' + i + '.png';
+                        thumb.alt = 'Cert ' + i;
+                        thumb.dataset.index = i;
+                        thumb.loading = 'lazy';
+                        if (i === 1) thumb.classList.add('active');
+                        
+                        thumb.addEventListener('click', function() {
+                            goToCertificate(parseInt(this.dataset.index));
+                        });
+                        
+                        galleryThumbnails.appendChild(thumb);
+                    }
+                    
+                    function updateButtons() {
+                        prevBtn.disabled = currentCertificate <= 1;
+                        nextBtn.disabled = currentCertificate >= totalCertificates;
+                    }
+                    
+                    function goToCertificate(index) {
+                        if (index < 1 || index > totalCertificates) return;
+                        
+                        currentCertificate = index;
+                        galleryImage.src = 'assets/certifications/certificate_page_' + index + '.png';
+                        galleryCurrent.textContent = index;
+                        updateButtons();
+                        
+                        document.querySelectorAll('.gallery-thumbnails img').forEach(function(img, i) {
+                            img.classList.toggle('active', i + 1 === index);
+                        });
+                        
+                        const activeThumb = galleryThumbnails.querySelector('.active');
+                        if (activeThumb) {
+                            activeThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                        }
+                    }
+                    
+                    prevBtn.addEventListener('click', function() {
+                        goToCertificate(currentCertificate - 1);
+                    });
+                    
+                    nextBtn.addEventListener('click', function() {
+                        goToCertificate(currentCertificate + 1);
+                    });
+                    
+                    document.addEventListener('keydown', function(e) {
+                        if (e.key === 'ArrowLeft') goToCertificate(currentCertificate - 1);
+                        if (e.key === 'ArrowRight') goToCertificate(currentCertificate + 1);
+                    });
+                    
+                    // Prevent drag on gallery container
+                    const galleryContainer = document.getElementById('gallery-image-container');
+                    galleryContainer.addEventListener('dragstart', function(e) { e.preventDefault(); });
+                    galleryContainer.addEventListener('drop', function(e) { e.preventDefault(); });
+                    galleryContainer.addEventListener('copy', function(e) { e.preventDefault(); });
+                })();
+                </script>
+            </section>
 
             <!-- Other Pages Links -->
             <section class="other-pages" style="text-align: center; margin: 20px 0;">
@@ -354,15 +1258,21 @@
                 </ul>
             </section>
 
-            <button class="close-btn" onclick="window.location.href='index.html';">Cerrar CV</button>
+            <button class="close-btn" onclick="window.location.href='index.html';"><i class="fas fa-power-off"></i>
+                SYSTEM EXIT // RETURN TO MAIN</button>
             </main>
         </div>
 
-        <!-- Social Media Links Section -->
-        <section id="social-media" class="content parallax-element" style="margin-top: 2rem; text-align: center;">
-            <h2>Connect With Us</h2>
-            <p>Stay connected and follow our journey in creating empathic digital experiences.</p>
+        <!-- Social Media Links Section - Standardized -->
+        <section id="social-media" class="content-section parallax-element">
+            <div class="section-header">
+                <h2>Connect With Us</h2>
+            </div>
+            <p style="text-align: center; margin-bottom: 2rem;">Stay connected and follow our journey in creating
+                empathic digital experiences.</p>
             <ul class="social-links">
+                <li><a href="mailto:eduardgildardoperezfranco@empathicweb.online" class="email-link"
+                        aria-label="Send us an email"><i class="fas fa-envelope"></i> Email</a></li>
                 <li><a href="https://www.linkedin.com/in/eduard-perez-331470b7/" target="_blank"
                         rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
                 <li><a href="https://www.facebook.com/EduardGildardoPerezFranco" target="_blank"
@@ -377,8 +1287,11 @@
                         rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></li>
                 <li><a href="https://www.tiktok.com/@eduardg.perezfranco" target="_blank" rel="noopener noreferrer"><i
                             class="fab fa-tiktok"></i> TikTok</a></li>
+                <li><a href="https://www.youtube.com/@EduardGildardoPerezFrancq" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-youtube"></i> YouTube</a></li>
             </ul>
         </section>
+
 
 
         <!-- Footer Navigation -->
@@ -398,11 +1311,15 @@
                 </nav>
 
                 <div class="footer-info">
-                    <p class="footer-copyright">© 2025 Eduard Gildardo Pérez Franco. All rights reserved.</p>
+                    <p class="footer-copyright">© 2026 Eduard Gildardo Pérez Franco. All rights reserved.</p>
                     <p class="footer-links">
                         <a href="legal.html">Legal Information</a>
                         <span class="footer-separator">•</span>
-                        <span class="footer-version">Version 0.1.1</span>
+                        <span class="footer-version" title="SemVer: Major.Minor.Patch | 0=Major features, 3=Feature updates, 0=Bug fixes">v0.3.0</span>
+                        <span class="footer-separator">•</span>
+                        <span class="footer-updated">Updated: March 2026</span>
+                        <span class="footer-separator">•</span>
+                        <span class="footer-build">Static Build</span>
                     </p>
                 </div>
             </div>
@@ -429,6 +1346,7 @@
     </noscript>
     <script src="Script.js"></script>
     <script src="enhanced-navigation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 </body>
 
 </html>

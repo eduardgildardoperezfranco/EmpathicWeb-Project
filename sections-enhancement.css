@@ -117,11 +117,15 @@
 /* Social Links Enhancement */
 .social-links {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 140px), 1fr));
+    gap: clamp(0.5rem, 1vw, 1rem);
     list-style: none;
     padding: 0;
     justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .social-links li {

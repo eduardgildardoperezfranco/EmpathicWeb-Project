@@ -84,11 +84,13 @@ body {
 /* Gallery Container - Responsive Grid for PC */
 .gallery-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: clamp(15px, 2.5vw, 25px);
     max-width: 1400px;
     margin: 0 auto;
-    padding: 20px;
+    padding: clamp(10px, 2vw, 20px);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Gallery Items - Responsive Cards */
@@ -561,4 +563,443 @@ body {
         height: auto !important;
         min-height: 480px !important;
     }
+}
+
+/* ============================================
+   RESPONSIVE VIDEO CONTAINER - "Our Story in Motion"
+   Psychological Strategy: Create an immersive, 
+   emotionally engaging video experience that 
+   adapts seamlessly to any device
+   ============================================ */
+
+.about-video-section {
+    padding: 60px 20px;
+    text-align: center;
+    background: rgba(0, 17, 34, 0.9);
+    margin: 40px 0;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative background elements for emotional engagement */
+.about-video-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #00e5ff, transparent);
+    animation: videoSectionGlow 3s ease-in-out infinite;
+}
+
+@keyframes videoSectionGlow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+.about-video-section h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin: 0 0 40px 0;
+    background: linear-gradient(135deg, #00E5FF, #00B8D4, #0097A7);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    position: relative;
+    z-index: 2;
+}
+
+/* Main Video Container - Responsive Wrapper */
+.about-video-section .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Inner Video Wrapper - 16:9 Aspect Ratio */
+.about-video-section .video-container::before {
+    content: '';
+    display: block;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.about-video-section .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: 3px solid rgba(0, 229, 255, 0.3);
+    box-shadow: 
+        0 20px 60px rgba(0, 229, 255, 0.2),
+        0 10px 30px rgba(0, 0, 0, 0.3);
+    background: #000;
+    object-fit: cover;
+    transition: all 0.4s ease;
+}
+
+/* Hover Effect - Emotional Engagement */
+.about-video-section .video-container:hover video {
+    border-color: rgba(0, 229, 255, 0.6);
+    box-shadow: 
+        0 25px 80px rgba(0, 229, 255, 0.3),
+        0 15px 40px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+}
+
+/* Video Fallback Styling */
+.about-video-section .video-fallback {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 17, 34, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid rgba(0, 229, 255, 0.3);
+    text-align: center;
+}
+
+.about-video-section .video-fallback p {
+    color: rgba(224, 247, 250, 0.9);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.about-video-section .video-fallback a {
+    color: #00e5ff;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.about-video-section .video-fallback a:hover {
+    color: #00B8D4;
+}
+
+/* Play Button Overlay - Psychological Cue */
+.about-video-section .video-container::after {
+    content: '▶';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 30px rgba(0, 229, 255, 0.5);
+    pointer-events: none;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.about-video-section .video-container:hover::after {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* Hide play button when video is playing */
+.about-video-section .video-container.playing::after {
+    display: none;
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS - All Devices
+   ============================================ */
+
+/* Large Desktop (1400px+) */
+@media (min-width: 1400px) {
+    .about-video-section {
+        padding: 80px 40px;
+        margin: 60px 0;
+    }
+
+    .about-video-section .video-container {
+        max-width: 1400px;
+        padding: 0;
+    }
+
+    .about-video-section h2 {
+        margin-bottom: 50px;
+    }
+}
+
+/* Desktop (1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .about-video-section {
+        padding: 70px 30px;
+    }
+
+    .about-video-section .video-container {
+        max-width: 1100px;
+    }
+}
+
+/* Small Desktop / Large Tablet (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .about-video-section {
+        padding: 60px 25px;
+    }
+
+    .about-video-section .video-container {
+        max-width: 900px;
+    }
+
+    .about-video-section h2 {
+        margin-bottom: 35px;
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .about-video-section {
+        padding: 50px 20px;
+        margin: 30px 0;
+        border-radius: 15px;
+    }
+
+    .about-video-section .video-container {
+        max-width: 700px;
+        padding: 0 15px;
+    }
+
+    .about-video-section h2 {
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        margin-bottom: 30px;
+    }
+
+    .about-video-section .video-container video {
+        border-radius: 12px;
+        border-width: 2px;
+    }
+}
+
+/* Large Mobile (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .about-video-section {
+        padding: 40px 15px;
+        margin: 25px 0;
+        border-radius: 12px;
+    }
+
+    .about-video-section .video-container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .about-video-section h2 {
+        font-size: clamp(1.5rem, 3.5vw, 2rem);
+        margin-bottom: 25px;
+    }
+
+    .about-video-section .video-container video {
+        border-radius: 10px;
+        border-width: 2px;
+    }
+
+    .about-video-section .video-container::after {
+        font-size: 3rem;
+    }
+}
+
+/* Mobile (480px - 575px) */
+@media (min-width: 480px) and (max-width: 575px) {
+    .about-video-section {
+        padding: 35px 12px;
+        margin: 20px 0;
+        border-radius: 10px;
+    }
+
+    .about-video-section .video-container {
+        padding: 0 8px;
+    }
+
+    .about-video-section h2 {
+        font-size: clamp(1.3rem, 3vw, 1.8rem);
+        margin-bottom: 20px;
+    }
+
+    .about-video-section .video-container video {
+        border-radius: 8px;
+        border-width: 2px;
+    }
+
+    .about-video-section .video-container::after {
+        font-size: 2.5rem;
+    }
+}
+
+/* Small Mobile (< 480px) */
+@media (max-width: 479px) {
+    .about-video-section {
+        padding: 30px 10px;
+        margin: 15px 0;
+        border-radius: 8px;
+    }
+
+    .about-video-section .video-container {
+        padding: 0 5px;
+    }
+
+    .about-video-section h2 {
+        font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+        margin-bottom: 18px;
+    }
+
+    .about-video-section .video-container video {
+        border-radius: 6px;
+        border-width: 1px;
+    }
+
+    .about-video-section .video-container::after {
+        font-size: 2rem;
+    }
+
+    .about-video-section .video-fallback {
+        padding: 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra Small Mobile (< 360px) */
+@media (max-width: 359px) {
+    .about-video-section {
+        padding: 25px 8px;
+        margin: 10px 0;
+        border-radius: 6px;
+    }
+
+    .about-video-section h2 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+
+    .about-video-section .video-container video {
+        border-radius: 4px;
+    }
+
+    .about-video-section .video-container::after {
+        font-size: 1.5rem;
+    }
+}
+
+/* Landscape Mode Optimizations */
+@media (max-height: 500px) and (orientation: landscape) {
+    .about-video-section {
+        padding: 20px 15px;
+    }
+
+    .about-video-section h2 {
+        margin-bottom: 15px;
+    }
+}
+
+/* High DPI / Retina Display Optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .about-video-section .video-container video {
+        border-width: 2px;
+    }
+}
+
+/* Dark Mode Preference */
+@media (prefers-color-scheme: dark) {
+    .about-video-section {
+        background: rgba(0, 8, 16, 0.95);
+    }
+}
+
+/* Reduced Motion Preference - Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .about-video-section .video-container video {
+        transition: none;
+    }
+
+    .about-video-section .video-container:hover video {
+        transform: none;
+    }
+
+    .about-video-section::before {
+        animation: none;
+    }
+
+    @keyframes videoSectionGlow {
+        0%, 100% { opacity: 0.7; }
+    }
+}
+
+/* Print Styles */
+@media print {
+    .about-video-section {
+        display: none;
+    }
+}
+
+/* Video Caption Styling */
+.about-video-section .video-caption {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: rgba(224, 247, 250, 0.8);
+    margin-top: 25px;
+    font-style: italic;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
+
+/* Download Link Styling */
+.about-video-section .download-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, rgba(0, 229, 255, 0.2), rgba(0, 184, 212, 0.2));
+    color: #00e5ff;
+    text-decoration: none;
+    border-radius: 25px;
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.about-video-section .download-link:hover {
+    background: linear-gradient(135deg, rgba(0, 229, 255, 0.3), rgba(0, 184, 212, 0.3));
+    border-color: rgba(0, 229, 255, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 229, 255, 0.2);
+}
+
+.about-video-section .download-link i {
+    font-size: 1.1rem;
+}
+
+/* Screen Reader Only - Accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Video Container Focus States - Accessibility */
+.about-video-section .video-container:focus-within {
+    outline: 3px solid rgba(0, 229, 255, 0.5);
+    outline-offset: 5px;
+    border-radius: 15px;
+}
+
+.about-video-section .video-container video:focus {
+    outline: none;
 }

@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="../Style.css">
     <link rel="stylesheet" href="about-style.css">
     <link rel="stylesheet" href="../social-cards-enhancement.css">
+    <!-- Cross-Browser Responsive Fixes (Safari, macOS, iOS, Firefox, Edge) -->
+    <link rel="stylesheet" href="../css/cross-browser-fixes.css">
     <!-- Font Awesome for social media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -54,15 +56,28 @@
         </div>
     </nav>
 
-    <!-- WhatsApp Floating Button -->
+    <!-- WhatsApp Floating Button - Chat Experience -->
     <div class="whatsapp-container">
         <div class="whatsapp-icon">
-            <a href="https://wa.me/573108005004" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/573108005004?text=Hi! I'm interested in your services. Can we chat?" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-whatsapp"></i>
             </a>
         </div>
         <div class="whatsapp-popup">
-            <p>I have cognition but I can not guess, talk with me!!!</p>
+            <button class="whatsapp-popup-close" onclick="this.parentElement.classList.add('closed')">&times;</button>
+            <div class="whatsapp-popup-header">
+                <div class="whatsapp-popup-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div>
+                    <div class="whatsapp-popup-name">EmpathicWeb</div>
+                    <div class="whatsapp-popup-status">Online</div>
+                </div>
+            </div>
+            <p>Hi there! 👋 Let's chat about your project</p>
+            <a href="https://wa.me/573108005004?text=Hi! I'm interested in your services. Can we chat?" target="_blank" rel="noopener noreferrer" class="whatsapp-popup-cta">
+                <i class="fab fa-whatsapp"></i> Chat now
+            </a>
         </div>
     </div>
 
@@ -110,19 +125,41 @@
             <!-- Container for the 3D Brain -->
             <div id="brain-container" class="parallax-element "></div>
 
-            <!-- About Video Section -->
-            <section id="about-video" class="about-video-section">
-                <h2 data-i18n="video.title">Our Story in Motion</h2>
-                <div class="video-container">
-                    <video controls poster="../assets/Logo/Logo_3d-brain.png" preload="metadata">
+            <!-- About Video Section - Responsive Container -->
+            <section id="about-video" class="about-video-section" aria-labelledby="video-title">
+                <h2 id="video-title" data-i18n="video.title">Our Story in Motion</h2>
+                <div class="video-container" role="figure" aria-label="Video presentation about EmpathicWeb story">
+                    <video 
+                        controls 
+                        poster="../assets/Logo/Logo_3d-brain.png" 
+                        preload="metadata"
+                        aria-describedby="video-description"
+                        playsinline
+                        controlsList="nodownload"
+                        disablePictureInPicture="false">
                         <source src="videos/about.mp4" type="video/mp4">
-                        <!-- Fallback content -->
-                        <div class="video-fallback">
-                            <p data-i18n="video.fallback1">Video not supported. <a href="videos/about.mp4"
-                                    download="about.mp4">Download the video</a> instead.</p>
+                        <source src="videos/about.webm" type="video/webm">
+                        <source src="videos/about.ogg" type="video/ogg">
+                        <!-- Fallback content for unsupported browsers -->
+                        <div class="video-fallback" role="alert">
+                            <p data-i18n="video.fallback1">Your browser does not support the video tag.</p>
+                            <p>
+                                <a href="videos/about.mp4" download="EmpathicWeb-Story.mp4" class="download-link">
+                                    <i class="fas fa-download" aria-hidden="true"></i>
+                                    <span data-i18n="video.download">Download the video</span>
+                                </a>
+                            </p>
                         </div>
                     </video>
+                    <!-- Hidden description for screen readers -->
+                    <span id="video-description" class="sr-only">
+                        A video presentation showcasing the story and journey of EmpathicWeb, 
+                        highlighting the fusion of human-centric design and web development.
+                    </span>
                 </div>
+                <p class="video-caption" data-i18n="video.caption">
+                    Discover the journey behind EmpathicWeb - where technology meets human emotion
+                </p>
             </section>
 
             <section id="gallery" class="gallery-section">
@@ -249,7 +286,7 @@
 
                     <div class="gallery-item">
                         <div class="gallery-image-container">
-                            <img src="images/My passions.jpg" alt="Creative Passions" class="gallery-image">
+                            <img src="images/my-passions.jpg" alt="Creative Passions" class="gallery-image">
                             <div class="gallery-overlay">
                                 <span class="gallery-action-btn">Discover</span>
                             </div>
@@ -393,7 +430,7 @@
 
                     <div class="gallery-item">
                         <div class="gallery-image-container">
-                            <img src="images/One of my best part.jpg" alt="Peak Performance" class="gallery-image">
+                            <img src="images/one-of-my-best-part.jpg" alt="Peak Performance" class="gallery-image">
                             <div class="gallery-overlay">
                                 <span class="gallery-action-btn">Excel</span>
                             </div>
@@ -540,6 +577,12 @@
                             data-i18n="social.tiktok">Connect</a>
                     </div>
                     <div class="social-card">
+                        <i class="fab fa-youtube"></i>
+                        <h3>YouTube</h3>
+                        <a href="https://www.youtube.com/@EduardGildardoPerezFrancq" target="_blank" rel="noopener noreferrer"
+                            data-i18n="social.youtube">Connect</a>
+                    </div>
+                    <div class="social-card">
                         <i class="fas fa-envelope"></i>
                         <h3>Email</h3>
                         <a href="mailto:eduardgildardoperezfranco@empathicweb.online?subject=EmpathicWeb%20About%20Page%20Inquiry"
@@ -568,11 +611,15 @@
             </nav>
 
             <div class="footer-info">
-                <p class="footer-copyright">© 2025 Eduard Gildardo Pérez Franco. All rights reserved.</p>
+                <p class="footer-copyright">© 2026 Eduard Gildardo Pérez Franco. All rights reserved.</p>
                 <p class="footer-links">
                     <a href="../legal.html">Legal Information</a>
                     <span class="footer-separator">•</span>
-                    <span class="footer-version">Version 0.1.1</span>
+                    <span class="footer-version" title="SemVer: Major.Minor.Patch | 0=Major features, 3=Feature updates, 0=Bug fixes">v0.3.0</span>
+                    <span class="footer-separator">•</span>
+                    <span class="footer-updated">Updated: March 2026</span>
+                    <span class="footer-separator">•</span>
+                    <span class="footer-build">Static Build</span>
                 </p>
             </div>
         </div>
@@ -582,8 +629,6 @@
     <script src="../enhanced-navigation.js"></script>
     <script src="../Script.js"></script>
     <script src="../navbar-highlight.js"></script>
-    <script src="../elegant-dropdown.js"></script>
-    <link rel="stylesheet" href="../elegant-enhancements.css">
     <link rel="stylesheet" href="../title-card-contrast.css">
 </body>
 

@@ -39,6 +39,7 @@ const translations = {
     'social.twitter': 'Twitter',
     'social.github': 'GitHub',
     'social.tiktok': 'TikTok',
+    'social.youtube': 'YouTube',
 
     // cv.html
     'cv.title': 'CV - Eduard Gildardo Pérez Franco',
@@ -200,6 +201,7 @@ const translations = {
     'social.twitter': 'Twitter',
     'social.github': 'GitHub',
     'social.tiktok': 'TikTok',
+    'social.youtube': 'YouTube',
 
     // cv.html (current Spanish content)
     'cv.title': 'CV - Eduard Gildardo Pérez Franco',
@@ -355,6 +357,7 @@ const translations = {
     'social.twitter': 'Twitter',
     'social.github': 'GitHub',
     'social.tiktok': 'TikTok',
+    'social.youtube': 'YouTube',
     'cv.title': 'CV - Eduard Gildardo Pérez Franco',
     'cv.name': 'Eduard Gildardo Pérez Franco',
     'profile.title': 'Profil professionnel',

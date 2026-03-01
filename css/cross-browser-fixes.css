@@ -1,0 +1,486 @@
+/**
+ * Cross-Browser Responsive Fixes
+ * Compatible with: Safari, Chrome, Firefox, Edge, Opera, macOS, iOS
+ * 
+ * This file addresses known browser-specific responsive issues:
+ * - Safari flexbox/grid bugs
+ * - macOS scroll behavior
+ * - iOS Safari viewport issues
+ * - Legacy browser fallbacks
+ */
+
+/* ============================================
+   CSS Custom Properties for Unified System
+   ============================================ */
+:root {
+    /* Breakpoints */
+    --breakpoint-mobile: 480px;
+    --breakpoint-tablet: 768px;
+    --breakpoint-desktop: 1024px;
+    --breakpoint-wide: 1200px;
+    
+    /* Container widths */
+    --container-max-width: 1200px;
+    --container-padding: clamp(1rem, 3vw, 2rem);
+    
+    /* Spacing scale */
+    --spacing-xs: clamp(0.25rem, 0.5vw, 0.5rem);
+    --spacing-sm: clamp(0.5rem, 1vw, 1rem);
+    --spacing-md: clamp(1rem, 2vw, 1.5rem);
+    --spacing-lg: clamp(1.5rem, 3vw, 2rem);
+    --spacing-xl: clamp(2rem, 4vw, 3rem);
+    
+    /* Grid minimum widths */
+    --grid-min-mobile: 150px;
+    --grid-min-tablet: 220px;
+    --grid-min-desktop: 280px;
+}
+
+/* ============================================
+   Safari & WebKit Specific Fixes
+   ============================================ */
+
+/* Fix Safari flexbox bug with min-height - only for specific containers */
+@supports (-webkit-touch-callout: none) {
+    /* Safari only - be more specific to avoid affecting animations */
+    .flex-container,
+    .grid-container {
+        -webkit-flex-basis: auto;
+        flex-basis: auto;
+    }
+    
+    /* Fix Safari grid gap issues - only for specific grid containers */
+    .grid-container {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}
+
+/* Safari 14+ specific grid fix */
+@media not all and (resolution >= 0.001dpcm) {
+    @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+        .grid-container {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 100%;
+        }
+    }
+}
+
+/* ============================================
+   iOS Safari Specific Fixes
+   ============================================ */
+
+/* Fix iOS Safari 100vh issue - only for specific classes */
+@supports (-webkit-touch-callout: none) {
+    .full-height,
+    .hero-section {
+        height: -webkit-fill-available;
+        min-height: -webkit-fill-available;
+    }
+}
+
+/* Prevent iOS zoom on form inputs (accessibility-friendly) */
+@supports (-webkit-touch-callout: none) {
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"],
+    input[type="search"],
+    textarea,
+    select {
+        font-size: max(16px, 1rem);
+    }
+}
+
+/* Fix iOS momentum scrolling - only for specific containers */
+@supports (-webkit-overflow-scrolling: touch) {
+    .scroll-container,
+    .overflow-auto {
+        -webkit-overflow-scrolling: touch;
+        overflow-y: auto;
+    }
+}
+
+/* ============================================
+   macOS Safari Specific Fixes
+   ============================================ */
+
+/* Fix macOS Safari scrollbar visibility */
+@media screen and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0) {
+    /* macOS Safari only */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* ============================================
+   Firefox Specific Fixes
+   ============================================ */
+
+@-moz-document url-prefix() {
+    /* Fix Firefox flexbox scrollbar issue - only for specific containers */
+    .flex-container {
+        min-height: -moz-min-content;
+    }
+    
+    /* Fix Firefox grid gap inheritance - only for specific containers */
+    .grid-container {
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}
+
+/* ============================================
+   Edge Legacy Fixes
+   ============================================ */
+
+/* Fix Edge grid auto-fit issue - only for specific containers */
+@supports (-ms-ime-align: auto) {
+    .grid-container {
+        display: grid;
+        display: -ms-grid;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}
+
+/* ============================================
+   Universal Cross-Browser Fixes
+   ============================================ */
+
+/* Prevent horizontal overflow universally */
+html {
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Universal box-sizing */
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Fix grid overflow on all browsers - but preserve animations */
+.grid-container {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Universal responsive grid pattern */
+.responsive-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-grid;
+    display: -ms-grid;
+    display: grid;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--grid-min-mobile)), 1fr));
+    gap: var(--spacing-md);
+    width: 100%;
+}
+
+/* ============================================
+   Container Queries Support (Modern Browsers)
+   ============================================ */
+
+/* Fallback for browsers without container queries support */
+@supports not (container-type: inline-size) {
+    .container-query-fallback {
+        width: 100%;
+        max-width: var(--container-max-width);
+        margin: 0 auto;
+        padding: var(--container-padding);
+    }
+}
+
+/* Container queries for modern browsers */
+@supports (container-type: inline-size) {
+    .card-container,
+    .component-container {
+        container-type: inline-size;
+        container-name: card;
+    }
+    
+    @container card (max-width: 400px) {
+        .card-content {
+            flex-direction: column;
+        }
+    }
+}
+
+/* ============================================
+   Responsive Image Fixes (All Browsers)
+   ============================================ */
+
+/* Universal responsive images - only apply max-width, preserve existing display */
+img,
+picture,
+video,
+canvas,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Fix Safari image rendering - only for static images, not animated elements */
+img:not([class*="animated"]):not([class*="float"]):not([class*="parallax"]) {
+    -webkit-backface-visibility: hidden;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+/* ============================================
+   Touch Device Optimizations
+   ============================================ */
+
+/* Improve touch targets (WCAG 2.1) */
+@media (pointer: coarse) {
+    a,
+    button,
+    input,
+    select,
+    textarea,
+    [role="button"],
+    .clickable {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Only remove transform on generic hover-effect class, not all hovers */
+    .hover-effect:hover {
+        transform: none;
+    }
+}
+
+/* ============================================
+   High DPI Display Fixes
+   ============================================ */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Fix sub-pixel rendering issues */
+    .border-fix {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+    
+    /* Sharper text on high DPI */
+    body {
+        -webkit-font-smoothing: subpixel-antialiased;
+    }
+}
+
+/* ============================================
+   Reduced Motion Support (Accessibility)
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    /* Only reduce motion for users who prefer it */
+    /* Note: We don't disable all animations as some are essential for UX */
+    html {
+        scroll-behavior: auto !important;
+    }
+    
+    /* Only disable purely decorative animations */
+    .decorative-animation,
+    .background-animation {
+        animation: none !important;
+    }
+}
+
+/* ============================================
+   Dark Mode Support
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-primary: #ffffff;
+        --text-secondary: #e0e0e0;
+        --background-primary: #121212;
+        --background-secondary: #1e1e1e;
+    }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+
+@media print {
+    *,
+    *::before,
+    *::after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+    
+    @page {
+        margin: 0.5cm;
+    }
+}
+
+/* ============================================
+   Legacy Browser Fallbacks
+   ============================================ */
+
+/* Fallback for browsers without CSS Grid - only for specific containers */
+@supports not (display: grid) {
+    .grid-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    
+    .grid-container > * {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 300px;
+        flex: 1 1 300px;
+        margin: 0.5rem;
+    }
+}
+
+/* Fallback for browsers without CSS min() - only for specific containers */
+@supports not (width: min(100%, 300px)) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    
+    @media (max-width: 320px) {
+        .grid-container {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+/* Fallback for browsers without CSS clamp() */
+@supports not (width: clamp(1rem, 2vw, 2rem)) {
+    :root {
+        --spacing-md: 1rem;
+    }
+    
+    @media (min-width: 768px) {
+        :root {
+            --spacing-md: 1.5rem;
+        }
+    }
+    
+    @media (min-width: 1200px) {
+        :root {
+            --spacing-md: 2rem;
+        }
+    }
+}
+
+/* ============================================
+   Safe Area Insets (iOS Notch Support)
+   ============================================ */
+
+@supports (padding: max(0px)) {
+    body {
+        padding-left: max(0px, env(safe-area-inset-left));
+        padding-right: max(0px, env(safe-area-inset-right));
+        padding-bottom: max(0px, env(safe-area-inset-bottom));
+    }
+    
+    .fixed-header,
+    header[style*="fixed"] {
+        padding-top: max(0px, env(safe-area-inset-top));
+    }
+    
+    .fixed-footer,
+    footer[style*="fixed"] {
+        padding-bottom: max(0px, env(safe-area-inset-bottom));
+    }
+}
+
+/* ============================================
+   Aspect Ratio Fallback
+   ============================================ */
+
+@supports not (aspect-ratio: 16/9) {
+    .aspect-ratio-16-9 {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
+        overflow: hidden;
+    }
+    
+    .aspect-ratio-16-9 > * {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .aspect-ratio-4-3 {
+        position: relative;
+        padding-bottom: 75%; /* 4:3 */
+        height: 0;
+        overflow: hidden;
+    }
+    
+    .aspect-ratio-4-3 > * {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* ============================================
+   Gap Property Fallback
+   ============================================ */
+
+@supports not (gap: 1rem) {
+    .grid-container {
+        margin: -0.5rem;
+    }
+    
+    .grid-container > * {
+        margin: 0.5rem;
+    }
+}

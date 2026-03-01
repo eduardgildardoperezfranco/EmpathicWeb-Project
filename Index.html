@@ -71,7 +71,8 @@
             "https://www.instagram.com/eduardgildardoperezfranco",
             "https://github.com/eduardgildardoperezfranco/EmpathicWeb",
             "https://www.tiktok.com/@eduardg.perezfranco",
-            "https://x.com/FEgpf"
+            "https://x.com/FEgpf",
+            "https://www.youtube.com/@EduardGildardoPerezFrancq"
         ],
         "address": {
             "@type": "PostalAddress",
@@ -113,7 +114,8 @@
         "knowsAbout": ["Web Development", "Cybersecurity", "Emotional Intelligence", "3D Web Design", "AI Integration", "Blockchain Development", "IoT Solutions", "Personal Security", "Bodyguard Services"],
         "sameAs": [
             "https://www.linkedin.com/in/eduard-perez-331470b7/",
-            "https://github.com/eduardgildardoperezfranco/EmpathicWeb"
+            "https://github.com/eduardgildardoperezfranco/EmpathicWeb",
+            "https://www.youtube.com/@EduardGildardoPerezFrancq"
         ]
     }
     </script>
@@ -176,6 +178,8 @@
     <link rel="stylesheet" href="enhanced-navigation.css">
     <link rel="stylesheet" href="Style.css">
     <link rel="stylesheet" href="projects-enhancement.css">
+    <!-- Cross-Browser Responsive Fixes (Safari, macOS, iOS, Firefox, Edge) -->
+    <link rel="stylesheet" href="css/cross-browser-fixes.css">
     <link rel="stylesheet" href="sections-enhancement.css">
     <!-- Font Awesome for social media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -245,25 +249,43 @@
         </div>
     </nav>
 
-    <!-- WhatsApp Floating Button -->
+    <!-- WhatsApp Floating Button - Chat Experience -->
     <div class="whatsapp-container">
         <div class="whatsapp-icon">
-            <a href="https://wa.me/573108005004" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/573108005004?text=Hi! I'm interested in your services. Can we chat?" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-whatsapp"></i>
             </a>
         </div>
         <div class="whatsapp-popup">
-            <p>I have cognition but I can not guess, talk with me!!!</p>
+            <button class="whatsapp-popup-close" onclick="this.parentElement.classList.add('closed')">&times;</button>
+            <div class="whatsapp-popup-header">
+                <div class="whatsapp-popup-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div>
+                    <div class="whatsapp-popup-name">EmpathicWeb</div>
+                    <div class="whatsapp-popup-status">Online</div>
+                </div>
+            </div>
+            <p>Hi there! 👋 Let's chat about your project</p>
+            <a href="https://wa.me/573108005004?text=Hi! I'm interested in your services. Can we chat?" target="_blank" rel="noopener noreferrer" class="whatsapp-popup-cta">
+                <i class="fab fa-whatsapp"></i> Chat now
+            </a>
         </div>
     </div>
 
     <div class="container" id="home">
         <!-- 3D Title -->
         <header class="title-container">
-            <h1 class="title-3d parallax-element " data-i18n="title">EmpathicWeb</h1>
-            <p class="subtitle parallax-element" data-i18n="subtitle"><span class="soft-skills">Soft Skills</span>,
-                <span class="protection">Protection</span> <span class="subtitle-word">and</span> <span
-                    class="development">Development</span>.</p>
+            <h1 class="title-3d parallax-element title-row" data-i18n="title">
+                <span>Protect.</span>
+                <span>Build.</span>
+                <span class="highlight-text">Care.</span>
+            </h1>
+            <p class="subtitle parallax-element" data-i18n="subtitle">
+                From operational precision to digital innovation.<br>
+                Where real-world experience meets modern technology.
+            </p>
 
         </header>
 
@@ -392,10 +414,9 @@
                         Let’s turn your vision into momentum. Reach out via email, phone, or social media—your next leap
                         forward starts with a conversation...📩</span>
                 </p>
-                <p data-i18n="contact.email"><i class="fas fa-envelope"></i> Email: <a
-                        href="mailto:eduardgildardoperezfranco@empathicweb.online?subject=EmpathicWeb%20Project%20Inquiry%20-%20Homepage">eduardgildardoperezfranco@empathicweb.online</a>
-                </p>
                 <ul class="social-links">
+                    <li><a href="mailto:eduardgildardoperezfranco@empathicweb.online" class="email-link"
+                            aria-label="Send us an email"><i class="fas fa-envelope"></i> Email</a></li>
                     <li><a href="https://www.linkedin.com/in/eduard-perez-331470b7/" target="_blank"
                             rel="noopener noreferrer" data-i18n="social.linkedin"><i class="fab fa-linkedin"></i>
                             LinkedIn</a></li>
@@ -414,6 +435,8 @@
                     </li>
                     <li><a href="https://www.tiktok.com/@eduardg.perezfranco" target="_blank" rel="noopener noreferrer"
                             data-i18n="social.tiktok"><i class="fab fa-tiktok"></i> TikTok</a></li>
+                    <li><a href="https://www.youtube.com/@EduardGildardoPerezFrancq" target="_blank" rel="noopener noreferrer"
+                            data-i18n="social.youtube"><i class="fab fa-youtube"></i> YouTube</a></li>
                 </ul>
                 <!-- Add form or links as needed -->
             </section>
@@ -437,11 +460,15 @@
             </nav>
 
             <div class="footer-info">
-                <p class="footer-copyright">© 2025 Eduard Gildardo Pérez Franco. All rights reserved.</p>
+                <p class="footer-copyright">© 2026 Eduard Gildardo Pérez Franco. All rights reserved.</p>
                 <p class="footer-links">
                     <a href="legal.html">Legal Information</a>
                     <span class="footer-separator">•</span>
-                    <span class="footer-version">Version 0.1.1</span>
+                    <span class="footer-version" title="SemVer: Major.Minor.Patch | 0=Major features, 3=Feature updates, 0=Bug fixes">v0.3.0</span>
+                    <span class="footer-separator">•</span>
+                    <span class="footer-updated">Updated: March 2026</span>
+                    <span class="footer-separator">•</span>
+                    <span class="footer-build">Static Build</span>
                 </p>
             </div>
         </div>
@@ -475,8 +502,6 @@
     <script src="enhanced-navigation.js"></script>
     <script src="Script.js"></script>
     <script src="navbar-highlight.js"></script>
-    <script src="elegant-dropdown.js"></script>
-    <link rel="stylesheet" href="title-card-contrast.css">
 </body>
 
 </html>

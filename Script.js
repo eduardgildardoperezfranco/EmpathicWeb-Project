@@ -704,3 +704,101 @@ function loadImage(img) {
 
 // Initialize enhanced animations
 document.addEventListener('DOMContentLoaded', setupEnhancedAnimations);
+
+/* ================================
+   RESPONSIVE VIDEO CONTAINER
+   "Our Story in Motion" Enhancement
+   ================================ */
+
+function setupResponsiveVideo() {
+  const videoSection = document.querySelector('.about-video-section');
+  if (!videoSection) return;
+  
+  const videoContainer = videoSection.querySelector('.video-container');
+  const video = videoContainer?.querySelector('video');
+  
+  if (!video || !videoContainer) return;
+  
+  // Track video play state for UI updates
+  video.addEventListener('play', () => {
+    videoContainer.classList.add('playing');
+  });
+  
+  video.addEventListener('pause', () => {
+    videoContainer.classList.remove('playing');
+  });
+  
+  video.addEventListener('ended', () => {
+    videoContainer.classList.remove('playing');
+  });
+  
+  // Handle video loading states
+  video.addEventListener('waiting', () => {
+    videoContainer.classList.add('buffering');
+  });
+  
+  video.addEventListener('canplay', () => {
+    videoContainer.classList.remove('buffering');
+  });
+  
+  // Intersection Observer for lazy loading and autoplay optimization
+  if ('IntersectionObserver' in window) {
+    const videoObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Video is in view - preload if needed
+          if (video.preload === 'none') {
+            video.preload = 'metadata';
+          }
+          videoContainer.classList.add('in-view');
+        } else {
+          videoContainer.classList.remove('in-view');
+          // Pause video when out of view for better performance
+          if (!video.paused) {
+            video.pause();
+          }
+        }
+      });
+    }, {
+      threshold: 0.25,
+      rootMargin: '100px'
+    });
+    
+    videoObserver.observe(videoContainer);
+  }
+  
+  // Handle fullscreen changes
+  document.addEventListener('fullscreenchange', () => {
+    if (document.fullscreenElement === video) {
+      videoContainer.classList.add('fullscreen');
+    } else {
+      videoContainer.classList.remove('fullscreen');
+    }
+  });
+  
+  // Keyboard accessibility
+  video.addEventListener('keydown', (e) => {
+    switch(e.key) {
+      case ' ':
+      case 'k':
+        e.preventDefault();
+        video.paused ? video.play() : video.pause();
+        break;
+      case 'f':
+        e.preventDefault();
+        if (document.fullscreenElement) {
+          document.exitFullscreen();
+        } else {
+          video.requestFullscreen();
+        }
+        break;
+      case 'm':
+        e.preventDefault();
+        video.muted = !video.muted;
+        break;
+    }
+  });
+}
+
+// Initialize video functionality
+document.addEventListener('DOMContentLoaded', setupResponsiveVideo);
