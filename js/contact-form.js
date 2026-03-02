@@ -19,47 +19,56 @@
     };
 
     // ============================================
-    // Service Pricing Data
+    // Service Pricing Data (in USD - base currency)
     // ============================================
     const SERVICE_PRICES = {
         // Web Development
-        'basic-web': { name: 'Basic Website', price: 1500000, category: 'web' },
-        'business-web': { name: 'Business Website', price: 2500000, category: 'web' },
-        'ecommerce': { name: 'E-commerce Platform', price: 4000000, category: 'web' },
-        'cms': { name: 'Custom CMS', price: 3500000, category: 'web' },
-        
-        // 3D Design - Basic
-        '3d-logo': { name: '3D Logo Design', price: 1200000, category: '3d-basic' },
-        '3d-simple': { name: 'Simple 3D Models', price: 800000, category: '3d-basic' },
-        '3d-icons': { name: '3D Icons & Graphics', price: 600000, category: '3d-basic' },
-        '3d-animation': { name: 'Basic 3D Animation', price: 1000000, category: '3d-basic' },
-        
-        // 3D Design - Interactive
-        '3d-interactive': { name: 'Interactive 3D Elements', price: 2000000, category: '3d-interactive' },
-        '3d-product': { name: '3D Product Visualization', price: 2500000, category: '3d-interactive' },
-        '3d-navigation': { name: 'Interactive 3D Navigation', price: 3000000, category: '3d-interactive' },
-        '3d-ui': { name: '3D UI Components', price: 2800000, category: '3d-interactive' },
-        '3d-gallery': { name: 'Immersive 3D Galleries', price: 3500000, category: '3d-interactive' },
-        
-        // 3D Design - Advanced
-        '3d-environment': { name: 'Full 3D Environment', price: 8000000, category: '3d-advanced' },
-        '3d-showroom': { name: '3D Virtual Showroom', price: 6000000, category: '3d-advanced' },
-        '3d-game': { name: '3D Game Integration', price: 12000000, category: '3d-advanced' },
-        '3d-vr-ar': { name: 'VR/AR Experience', price: 18000000, category: '3d-advanced' },
-        
-        // Additional Services
-        'maintenance': { name: 'Website Maintenance', price: 500000, category: 'services', recurring: true },
-        'cybersecurity': { name: 'Cybersecurity Consulting', price: 1000000, category: 'services' },
-        'security': { name: 'Personal Security', price: 300000, category: 'services', recurring: true },
-        'training': { name: 'Empathy Training', price: 800000, category: 'services' },
-        
-        // Features
-        'advanced-seo': { name: 'Advanced SEO', price: 300000, category: 'features' },
-        'performance': { name: 'Performance Optimization', price: 300000, category: 'features' },
-        'ai-integration': { name: 'AI Integration', price: 1200000, category: 'features' },
-        'multilingual': { name: 'Multilingual Support', price: 350000, category: 'features' },
-        'analytics': { name: 'Analytics Integration', price: 200000, category: 'features' }
+        'landing-page': { name: 'Landing Page', price: 150, category: 'web' },
+        'business-web': { name: 'Business Website', price: 350, category: 'web' },
+        'ecommerce': { name: 'Online Store', price: 800, category: 'web' },
+
+        // Design & Branding
+        'logo-branding': { name: 'Logo & Branding', price: 100, category: 'design' },
+        '3d-design': { name: '3D Design', price: 200, category: 'design' },
+        'social-content': { name: 'Social Content (10 posts)', price: 80, category: 'design' },
+
+        // Digital Marketing
+        'social-management': { name: 'Social Media Management', price: 280, category: 'marketing', recurring: true },
+        'seo': { name: 'SEO Positioning', price: 200, category: 'marketing', recurring: true },
+        'google-ads': { name: 'Google Ads Management', price: 160, category: 'marketing', recurring: true },
+        'email-marketing': { name: 'Email Marketing Setup', price: 120, category: 'marketing' },
+
+        // Support & Security
+        'maintenance': { name: 'Website Maintenance', price: 60, category: 'support', recurring: true },
+        'security-audit': { name: 'Security Audit', price: 120, category: 'support' },
+        'training': { name: 'Training & Consulting', price: 50, category: 'support' },
+        'copywriting': { name: 'Copywriting', price: 40, category: 'support' },
+        'audio-production': { name: 'Audio Production', price: 100, category: 'support' },
+
+        // Add-ons (category: 'features' to match HTML name="features")
+        'extra-pages': { name: 'Extra Pages', price: 30, category: 'features' },
+        'extra-products': { name: 'Extra Products (10)', price: 20, category: 'features' },
+        'priority-support': { name: 'Priority Support', price: 50, category: 'features', recurring: true },
+        'rush-delivery': { name: 'Rush Delivery', price: 100, category: 'features' },
+        'source-files': { name: 'Source Files', price: 50, category: 'features' }
     };
+
+    // Currency conversion
+    const EXCHANGE_RATE = 4000; // 1 USD = 4000 COP
+    const STORAGE_KEY = 'preferredCurrency';
+
+    function formatPrice(usdAmount, currency) {
+        if (currency === 'USD') {
+            return `$${usdAmount} USD`;
+        } else {
+            const copAmount = Math.round(usdAmount * EXCHANGE_RATE / 1000) * 1000;
+            return `${copAmount.toLocaleString('es-CO')} COP`;
+        }
+    }
+
+    function getCurrentCurrency() {
+        return localStorage.getItem(STORAGE_KEY) || 'USD';
+    }
 
     // Timeline multipliers
     const TIMELINE_MULTIPLIERS = {
@@ -253,21 +262,21 @@
         let subtotal = 0;
         const breakdown = [];
 
-        // Calculate services
+        // Calculate services (prices are in USD)
         state.selectedServices.forEach(serviceId => {
             const service = SERVICE_PRICES[serviceId];
             if (service) {
                 subtotal += service.price;
-                breakdown.push({ name: service.name, price: service.price });
+                breakdown.push({ name: service.name, usdPrice: service.price });
             }
         });
 
-        // Calculate features
+        // Calculate features (prices are in USD)
         state.selectedFeatures.forEach(featureId => {
             const feature = SERVICE_PRICES[featureId];
             if (feature) {
                 subtotal += feature.price;
-                breakdown.push({ name: feature.name, price: feature.price });
+                breakdown.push({ name: feature.name, usdPrice: feature.price });
             }
         });
 
@@ -277,22 +286,29 @@
             multiplier = TIMELINE_MULTIPLIERS[state.timeline];
         }
 
+        // Store total in USD
         state.total = Math.round(subtotal * multiplier);
+        state.breakdown = breakdown;
+        state.multiplier = multiplier;
 
         // Update display
-        updateBudgetDisplay(breakdown, multiplier);
+        updateBudgetDisplay();
     }
 
-    function updateBudgetDisplay(breakdown, multiplier) {
+    function updateBudgetDisplay() {
+        const currency = getCurrentCurrency();
+        const breakdown = state.breakdown || [];
+        const multiplier = state.multiplier || 1;
+
         if (elements.budgetAmount) {
-            elements.budgetAmount.textContent = state.total.toLocaleString() + ' COP';
+            elements.budgetAmount.textContent = formatPrice(state.total, currency);
         }
 
         if (elements.budgetBreakdown && breakdown.length > 0) {
             let html = breakdown.map(item => `
                 <div class="budget-item">
                     <span>${item.name}</span>
-                    <span>${item.price.toLocaleString()} COP</span>
+                    <span>${formatPrice(item.usdPrice, currency)}</span>
                 </div>
             `).join('');
 
@@ -310,6 +326,9 @@
             elements.budgetBreakdown.innerHTML = '<p style="text-align: center; opacity: 0.6;">Select services to see estimate</p>';
         }
     }
+
+    // Refresh display when currency changes
+    window.refreshBudgetDisplay = updateBudgetDisplay;
 
     // ============================================
     // Validation
@@ -516,7 +535,7 @@ ${services.length > 0 ? services.map(s => `• ${s}`).join('\n') : '• General 
 
 ${features.length > 0 ? `\nADDITIONAL FEATURES:\n${features.map(f => `• ${f}`).join('\n')}` : ''}
 
-${state.total > 0 ? `\nESTIMATED BUDGET: ${state.total.toLocaleString()} COP` : ''}
+${state.total > 0 ? `\nESTIMATED BUDGET: $${state.total} USD (~${(state.total * EXCHANGE_RATE).toLocaleString('es-CO')} COP)` : ''}
 
 PROJECT DESCRIPTION:
 ${elements.message.value}
@@ -544,7 +563,7 @@ Hello! I'm interested in discussing a project.
 
 ${services.length > 0 ? `*Selected Services:*\n${services.map(s => `• ${s}`).join('\n')}` : '*Inquiry Type:* General consultation'}
 
-${state.total > 0 ? `*Estimated Budget:* ${state.total.toLocaleString()} COP` : ''}
+${state.total > 0 ? `*Estimated Budget:* $${state.total} USD (~${(state.total * EXCHANGE_RATE).toLocaleString('es-CO')} COP)` : ''}
 
 *Message:*
 ${elements.message.value}

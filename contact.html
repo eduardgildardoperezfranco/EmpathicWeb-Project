@@ -218,29 +218,49 @@
                                     <div class="section-icon blue">
                                         <i class="fas fa-cogs"></i>
                                     </div>
-                                    <div>
+                                <div>
                                         <h3 class="section-title">Service Selection</h3>
-                                        <p class="section-subtitle">Choose your services (optional - we can discuss later)</p>
+                                        <p class="section-subtitle">Choose your services. Toggle USD/COP to see prices in your preferred currency.</p>
                                     </div>
+                                </div>
+
+                                <!-- Currency Toggle -->
+                                <div class="currency-toggle-container" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding: 12px 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 50px;">
+                                    <span style="color: #E0F7FA; font-size: 0.9rem;"><i class="fas fa-coins" style="color: #00E5FF; margin-right: 8px;"></i>Prices shown in:</span>
+                                    <div class="currency-toggle" style="display: inline-flex; align-items: center; gap: 10px;">
+                                        <span class="currency-label" data-currency="USD" style="color: #E0F7FA; font-size: 0.85rem; font-weight: 600; opacity: 1;">USD</span>
+                                        <button type="button" class="toggle-switch" id="currencyToggle" aria-label="Toggle currency" style="position: relative; width: 44px; height: 24px; background: linear-gradient(135deg, #00A8FF, #00E5FF); border: none; border-radius: 12px; cursor: pointer; transition: all 0.3s ease;">
+                                            <span class="toggle-knob" style="position: absolute; top: 2px; left: 2px; width: 20px; height: 20px; background: white; border-radius: 50%; transition: transform 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></span>
+                                        </button>
+                                        <span class="currency-label" data-currency="COP" style="color: #E0F7FA; font-size: 0.85rem; font-weight: 600; opacity: 0.5;">COP</span>
+                                    </div>
+                                </div>
+
+                                <!-- Services Catalog Invitation -->
+                                <div class="services-catalog-invite" style="background: rgba(0, 168, 255, 0.1); border: 1px solid rgba(0, 168, 255, 0.3); border-radius: 8px; padding: 15px 20px; margin-bottom: 20px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+                                    <i class="fas fa-lightbulb" style="color: #00E5FF; font-size: 1.2rem;"></i>
+                                    <span style="color: #E0F7FA; font-size: 0.95rem;">
+                                        Not sure what you need? <a href="services-catalog.html" style="color: #00E5FF; text-decoration: underline; font-weight: 500;">Explore our Services Catalog</a> to find the perfect solution for your project.
+                                    </span>
                                 </div>
 
                                 <!-- Service Category Tabs -->
                                 <div class="service-tabs">
                                     <button type="button" class="service-tab active" data-tab="web">
                                         <i class="fas fa-globe"></i>
-                                        <span>Web Development</span>
+                                        <span>Web Dev</span>
                                     </button>
                                     <button type="button" class="service-tab" data-tab="3d-basic">
-                                        <i class="fas fa-cube"></i>
-                                        <span>3D Design</span>
+                                        <i class="fas fa-palette"></i>
+                                        <span>Design</span>
                                     </button>
                                     <button type="button" class="service-tab" data-tab="services">
-                                        <i class="fas fa-shield-alt"></i>
-                                        <span>Services</span>
+                                        <i class="fas fa-bullhorn"></i>
+                                        <span>Marketing</span>
                                     </button>
                                     <button type="button" class="service-tab" data-tab="features">
-                                        <i class="fas fa-puzzle-piece"></i>
-                                        <span>Features</span>
+                                        <i class="fas fa-plus-circle"></i>
+                                        <span>Add-ons</span>
                                     </button>
                                 </div>
 
@@ -248,16 +268,16 @@
                                 <div id="panel-web" class="service-panel active">
                                     <div class="service-options">
                                         <label class="service-option">
-                                            <input type="checkbox" name="services" value="basic-web">
+                                            <input type="checkbox" name="services" value="landing-page">
                                             <div class="service-option-content">
                                                 <div class="service-option-header">
                                                     <span class="service-option-name">
                                                         <i class="fas fa-laptop-code"></i>
-                                                        Basic Website
+                                                        Landing Page
                                                     </span>
-                                                    <span class="service-option-price">1,500,000 COP</span>
+                                                    <span class="service-option-price" data-usd-price="150">$150 USD</span>
                                                 </div>
-                                                <span class="service-option-desc">5 pages, responsive, basic SEO</span>
+                                                <span class="service-option-desc">Single page, lead generation, mobile-first</span>
                                             </div>
                                         </label>
 
@@ -269,9 +289,9 @@
                                                         <i class="fas fa-building"></i>
                                                         Business Website
                                                     </span>
-                                                    <span class="service-option-price">2,500,000 COP</span>
+                                                    <span class="service-option-price" data-usd-price="350">$350 USD</span>
                                                 </div>
-                                                <span class="service-option-desc">10+ pages, advanced features</span>
+                                                <span class="service-option-desc">Up to 5 pages, premium design, SEO ready</span>
                                             </div>
                                         </label>
 
@@ -281,94 +301,122 @@
                                                 <div class="service-option-header">
                                                     <span class="service-option-name">
                                                         <i class="fas fa-shopping-cart"></i>
-                                                        E-commerce
+                                                        Online Store
                                                     </span>
-                                                    <span class="service-option-price">4,000,000 COP</span>
+                                                    <span class="service-option-price" data-usd-price="800">$800 USD</span>
                                                 </div>
-                                                <span class="service-option-desc">Full online store, payments</span>
-                                            </div>
-                                        </label>
-
-                                        <label class="service-option">
-                                            <input type="checkbox" name="services" value="cms">
-                                            <div class="service-option-content">
-                                                <div class="service-option-header">
-                                                    <span class="service-option-name">
-                                                        <i class="fas fa-edit"></i>
-                                                        Custom CMS
-                                                    </span>
-                                                    <span class="service-option-price">3,500,000 COP</span>
-                                                </div>
-                                                <span class="service-option-desc">Content management system</span>
+                                                <span class="service-option-desc">Full e-commerce, 30 products, payments</span>
                                             </div>
                                         </label>
                                     </div>
                                 </div>
 
-                                <!-- 3D Design Panel -->
+                                <!-- Design Panel -->
                                 <div id="panel-3d-basic" class="service-panel">
                                     <div class="service-options">
                                         <label class="service-option">
-                                            <input type="checkbox" name="services" value="3d-logo">
+                                            <input type="checkbox" name="services" value="logo-branding">
+                                            <div class="service-option-content">
+                                                <div class="service-option-header">
+                                                    <span class="service-option-name">
+                                                        <i class="fas fa-pen-nib"></i>
+                                                        Logo & Branding
+                                                    </span>
+                                                    <span class="service-option-price" data-usd-price="100">$100 USD</span>
+                                                </div>
+                                                <span class="service-option-desc">3 concepts, vector files, full rights</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="service-option">
+                                            <input type="checkbox" name="services" value="3d-design">
                                             <div class="service-option-content">
                                                 <div class="service-option-header">
                                                     <span class="service-option-name">
                                                         <i class="fas fa-cube"></i>
-                                                        3D Logo Design
+                                                        3D Design
                                                     </span>
-                                                    <span class="service-option-price">1,200,000 COP</span>
+                                                    <span class="service-option-price" data-usd-price="200">$200+ USD</span>
                                                 </div>
-                                                <span class="service-option-desc">Animated 3D logos</span>
+                                                <span class="service-option-desc">3D elements, animations, interactive</span>
                                             </div>
                                         </label>
 
                                         <label class="service-option">
-                                            <input type="checkbox" name="services" value="3d-interactive">
+                                            <input type="checkbox" name="services" value="social-content">
                                             <div class="service-option-content">
                                                 <div class="service-option-header">
                                                     <span class="service-option-name">
-                                                        <i class="fas fa-mouse-pointer"></i>
-                                                        Interactive 3D
+                                                        <i class="fas fa-photo-video"></i>
+                                                        Social Content
                                                     </span>
-                                                    <span class="service-option-price">2,000,000 COP</span>
+                                                    <span class="service-option-price" data-usd-price="80">$80 USD</span>
                                                 </div>
-                                                <span class="service-option-desc">3D interactions, hover effects</span>
-                                            </div>
-                                        </label>
-
-                                        <label class="service-option">
-                                            <input type="checkbox" name="services" value="3d-environment">
-                                            <div class="service-option-content">
-                                                <div class="service-option-header">
-                                                    <span class="service-option-name">
-                                                        <i class="fas fa-globe"></i>
-                                                        Full 3D Environment
-                                                    </span>
-                                                    <span class="service-option-price">8,000,000 COP</span>
-                                                </div>
-                                                <span class="service-option-desc">Complete 3D virtual space</span>
-                                            </div>
-                                        </label>
-
-                                        <label class="service-option">
-                                            <input type="checkbox" name="services" value="3d-vr-ar">
-                                            <div class="service-option-content">
-                                                <div class="service-option-header">
-                                                    <span class="service-option-name">
-                                                        <i class="fas fa-vr-cardboard"></i>
-                                                        VR/AR Experience
-                                                    </span>
-                                                    <span class="service-option-price">18,000,000 COP</span>
-                                                </div>
-                                                <span class="service-option-desc">Virtual & augmented reality</span>
+                                                <span class="service-option-desc">10 custom graphics, branded, ready to post</span>
                                             </div>
                                         </label>
                                     </div>
                                 </div>
 
-                                <!-- Services Panel -->
+                                <!-- Marketing & Support Panel -->
                                 <div id="panel-services" class="service-panel">
                                     <div class="service-options">
+                                        <label class="service-option">
+                                            <input type="checkbox" name="services" value="social-management">
+                                            <div class="service-option-content">
+                                                <div class="service-option-header">
+                                                    <span class="service-option-name">
+                                                        <i class="fab fa-instagram"></i>
+                                                        Social Media Management
+                                                    </span>
+                                                    <span class="service-option-price" data-usd-price="280">$280 USD/mo</span>
+                                                </div>
+                                                <span class="service-option-desc">12 posts/month, engagement, growth</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="service-option">
+                                            <input type="checkbox" name="services" value="seo">
+                                            <div class="service-option-content">
+                                                <div class="service-option-header">
+                                                    <span class="service-option-name">
+                                                        <i class="fas fa-search"></i>
+                                                        SEO Positioning
+                                                    </span>
+                                                    <span class="service-option-price" data-usd-price="200">$200 USD/mo</span>
+                                                </div>
+                                                <span class="service-option-desc">Google ranking, organic traffic</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="service-option">
+                                            <input type="checkbox" name="services" value="google-ads">
+                                            <div class="service-option-content">
+                                                <div class="service-option-header">
+                                                    <span class="service-option-name">
+                                                        <i class="fas fa-bullseye"></i>
+                                                        Google Ads
+                                                    </span>
+                                                    <span class="service-option-price" data-usd-price="160">$160 USD/mo</span>
+                                                </div>
+                                                <span class="service-option-desc">Campaign management (ad budget separate)</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="service-option">
+                                            <input type="checkbox" name="services" value="email-marketing">
+                                            <div class="service-option-content">
+                                                <div class="service-option-header">
+                                                    <span class="service-option-name">
+                                                        <i class="fas fa-envelope"></i>
+                                                        Email Marketing
+                                                    </span>
+                                                    <span class="service-option-price" data-usd-price="120">$120 USD</span>
+                                                </div>
+                                                <span class="service-option-desc">Setup + first campaign, automation</span>
+                                            </div>
+                                        </label>
+
                                         <label class="service-option">
                                             <input type="checkbox" name="services" value="maintenance">
                                             <div class="service-option-content">
@@ -377,37 +425,23 @@
                                                         <i class="fas fa-tools"></i>
                                                         Maintenance
                                                     </span>
-                                                    <span class="service-option-price">500,000 COP/mo</span>
+                                                    <span class="service-option-price" data-usd-price="60">$60 USD/mo</span>
                                                 </div>
-                                                <span class="service-option-desc">Updates, backups, support</span>
+                                                <span class="service-option-desc">Updates, backups, 24/7 support</span>
                                             </div>
                                         </label>
 
                                         <label class="service-option">
-                                            <input type="checkbox" name="services" value="cybersecurity">
+                                            <input type="checkbox" name="services" value="security-audit">
                                             <div class="service-option-content">
                                                 <div class="service-option-header">
                                                     <span class="service-option-name">
                                                         <i class="fas fa-shield-alt"></i>
-                                                        Cybersecurity
+                                                        Security Audit
                                                     </span>
-                                                    <span class="service-option-price">1,000,000 COP</span>
+                                                    <span class="service-option-price" data-usd-price="120">$120 USD</span>
                                                 </div>
-                                                <span class="service-option-desc">Security audit, protection</span>
-                                            </div>
-                                        </label>
-
-                                        <label class="service-option">
-                                            <input type="checkbox" name="services" value="security">
-                                            <div class="service-option-content">
-                                                <div class="service-option-header">
-                                                    <span class="service-option-name">
-                                                        <i class="fas fa-user-shield"></i>
-                                                        Personal Security
-                                                    </span>
-                                                    <span class="service-option-price">300,000 COP/day</span>
-                                                </div>
-                                                <span class="service-option-desc">Executive protection</span>
+                                                <span class="service-option-desc">Vulnerability scan, protection setup</span>
                                             </div>
                                         </label>
 
@@ -416,82 +450,115 @@
                                             <div class="service-option-content">
                                                 <div class="service-option-header">
                                                     <span class="service-option-name">
-                                                        <i class="fas fa-heart"></i>
-                                                        Empathy Training
+                                                        <i class="fas fa-chalkboard-teacher"></i>
+                                                        Training
                                                     </span>
-                                                    <span class="service-option-price">800,000 COP</span>
+                                                    <span class="service-option-price" data-usd-price="50">$50 USD/hr</span>
                                                 </div>
-                                                <span class="service-option-desc">Emotional intelligence</span>
+                                                <span class="service-option-desc">Digital skills, personalized sessions</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="service-option">
+                                            <input type="checkbox" name="services" value="copywriting">
+                                            <div class="service-option-content">
+                                                <div class="service-option-header">
+                                                    <span class="service-option-name">
+                                                        <i class="fas fa-pen-fancy"></i>
+                                                        Copywriting
+                                                    </span>
+                                                    <span class="service-option-price" data-usd-price="40">$40 USD/page</span>
+                                                </div>
+                                                <span class="service-option-desc">SEO-optimized content that sells</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="service-option">
+                                            <input type="checkbox" name="services" value="audio-production">
+                                            <div class="service-option-content">
+                                                <div class="service-option-header">
+                                                    <span class="service-option-name">
+                                                        <i class="fas fa-microphone"></i>
+                                                        Audio Production
+                                                    </span>
+                                                    <span class="service-option-price" data-usd-price="100">$100+ USD</span>
+                                                </div>
+                                                <span class="service-option-desc">Voiceover, podcast, audio editing</span>
                                             </div>
                                         </label>
                                     </div>
                                 </div>
 
-                                <!-- Features Panel -->
+                                <!-- Add-ons Panel -->
                                 <div id="panel-features" class="service-panel">
                                     <div class="service-options">
                                         <label class="service-option">
-                                            <input type="checkbox" name="features" value="advanced-seo">
+                                            <input type="checkbox" name="features" value="extra-pages">
                                             <div class="service-option-content">
                                                 <div class="service-option-header">
                                                     <span class="service-option-name">
-                                                        <i class="fas fa-search"></i>
-                                                        Advanced SEO
+                                                        <i class="fas fa-file-alt"></i>
+                                                        Extra Pages
                                                     </span>
-                                                    <span class="service-option-price">300,000 COP</span>
+                                                    <span class="service-option-price" data-usd-price="30">$30 USD/page</span>
                                                 </div>
+                                                <span class="service-option-desc">Additional website pages beyond package</span>
                                             </div>
                                         </label>
 
                                         <label class="service-option">
-                                            <input type="checkbox" name="features" value="performance">
+                                            <input type="checkbox" name="features" value="extra-products">
                                             <div class="service-option-content">
                                                 <div class="service-option-header">
                                                     <span class="service-option-name">
-                                                        <i class="fas fa-tachometer-alt"></i>
-                                                        Performance
+                                                        <i class="fas fa-boxes"></i>
+                                                        Extra Products
                                                     </span>
-                                                    <span class="service-option-price">300,000 COP</span>
+                                                    <span class="service-option-price" data-usd-price="20">$20 USD/10 products</span>
                                                 </div>
+                                                <span class="service-option-desc">Beyond the 30 included in Online Store</span>
                                             </div>
                                         </label>
 
                                         <label class="service-option">
-                                            <input type="checkbox" name="features" value="ai-integration">
+                                            <input type="checkbox" name="features" value="priority-support">
                                             <div class="service-option-content">
                                                 <div class="service-option-header">
                                                     <span class="service-option-name">
-                                                        <i class="fas fa-robot"></i>
-                                                        AI Integration
+                                                        <i class="fas fa-headset"></i>
+                                                        Priority Support
                                                     </span>
-                                                    <span class="service-option-price">1,200,000 COP</span>
+                                                    <span class="service-option-price" data-usd-price="50">$50 USD/mo</span>
                                                 </div>
+                                                <span class="service-option-desc">1-hour response time, dedicated line</span>
                                             </div>
                                         </label>
 
                                         <label class="service-option">
-                                            <input type="checkbox" name="features" value="multilingual">
+                                            <input type="checkbox" name="features" value="rush-delivery">
                                             <div class="service-option-content">
                                                 <div class="service-option-header">
                                                     <span class="service-option-name">
-                                                        <i class="fas fa-language"></i>
-                                                        Multilingual
+                                                        <i class="fas fa-bolt"></i>
+                                                        Rush Delivery
                                                     </span>
-                                                    <span class="service-option-price">350,000 COP</span>
+                                                    <span class="service-option-price" data-usd-price="100">$100 USD</span>
                                                 </div>
+                                                <span class="service-option-desc">Priority scheduling, faster turnaround</span>
                                             </div>
                                         </label>
 
                                         <label class="service-option">
-                                            <input type="checkbox" name="features" value="analytics">
+                                            <input type="checkbox" name="features" value="source-files">
                                             <div class="service-option-content">
                                                 <div class="service-option-header">
                                                     <span class="service-option-name">
-                                                        <i class="fas fa-chart-bar"></i>
-                                                        Analytics
+                                                        <i class="fas fa-file-code"></i>
+                                                        Source Files
                                                     </span>
-                                                    <span class="service-option-price">200,000 COP</span>
+                                                    <span class="service-option-price" data-usd-price="50">$50 USD</span>
                                                 </div>
+                                                <span class="service-option-desc">Editable design files, full documentation</span>
                                             </div>
                                         </label>
                                     </div>
@@ -538,7 +605,7 @@
                                             <i class="fas fa-calculator"></i>
                                             <span>Estimated Investment</span>
                                         </div>
-                                        <span id="budget-amount" class="budget-amount">0 COP</span>
+                                        <span id="budget-amount" class="budget-amount">$0 USD</span>
                                     </div>
                                     <div id="budget-breakdown" class="budget-breakdown">
                                         <p style="text-align: center; opacity: 0.6;">Select services to see estimate</p>
@@ -648,7 +715,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.facebook.com/EduardGildardoPerezFranco" target="_blank" rel="noopener" class="facebook-link">
+                                <a href="https://www.facebook.com/profile.php?id=100064804840004" target="_blank" rel="noopener" class="facebook-link">
                                     <i class="fab fa-facebook"></i>
                                     <span>Facebook</span>
                                 </a>
@@ -704,6 +771,83 @@
     <script src="js/contact-form.js"></script>
     <script src="translations.js"></script>
     <script src="enhanced-navigation.js"></script>
+
+    <!-- Currency Toggle Script -->
+    <script>
+    (function() {
+        'use strict';
+
+        const EXCHANGE_RATE = 4000; // 1 USD = 4000 COP
+        const STORAGE_KEY = 'preferredCurrency';
+
+        let currentCurrency = localStorage.getItem(STORAGE_KEY) || 'USD';
+
+        function formatPrice(usdPrice, currency) {
+            if (currency === 'USD') {
+                return `$${usdPrice} USD`;
+            } else {
+                const copPrice = Math.round(usdPrice * EXCHANGE_RATE / 1000) * 1000;
+                return `${copPrice.toLocaleString('es-CO')} COP`;
+            }
+        }
+
+        function updatePrices() {
+            const priceSpans = document.querySelectorAll('.service-option-price[data-usd-price]');
+            priceSpans.forEach(span => {
+                const usdPrice = parseInt(span.dataset.usdPrice);
+                if (usdPrice) {
+                    span.textContent = formatPrice(usdPrice, currentCurrency);
+                }
+            });
+
+            // Update budget display if it exists
+            const budgetAmount = document.getElementById('budget-amount');
+            if (budgetAmount && budgetAmount.dataset.usdTotal) {
+                const usdTotal = parseInt(budgetAmount.dataset.usdTotal);
+                budgetAmount.textContent = formatPrice(usdTotal, currentCurrency);
+            }
+        }
+
+        function toggleCurrency() {
+            currentCurrency = currentCurrency === 'USD' ? 'COP' : 'USD';
+            localStorage.setItem(STORAGE_KEY, currentCurrency);
+            applyCurrencyState();
+        }
+
+        function applyCurrencyState() {
+            const toggleBtn = document.getElementById('currencyToggle');
+            const knob = toggleBtn?.querySelector('.toggle-knob');
+            const usdLabel = document.querySelector('.currency-label[data-currency="USD"]');
+            const copLabel = document.querySelector('.currency-label[data-currency="COP"]');
+
+            if (currentCurrency === 'COP') {
+                knob.style.transform = 'translateX(20px)';
+                usdLabel.style.opacity = '0.5';
+                copLabel.style.opacity = '1';
+            } else {
+                knob.style.transform = 'translateX(0)';
+                usdLabel.style.opacity = '1';
+                copLabel.style.opacity = '0.5';
+            }
+
+            updatePrices();
+
+            // Refresh budget display if form has calculated values
+            if (window.refreshBudgetDisplay) {
+                window.refreshBudgetDisplay();
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleBtn = document.getElementById('currencyToggle');
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', toggleCurrency);
+                applyCurrencyState();
+            }
+        });
+    })();
+    </script>
 
     <!-- Psych Messages - Static Message Section -->
     <div class="psych-messages">

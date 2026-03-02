@@ -2558,6 +2558,118 @@ html {
     font-size: 1.1rem;
 }
 
+.pricing-note {
+    margin-top: 25px;
+    padding: 15px 25px;
+    background: rgba(0, 168, 255, 0.1);
+    border: 1px solid rgba(0, 168, 255, 0.3);
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pricing-note i {
+    color: var(--glow-color-1);
+    font-size: 1.1rem;
+}
+
+.pricing-note span {
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.pricing-note a {
+    color: var(--glow-color-2);
+    text-decoration: underline;
+    transition: color var(--transition-fast);
+}
+
+.pricing-note a:hover {
+    color: var(--glow-color-1);
+}
+
+@media (max-width: 768px) {
+    .pricing-note {
+        padding: 12px 18px;
+        margin: 20px 15px 0;
+    }
+    
+    .pricing-note span {
+        font-size: 0.9rem;
+    }
+}
+
+.payment-methods {
+    text-align: center;
+    margin: 3rem 0;
+    padding: 20px;
+}
+
+.payment-methods p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.payment-methods p i {
+    color: var(--glow-color-1);
+    margin-right: 8px;
+}
+
+.payment-methods div {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    font-size: 2rem;
+}
+
+.payment-methods i {
+    opacity: 0.8;
+    transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.payment-methods i:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.payment-methods span {
+    font-size: 0.9rem;
+    font-weight: bold;
+    background: rgba(255,255,255,0.1);
+    padding: 5px 12px;
+    border-radius: 6px;
+    transition: all var(--transition-fast);
+    cursor: default;
+}
+
+.payment-methods span:hover {
+    background: rgba(255,255,255,0.2);
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .payment-methods {
+        margin: 2rem 0;
+        padding: 15px;
+    }
+    
+    .payment-methods div {
+        gap: 20px;
+        font-size: 1.6rem;
+    }
+    
+    .payment-methods span {
+        font-size: 0.8rem;
+        padding: 4px 10px;
+    }
+}
+
 .catalog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));

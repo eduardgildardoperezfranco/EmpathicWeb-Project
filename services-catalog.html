@@ -1,54 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-lang>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional digital services: web development, branding, social media management, cybersecurity, digital marketing, 3D design, copywriting, and training.">
-    <title>Services Catalog | EmpathicWeb</title>
+    
+    <!-- Primary SEO Meta Tags -->
+    <meta name="description" content="Professional digital services: web development, branding, SEO, social media management, Google Ads, 3D design, and cybersecurity. Transparent pricing starting at $60 USD.">
+    <meta name="keywords" content="web development services, SEO services, social media management, Google Ads management, logo design, 3D design, website maintenance, cybersecurity audit, digital marketing, content creation, small business website, e-commerce development, professional web design Colombia">
+    <meta name="author" content="Eduard Gildardo Perez Franco">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://empathicweb.online/services-catalog.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://empathicweb.online/services-catalog.html">
+    <meta property="og:title" content="Services Catalog | EmpathicWeb - Digital Solutions">
+    <meta property="og:description" content="Professional web development, SEO, social media, and digital marketing services. Transparent pricing. Quality guaranteed.">
+    <meta property="og:image" content="https://empathicweb.online/assets/Logo/Logo_3d-brain.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="EmpathicWeb">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Services Catalog | EmpathicWeb">
+    <meta name="twitter:description" content="Professional web development, SEO, social media, and digital marketing services.">
+    <meta name="twitter:image" content="https://empathicweb.online/assets/Logo/Logo_3d-brain.png">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#010418">
+    <meta name="msapplication-TileColor" content="#010418">
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/Logo/Logo_3d-brain.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="assets/Logo/Logo_3d-brain.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="enhanced-navigation.css">
     <link rel="stylesheet" href="Style.css">
     <link rel="stylesheet" href="css/cross-browser-fixes.css">
+    <link rel="stylesheet" href="title-card-contrast.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title data-i18n="title">Services Catalog | EmpathicWeb - Digital Solutions</title>
 </head>
 
 <body>
+    <!-- Skip to content -->
+    <a href="#services" class="skip-to-content">Skip to main content</a>
+
+    <!-- Background Video -->
+    <video id="bg-video" autoplay muted loop playsinline preload="metadata"
+        poster="assets/Logo/Logo_3d-brain.png" width="1920" height="1080" aria-label="Animated 3D brain logo background">
+        <source src="assets/Logo/VideoLogo_3d-brain.mp4" type="video/mp4">
+    </video>
+
     <!-- Navigation -->
-    <nav class="main-nav" id="mainNav">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="assets/Logo/Logo_3d-brain.png" alt="EmpathicWeb Logo" width="40" height="40">
+            <a href="index.html" class="nav-logo" aria-label="EmpathicWeb Home">
+                <video src="assets/Logo/VideoLogo_3d-brain.mp4" class="nav-logo-img" autoplay muted loop playsinline aria-hidden="true"></video>
                 <span>EmpathicWeb</span>
             </a>
-            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about/about.html">About</a></li>
-                <li><a href="Projects/projects.html">Projects</a></li>
-                <li><a href="services-catalog.html" class="active">Services</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <ul class="nav-menu" id="nav-menu" role="menubar">
+                <li class="nav-item" role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+                <li class="nav-item" role="none"><a href="about/about.html" class="nav-link" role="menuitem">About</a></li>
+                <li class="nav-item" role="none"><a href="Projects/projects.html" class="nav-link" role="menuitem">Projects</a></li>
+                <li class="nav-item" role="none"><a href="services-catalog.html" class="nav-link active" role="menuitem">Services</a></li>
+                <li class="nav-item" role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
             </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
     <!-- WhatsApp Floating Button -->
     <div class="whatsapp-container">
         <div class="whatsapp-icon">
-            <a href="https://wa.me/573108005004?text=Hi! I'm interested in your services." target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/573108005004?text=Hi! I'm interested in your services." target="_blank" rel="noopener noreferrer" aria-label="Contact on WhatsApp">
                 <i class="fab fa-whatsapp"></i>
             </a>
         </div>
         <div class="whatsapp-popup">
             <button class="whatsapp-popup-close" onclick="this.parentElement.classList.add('closed')">&times;</button>
             <div class="whatsapp-popup-header">
-                <div class="whatsapp-popup-avatar">
-                    <i class="fas fa-user"></i>
-                </div>
+                <div class="whatsapp-popup-avatar"><i class="fas fa-user"></i></div>
                 <div>
                     <div class="whatsapp-popup-name">EmpathicWeb</div>
                     <div class="whatsapp-popup-status">Online</div>
@@ -63,46 +109,55 @@
 
     <!-- Main Content -->
     <div class="container">
-        <section class="catalog-section" id="services-catalog">
+        <section class="catalog-section" id="services">
+            
             <!-- Hero Section -->
             <div class="catalog-hero">
                 <h2><i class="fas fa-briefcase"></i> Our Services</h2>
-                <p>Professional digital solutions tailored for your business success.<br>From concept to launch, we deliver excellence.</p>
-                
+                <p>You know you need a strong online presence, but you're not sure where to start.<br>
+                We make it simple. Professional digital solutions that grow your business.</p>
+
                 <!-- Trust Badges -->
                 <div class="trust-badges">
-                    <div class="trust-badge">
-                        <i class="fas fa-check-circle"></i>
-                        <span>100% Satisfaction</span>
+                    <div class="trust-badge"><i class="fas fa-check-circle"></i><span>100% Satisfaction</span></div>
+                    <div class="trust-badge"><i class="fas fa-clock"></i><span>On-Time Delivery</span></div>
+                    <div class="trust-badge"><i class="fas fa-shield-alt"></i><span>Secure Payments</span></div>
+                    <div class="trust-badge"><i class="fas fa-headset"></i><span>24/7 Support</span></div>
+                </div>
+
+                <!-- Pricing Controls -->
+                <div class="pricing-controls" style="margin-top: 25px; display: flex; flex-direction: column; align-items: center; gap: 15px;">
+                    <!-- Currency Toggle -->
+                    <div class="currency-toggle" style="display: inline-flex; align-items: center; gap: 12px; padding: 8px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 50px;">
+                        <span class="currency-label" data-currency="USD" style="color: #E0F7FA; font-size: 0.9rem; font-weight: 600; opacity: 1;">USD</span>
+                        <button type="button" class="toggle-switch" id="currencyToggle" aria-label="Toggle currency" style="position: relative; width: 50px; height: 26px; background: linear-gradient(135deg, #00A8FF, #00E5FF); border: none; border-radius: 13px; cursor: pointer; transition: all 0.3s ease;">
+                            <span class="toggle-knob" style="position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; background: white; border-radius: 50%; transition: transform 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></span>
+                        </button>
+                        <span class="currency-label" data-currency="COP" style="color: #E0F7FA; font-size: 0.9rem; font-weight: 600; opacity: 0.5;">COP</span>
                     </div>
-                    <div class="trust-badge">
-                        <i class="fas fa-clock"></i>
-                        <span>On-Time Delivery</span>
-                    </div>
-                    <div class="trust-badge">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>Secure Payments</span>
-                    </div>
-                    <div class="trust-badge">
-                        <i class="fas fa-headset"></i>
-                        <span>24/7 Support</span>
+
+                    <!-- Local Rates Info -->
+                    <div class="local-rates-info" style="max-width: 600px; padding: 12px 20px; background: rgba(0, 229, 255, 0.08); border: 1px solid rgba(0, 229, 255, 0.2); border-radius: 8px;">
+                        <p style="color: #E0F7FA; font-size: 0.9rem; margin: 0; line-height: 1.5;">
+                            <i class="fas fa-tag" style="color: #00E5FF; margin-right: 8px;"></i>
+                            <strong>Colombia Local Rates:</strong> Save ~15-20% when paying in COP via local transfer (PSE, Bancolombia). Contact for details.
+                        </p>
                     </div>
                 </div>
             </div>
 
             <div class="catalog-grid">
-                <!-- WEB DEVELOPMENT CATEGORY -->
+                
+                <!-- CATEGORY: Web Development -->
                 <div class="category-header">
                     <h3><i class="fas fa-code"></i> Web Development</h3>
-                    <p>Professional websites that convert visitors into customers</p>
+                    <p>Your website is your 24/7 salesperson. Make it count.</p>
                 </div>
 
                 <!-- 1. Landing Page -->
-                <article class="catalog-card package-card">
+                <article class="catalog-card">
                     <div class="catalog-card-header">
-                        <div class="catalog-card-icon">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
+                        <div class="catalog-card-icon"><i class="fas fa-laptop-code"></i></div>
                         <div>
                             <h3 class="catalog-card-title">Landing Page</h3>
                             <p class="catalog-card-subtitle">High-Converting Single Page</p>
@@ -110,26 +165,29 @@
                     </div>
                     <div class="catalog-card-content">
                         <div class="service-price">
-                            <span>$150 USD</span>
+                            <span data-usd-price="150">$150 USD</span>
                             <p>One-time payment</p>
                         </div>
-                        <p>Perfect for product launches, campaigns, or service showcases. Optimized for conversions with clear call-to-actions.</p>
+                        <p>Perfect for product launches, lead generation, or presenting a specific service. One powerful page that turns visitors into customers.</p>
                         <div style="margin: 10px 0;">
-                            <span class="feature-tag">Responsive</span>
+                            <span class="feature-tag">Mobile-First</span>
                             <span class="feature-tag">SEO Ready</span>
-                            <span class="feature-tag">Fast</span>
+                            <span class="feature-tag">Fast Loading</span>
                         </div>
                         <h4><i class="fas fa-check"></i> What's Included:</h4>
                         <ul>
-                            <li>Custom design (mobile & desktop)</li>
-                            <li>Brand colors & logo integration</li>
-                            <li>Contact/lead capture form</li>
+                            <li>Custom responsive design</li>
+                            <li>Your branding & colors</li>
+                            <li>Lead capture forms</li>
                             <li>Google Analytics setup</li>
                             <li>Basic SEO optimization</li>
-                            <li>Delivery in 5 business days</li>
+                            <li>Delivery in 5 days</li>
                         </ul>
                         <div class="service-note">
-                            <i class="fas fa-info-circle"></i> Hosting and domain not included
+                            <i class="fas fa-lightbulb"></i> Ideal for: Product launches, webinar signups, service promotion
+                        </div>
+                        <div class="service-note">
+                            <i class="fas fa-info-circle"></i> Hosting & domain not included
                         </div>
                     </div>
                 </article>
@@ -137,9 +195,7 @@
                 <!-- 2. Business Website -->
                 <article class="catalog-card package-card recommended">
                     <div class="catalog-card-header">
-                        <div class="catalog-card-icon">
-                            <i class="fas fa-globe"></i>
-                        </div>
+                        <div class="catalog-card-icon"><i class="fas fa-globe"></i></div>
                         <div>
                             <h3 class="catalog-card-title">Business Website</h3>
                             <p class="catalog-card-subtitle">Professional Multi-Page Site</p>
@@ -147,38 +203,39 @@
                     </div>
                     <div class="catalog-card-content">
                         <div class="service-price">
-                            <span>$350 USD</span>
+                            <span data-usd-price="350">$350 USD</span>
                             <p>One-time payment</p>
                         </div>
-                        <p>Complete corporate presence. Ideal for established businesses needing a professional digital footprint.</p>
+                        <p>Your complete digital headquarters. Whether you're a consultant, restaurant, or law firm—establish credibility and attract clients.</p>
                         <div style="margin: 10px 0;">
-                            <span class="feature-tag popular">Popular</span>
+                            <span class="feature-tag popular">Most Popular</span>
                             <span class="feature-tag">5 Pages</span>
-                            <span class="feature-tag">Premium</span>
+                            <span class="feature-tag">Premium Design</span>
                         </div>
                         <h4><i class="fas fa-check"></i> What's Included:</h4>
                         <ul>
-                            <li>Up to 5 custom pages</li>
+                            <li>Up to 5 custom pages (Home, About, Services, Contact, etc.)</li>
                             <li>Premium responsive design</li>
                             <li>Advanced SEO setup</li>
                             <li>Google Business integration</li>
                             <li>Social media links</li>
                             <li>Contact forms with validation</li>
-                            <li>Image gallery/portfolio</li>
-                            <li>Delivery in 10 business days</li>
+                            <li>Image gallery or portfolio</li>
+                            <li>Delivery in 10 days</li>
                         </ul>
                         <div class="service-note">
-                            <i class="fas fa-info-circle"></i> Hosting and domain not included
+                            <i class="fas fa-lightbulb"></i> Ideal for: Established businesses, consultants, agencies, professionals
+                        </div>
+                        <div class="service-note">
+                            <i class="fas fa-info-circle"></i> Hosting & domain not included
                         </div>
                     </div>
                 </article>
 
                 <!-- 3. Online Store -->
-                <article class="catalog-card package-card">
+                <article class="catalog-card">
                     <div class="catalog-card-header">
-                        <div class="catalog-card-icon">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
+                        <div class="catalog-card-icon"><i class="fas fa-shopping-cart"></i></div>
                         <div>
                             <h3 class="catalog-card-title">Online Store</h3>
                             <p class="catalog-card-subtitle">Full E-Commerce Solution</p>
@@ -186,10 +243,10 @@
                     </div>
                     <div class="catalog-card-content">
                         <div class="service-price">
-                            <span>$800 USD</span>
+                            <span data-usd-price="800">$800 USD</span>
                             <p>One-time payment</p>
                         </div>
-                        <p>Start selling online immediately. Complete e-commerce with inventory management and secure payments.</p>
+                        <p>Turn your products into profits. A complete online store that handles inventory, payments, and shipping—while you focus on growing your business.</p>
                         <div style="margin: 10px 0;">
                             <span class="feature-tag new">Full Featured</span>
                             <span class="feature-tag">30 Products</span>
@@ -198,62 +255,69 @@
                         <h4><i class="fas fa-check"></i> What's Included:</h4>
                         <ul>
                             <li>Up to 30 products setup</li>
-                            <li>Payment gateway integration</li>
-                            <li>Inventory management system</li>
+                            <li>Payment gateway (Stripe, PayPal, etc.)</li>
+                            <li>Inventory management</li>
                             <li>Order tracking dashboard</li>
                             <li>Customer accounts</li>
                             <li>Discount/coupon system</li>
                             <li>Shipping configuration</li>
-                            <li>Admin training included</li>
-                            <li>Delivery in 15 business days</li>
+                            <li>Admin training session</li>
+                            <li>Delivery in 15 days</li>
                         </ul>
                         <div class="service-note">
-                            <i class="fas fa-info-circle"></i> Payment processor fees apply separately
+                            <i class="fas fa-lightbulb"></i> Ideal for: Retail stores, artisans, dropshipping, digital products
+                        </div>
+                        <div class="service-note">
+                            <i class="fas fa-info-circle"></i> Transaction fees apply separately
                         </div>
                     </div>
                 </article>
 
-                <!-- DESIGN CATEGORY -->
+                <!-- CATEGORY: Design -->
                 <div class="category-header">
                     <h3><i class="fas fa-palette"></i> Design & Branding</h3>
-                    <p>Visual identity that makes your brand memorable</p>
+                    <p>Stand out with visuals that tell your story.</p>
                 </div>
 
-                <!-- 4. Logo Design -->
+                <!-- 4. Logo & Branding -->
                 <article class="catalog-card">
                     <div class="catalog-card-header">
                         <div class="catalog-card-icon" style="background: linear-gradient(135deg, #9b59b6, #8e44ad);">
                             <i class="fas fa-pen-nib"></i>
                         </div>
                         <div>
-                            <h3 class="catalog-card-title">Logo Design</h3>
-                            <p class="catalog-card-subtitle">Professional Brand Identity</p>
+                            <h3 class="catalog-card-title">Logo & Branding</h3>
+                            <p class="catalog-card-subtitle">Professional Identity Design</p>
                         </div>
                     </div>
                     <div class="catalog-card-content">
                         <div class="service-price" style="border-color: #9b59b6; background: rgba(155,89,182,0.15);">
-                            <span style="color: #9b59b6;">$100 USD</span>
+                            <span style="color: #9b59b6;" data-usd-price="100">$100 USD</span>
                             <p>One-time payment</p>
                         </div>
-                        <p>A unique logo that represents your brand values and stands out from competitors.</p>
+                        <p>Your logo is the face of your business. Make a memorable first impression with a professional, unique design that reflects your values.</p>
                         <div style="margin: 10px 0;">
                             <span class="feature-tag">3 Concepts</span>
                             <span class="feature-tag">Vector Files</span>
+                            <span class="feature-tag">Full Rights</span>
                         </div>
                         <h4><i class="fas fa-check"></i> What's Included:</h4>
                         <ul>
                             <li>3 unique design concepts</li>
                             <li>Unlimited revision rounds</li>
                             <li>All file formats (PNG, JPG, SVG, AI)</li>
-                            <li>Full copyright transfer</li>
-                            <li>Brand guidelines document</li>
+                            <li>Full copyright ownership</li>
+                            <li>Brand color palette</li>
                             <li>Social media profile versions</li>
                             <li>Delivery in 3-5 days</li>
                         </ul>
+                        <div class="service-note">
+                            <i class="fas fa-lightbulb"></i> Ideal for: New businesses, rebranding, startups
+                        </div>
                     </div>
                 </article>
 
-                <!-- 5. 3D Design -->
+                <!-- 5. 3D Design & Animation -->
                 <article class="catalog-card">
                     <div class="catalog-card-header">
                         <div class="catalog-card-icon" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
@@ -266,15 +330,15 @@
                     </div>
                     <div class="catalog-card-content">
                         <div class="service-price" style="border-color: #e74c3c; background: rgba(231,76,60,0.15);">
-                            <span style="color: #e74c3c;">$200 USD</span>
+                            <span style="color: #e74c3c;">$200+ USD</span>
                             <p>Starting price</p>
                         </div>
-                        <p>Add depth and interactivity to your website with stunning 3D visualizations.</p>
+                        <p>Add depth and interactivity to your website. From animated logos to product visualizations—make your brand unforgettable.</p>
                         <div style="margin: 10px 0;">
-                            <span class="feature-tag new">Immersive</span>
-                            <span class="feature-tag">Interactive</span>
+                            <span class="feature-tag new">Interactive</span>
+                            <span class="feature-tag">Web-Ready</span>
                         </div>
-                        <h4><i class="fas fa-check"></i> What's Included:</h4>
+                        <h4><i class="fas fa-check"></i> Services:</h4>
                         <ul>
                             <li>3D logo animation</li>
                             <li>Product 3D visualization</li>
@@ -282,31 +346,33 @@
                             <li>360° product viewers</li>
                             <li>Virtual showroom setup</li>
                             <li>Web-optimized 3D models</li>
-                            <li>Price varies by complexity</li>
                         </ul>
                         <div class="service-note">
-                            <i class="fas fa-info-circle"></i> Custom quote based on requirements
+                            <i class="fas fa-lightbulb"></i> Ideal for: Product showcases, tech companies, creative agencies
+                        </div>
+                        <div class="service-note">
+                            <i class="fas fa-info-circle"></i> Price varies by complexity—request custom quote
                         </div>
                     </div>
                 </article>
 
-                <!-- 6. Digital Content -->
+                <!-- 6. Social Media Content -->
                 <article class="catalog-card">
                     <div class="catalog-card-header">
                         <div class="catalog-card-icon" style="background: linear-gradient(135deg, #f39c12, #e67e22);">
                             <i class="fas fa-photo-video"></i>
                         </div>
                         <div>
-                            <h3 class="catalog-card-title">Digital Content</h3>
-                            <p class="catalog-card-subtitle">Social Media Graphics</p>
+                            <h3 class="catalog-card-title">Social Content</h3>
+                            <p class="catalog-card-subtitle">Graphics for Social Media</p>
                         </div>
                     </div>
                     <div class="catalog-card-content">
                         <div class="service-price" style="border-color: #f39c12; background: rgba(243,156,18,0.15);">
-                            <span style="color: #f39c12;">$80 USD</span>
-                            <p>Per 10 posts pack</p>
+                            <span style="color: #f39c12;" data-usd-price="80">$80 USD</span>
+                            <p>Per 10-post pack</p>
                         </div>
-                        <p>Eye-catching graphics designed for engagement on Instagram, Facebook, and LinkedIn.</p>
+                        <p>Stop struggling with what to post. Get eye-catching, branded graphics that engage your audience and save you hours of work.</p>
                         <div style="margin: 10px 0;">
                             <span class="feature-tag">Branded</span>
                             <span class="feature-tag">Ready to Post</span>
@@ -317,17 +383,20 @@
                             <li>Your brand colors & fonts</li>
                             <li>Instagram/Facebook optimized</li>
                             <li>Stories format included</li>
-                            <li>Captions suggestions</li>
+                            <li>Caption suggestions</li>
                             <li>Hashtag recommendations</li>
                             <li>Delivery in 3 days</li>
                         </ul>
+                        <div class="service-note">
+                            <i class="fas fa-lightbulb"></i> Ideal for: Consistent social presence without daily design stress
+                        </div>
                     </div>
                 </article>
 
-                <!-- MARKETING CATEGORY -->
+                <!-- CATEGORY: Marketing -->
                 <div class="category-header">
                     <h3><i class="fas fa-bullhorn"></i> Digital Marketing</h3>
-                    <p>Strategies that drive traffic, engagement, and sales</p>
+                    <p>Get found, get leads, get customers.</p>
                 </div>
 
                 <!-- 7. Social Media Management -->
@@ -337,32 +406,35 @@
                             <i class="fab fa-instagram"></i>
                         </div>
                         <div>
-                            <h3 class="catalog-card-title">Social Media</h3>
-                            <p class="catalog-card-subtitle">Full Management</p>
+                            <h3 class="catalog-card-title">Social Media Management</h3>
+                            <p class="catalog-card-subtitle">Full Service Management</p>
                         </div>
                     </div>
                     <div class="catalog-card-content">
                         <div class="service-price">
-                            <span>$280 USD</span>
+                            <span data-usd-price="280">$280 USD</span>
                             <p>Per month</p>
                         </div>
-                        <p>We handle everything: content creation, posting, engagement, and growth strategies.</p>
+                        <p>Too busy to post? We handle everything: content creation, posting, engagement, and growth—so you can focus on running your business.</p>
                         <div style="margin: 10px 0;">
                             <span class="feature-tag popular">Best Value</span>
                             <span class="feature-tag">12 Posts</span>
-                            <span class="feature-tag">Growth</span>
+                            <span class="feature-tag">Growth Focus</span>
                         </div>
                         <h4><i class="fas fa-check"></i> What's Included:</h4>
                         <ul>
-                            <li>1 platform (Instagram/Facebook)</li>
+                            <li>1 platform (Instagram/Facebook/LinkedIn)</li>
                             <li>12 posts per month</li>
-                            <li>Stories (daily when needed)</li>
-                            <li>Comment & message responses</li>
-                            <li>Hashtag research</li>
+                            <li>Daily Stories when needed</li>
+                            <li>Comment & DM responses</li>
+                            <li>Hashtag research & strategy</li>
                             <li>Monthly performance report</li>
                             <li>Content calendar planning</li>
                             <li>Competitor analysis</li>
                         </ul>
+                        <div class="service-note">
+                            <i class="fas fa-lightbulb"></i> Ideal for: Business owners who want results without the daily hassle
+                        </div>
                     </div>
                 </article>
 
@@ -374,32 +446,35 @@
                         </div>
                         <div>
                             <h3 class="catalog-card-title">SEO</h3>
-                            <p class="catalog-card-subtitle">Google Ranking</p>
+                            <p class="catalog-card-subtitle">Google Ranking Service</p>
                         </div>
                     </div>
                     <div class="catalog-card-content">
                         <div class="service-price" style="border-color: #4285F4; background: rgba(66,133,244,0.15);">
-                            <span style="color: #4285F4;">$200 USD</span>
+                            <span style="color: #4285F4;" data-usd-price="200">$200 USD</span>
                             <p>Per month</p>
                         </div>
-                        <p>Get found on Google. Technical optimization and content strategy for organic growth.</p>
+                        <p>Be the first business customers find on Google. We optimize your site so you rank higher and get free, organic traffic.</p>
                         <div style="margin: 10px 0;">
-                            <span class="feature-tag">Organic</span>
+                            <span class="feature-tag">Organic Traffic</span>
                             <span class="feature-tag">Long-term</span>
                         </div>
                         <h4><i class="fas fa-check"></i> What's Included:</h4>
                         <ul>
-                            <li>Website technical audit</li>
+                            <li>Complete website audit</li>
                             <li>Keyword research & targeting</li>
                             <li>On-page optimization</li>
                             <li>Google Business setup</li>
-                            <li>Local SEO optimization</li>
-                            <li>Backlink strategy</li>
+                            <li>Local SEO for your area</li>
+                            <li>Backlink building strategy</li>
                             <li>Monthly ranking reports</li>
                             <li>Competitor tracking</li>
                         </ul>
                         <div class="service-note">
-                            <i class="fas fa-info-circle"></i> First results typically seen in 3 months
+                            <i class="fas fa-lightbulb"></i> Ideal for: Businesses wanting sustainable, long-term visibility
+                        </div>
+                        <div class="service-note">
+                            <i class="fas fa-info-circle"></i> First results typically in 3 months
                         </div>
                     </div>
                 </article>
@@ -412,15 +487,15 @@
                         </div>
                         <div>
                             <h3 class="catalog-card-title">Google Ads</h3>
-                            <p class="catalog-card-subtitle">Paid Advertising</p>
+                            <p class="catalog-card-subtitle">Paid Search Advertising</p>
                         </div>
                     </div>
                     <div class="catalog-card-content">
                         <div class="service-price" style="border-color: #34A853; background: rgba(52,168,83,0.15);">
-                            <span style="color: #34A853;">$160 USD</span>
+                            <span style="color: #34A853;" data-usd-price="160">$160 USD</span>
                             <p>Management per month</p>
                         </div>
-                        <p>Instant visibility. Targeted ads that appear when customers search for your services.</p>
+                        <p>Need customers now? Get instant visibility with targeted ads that appear when people search for your services. Pay only for clicks.</p>
                         <div style="margin: 10px 0;">
                             <span class="feature-tag">Fast Results</span>
                             <span class="feature-tag">Targeted</span>
@@ -429,14 +504,17 @@
                         <ul>
                             <li>Campaign strategy & setup</li>
                             <li>Keyword research</li>
-                            <li>Ad copy creation</li>
+                            <li>Compelling ad copy</li>
                             <li>Conversion tracking</li>
                             <li>A/B testing</li>
                             <li>Monthly optimization</li>
                             <li>Performance reports</li>
                         </ul>
                         <div class="service-note">
-                            <i class="fas fa-info-circle"></i> Ad spend budget separate (min. $200/month recommended)
+                            <i class="fas fa-lightbulb"></i> Ideal for: New businesses, seasonal promotions, immediate lead generation
+                        </div>
+                        <div class="service-note">
+                            <i class="fas fa-info-circle"></i> Ad budget separate (min. $200/month recommended)
                         </div>
                     </div>
                 </article>
@@ -449,15 +527,15 @@
                         </div>
                         <div>
                             <h3 class="catalog-card-title">Email Marketing</h3>
-                            <p class="catalog-card-subtitle">Newsletters & Campaigns</p>
+                            <p class="catalog-card-subtitle">Newsletters & Automation</p>
                         </div>
                     </div>
                     <div class="catalog-card-content">
                         <div class="service-price" style="border-color: #1abc9c; background: rgba(26,188,156,0.15);">
-                            <span style="color: #1abc9c;">$120 USD</span>
+                            <span style="color: #1abc9c;" data-usd-price="120">$120 USD</span>
                             <p>Setup + first campaign</p>
                         </div>
-                        <p>Build customer loyalty and drive sales with professional email campaigns.</p>
+                        <p>Your email list is your most valuable asset. Build relationships and drive sales with professional email campaigns.</p>
                         <div style="margin: 10px 0;">
                             <span class="feature-tag">Automation</span>
                             <span class="feature-tag">Templates</span>
@@ -467,37 +545,40 @@
                             <li>Email platform setup</li>
                             <li>Custom email templates</li>
                             <li>Website integration</li>
-                            <li>Welcome series setup</li>
+                            <li>Welcome email series</li>
                             <li>First campaign design</li>
                             <li>Subscriber list import</li>
                             <li>Automation workflows</li>
                         </ul>
+                        <div class="service-note">
+                            <i class="fas fa-lightbulb"></i> Ideal for: Building customer loyalty and repeat business
+                        </div>
                     </div>
                 </article>
 
-                <!-- SUPPORT CATEGORY -->
+                <!-- CATEGORY: Support & Security -->
                 <div class="category-header">
                     <h3><i class="fas fa-tools"></i> Support & Security</h3>
-                    <p>Keep your digital assets secure and running smoothly</p>
+                    <p>Keep your digital assets safe and running smoothly.</p>
                 </div>
 
-                <!-- 11. Web Security -->
+                <!-- 11. Web Security Audit -->
                 <article class="catalog-card">
                     <div class="catalog-card-header">
                         <div class="catalog-card-icon" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
                             <i class="fas fa-shield-alt"></i>
                         </div>
                         <div>
-                            <h3 class="catalog-card-title">Web Security</h3>
-                            <p class="catalog-card-subtitle">Audit & Protection</p>
+                            <h3 class="catalog-card-title">Security Audit</h3>
+                            <p class="catalog-card-subtitle">Website Protection</p>
                         </div>
                     </div>
                     <div class="catalog-card-content">
                         <div class="service-price" style="border-color: #e74c3c; background: rgba(231,76,60,0.15);">
-                            <span style="color: #e74c3c;">$120 USD</span>
+                            <span style="color: #e74c3c;" data-usd-price="120">$120 USD</span>
                             <p>One-time audit</p>
                         </div>
-                        <p>Protect your website from hackers, malware, and data breaches with a comprehensive security audit.</p>
+                        <p>Don't wait for a hack. Protect your business with a comprehensive security check and fix vulnerabilities before they're exploited.</p>
                         <div style="margin: 10px 0;">
                             <span class="feature-tag">Essential</span>
                             <span class="feature-tag">Protection</span>
@@ -513,12 +594,12 @@
                             <li>Fix implementation guide</li>
                         </ul>
                         <div class="service-note">
-                            <i class="fas fa-info-circle"></i> Certified cybersecurity specialist
+                            <i class="fas fa-lightbulb"></i> Ideal for: Every website owner—prevention is cheaper than recovery
                         </div>
                     </div>
                 </article>
 
-                <!-- 12. Maintenance -->
+                <!-- 12. Website Maintenance -->
                 <article class="catalog-card package-card recommended">
                     <div class="catalog-card-header">
                         <div class="catalog-card-icon" style="background: linear-gradient(135deg, #95a5a6, #7f8c8d);">
@@ -531,10 +612,10 @@
                     </div>
                     <div class="catalog-card-content">
                         <div class="service-price" style="border-color: #95a5a6; background: rgba(149,165,166,0.15);">
-                            <span style="color: #95a5a6;">$60 USD</span>
+                            <span style="color: #95a5a6;" data-usd-price="60">$60 USD</span>
                             <p>Per month</p>
                         </div>
-                        <p>Peace of mind. Your website stays updated, secure, and performing at its best.</p>
+                        <p>Your website is like a car—it needs regular care. We handle updates, backups, and security so you never worry about technical issues.</p>
                         <div style="margin: 10px 0;">
                             <span class="feature-tag popular">Recommended</span>
                             <span class="feature-tag">24/7</span>
@@ -546,17 +627,20 @@
                             <li>Security monitoring</li>
                             <li>Uptime monitoring</li>
                             <li>Performance optimization</li>
-                            <li>Monthly reports</li>
+                            <li>Monthly health reports</li>
                             <li>WhatsApp priority support</li>
                             <li>Emergency response</li>
                         </ul>
+                        <div class="service-note">
+                            <i class="fas fa-lightbulb"></i> Ideal for: Business owners who want peace of mind
+                        </div>
                         <div class="service-note">
                             <i class="fas fa-info-circle"></i> Minimum 3-month contract
                         </div>
                     </div>
                 </article>
 
-                <!-- 13. Training -->
+                <!-- 13. Training & Consulting -->
                 <article class="catalog-card">
                     <div class="catalog-card-header">
                         <div class="catalog-card-icon" style="background: linear-gradient(135deg, #8e44ad, #9b59b6);">
@@ -564,29 +648,32 @@
                         </div>
                         <div>
                             <h3 class="catalog-card-title">Training</h3>
-                            <p class="catalog-card-subtitle">Workshops & Coaching</p>
+                            <p class="catalog-card-subtitle">Learn Digital Skills</p>
                         </div>
                     </div>
                     <div class="catalog-card-content">
                         <div class="service-price" style="border-color: #8e44ad; background: rgba(142,68,173,0.15);">
-                            <span style="color: #8e44ad;">$50 USD</span>
+                            <span style="color: #8e44ad;" data-usd-price="50">$50 USD</span>
                             <p>Per hour</p>
                         </div>
-                        <p>Learn to manage your digital presence. Personalized training for you or your team.</p>
+                        <p>Want to manage your own website or social media? Learn from experts. Personalized training for you or your team.</p>
                         <div style="margin: 10px 0;">
                             <span class="feature-tag">Online</span>
                             <span class="feature-tag">In-Person</span>
                         </div>
-                        <h4><i class="fas fa-check"></i> Topics Available:</h4>
+                        <h4><i class="fas fa-check"></i> Training Topics:</h4>
                         <ul>
                             <li>Website management basics</li>
                             <li>Social media strategy</li>
                             <li>Google Ads fundamentals</li>
-                            <li>Email marketing setup</li>
                             <li>SEO best practices</li>
+                            <li>Email marketing setup</li>
                             <li>Content creation tips</li>
                             <li>Group training available</li>
                         </ul>
+                        <div class="service-note">
+                            <i class="fas fa-lightbulb"></i> Ideal for: Teams wanting in-house digital skills
+                        </div>
                     </div>
                 </article>
 
@@ -598,22 +685,22 @@
                         </div>
                         <div>
                             <h3 class="catalog-card-title">Copywriting</h3>
-                            <p class="catalog-card-subtitle">Professional Writing</p>
+                            <p class="catalog-card-subtitle">Words That Sell</p>
                         </div>
                     </div>
                     <div class="catalog-card-content">
                         <div class="service-price" style="border-color: #e67e22; background: rgba(230,126,34,0.15);">
-                            <span style="color: #e67e22;">$40 USD</span>
+                            <span style="color: #e67e22;" data-usd-price="40">$40 USD</span>
                             <p>Per page</p>
                         </div>
-                        <p>Persuasive, SEO-optimized content that sells your products and services.</p>
+                        <p>Struggling to write about your business? We craft compelling, SEO-optimized content that connects with your audience and drives action.</p>
                         <div style="margin: 10px 0;">
                             <span class="feature-tag">SEO</span>
                             <span class="feature-tag">Sales</span>
                         </div>
                         <h4><i class="fas fa-check"></i> Services:</h4>
                         <ul>
-                            <li>Website copy</li>
+                            <li>Website copy & pages</li>
                             <li>Product descriptions</li>
                             <li>Social media captions</li>
                             <li>Email campaigns</li>
@@ -621,25 +708,83 @@
                             <li>Ad copy</li>
                             <li>Sales pages</li>
                         </ul>
+                        <div class="service-note">
+                            <i class="fas fa-lightbulb"></i> Ideal for: Business owners who know what they do but struggle to explain it
+                        </div>
                     </div>
                 </article>
+
+                <!-- 15. Sound Production -->
+                <article class="catalog-card">
+                    <div class="catalog-card-header">
+                        <div class="catalog-card-icon" style="background: linear-gradient(135deg, #2c3e50, #34495e);">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                        <div>
+                            <h3 class="catalog-card-title">Audio Production</h3>
+                            <p class="catalog-card-subtitle">Voiceover & Podcast</p>
+                        </div>
+                    </div>
+                    <div class="catalog-card-content">
+                        <div class="service-price" style="border-color: #2c3e50; background: rgba(44,62,80,0.15);">
+                            <span style="color: #95a5a6;">$100+ USD</span>
+                            <p>Starting price</p>
+                        </div>
+                        <p>Professional audio for podcasts, videos, ads, and voiceovers. Clean, crisp sound that elevates your content.</p>
+                        <div style="margin: 10px 0;">
+                            <span class="feature-tag">Professional</span>
+                            <span class="feature-tag">Studio Quality</span>
+                        </div>
+                        <h4><i class="fas fa-check"></i> Services:</h4>
+                        <ul>
+                            <li>Voiceover recording</li>
+                            <li>Podcast production</li>
+                            <li>Audio editing & cleanup</li>
+                            <li>Sound effects</li>
+                            <li>Background music</li>
+                            <li>Audio restoration</li>
+                        </ul>
+                        <div class="service-note">
+                            <i class="fas fa-lightbulb"></i> Ideal for: Podcasters, YouTubers, video creators, advertisers
+                        </div>
+                        <div class="service-note">
+                            <i class="fas fa-info-circle"></i> Price varies by project length
+                        </div>
+                    </div>
+                </article>
+
             </div>
 
-            <!-- Process Section -->
-            <div class="catalog-cta" style="margin-top: 4rem;">
+            <!-- Payment Methods -->
+            <div class="payment-methods" style="text-align: center; margin: 3rem 0; padding: 20px;">
+                <p style="font-size: 0.9rem; color: #E0F7FA; margin-bottom: 15px; opacity: 0.9;">
+                    <i class="fas fa-lock" style="color: #00A8FF; margin-right: 8px;"></i>
+                    Secure payments via PayPal, Wise, Payoneer, or bank transfer
+                </p>
+                <div class="payment-icons" style="display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; font-size: 2rem; align-items: center;">
+                    <i class="fab fa-cc-paypal" style="color: #003087;" title="PayPal"></i>
+                    <i class="fas fa-university" style="color: #00E5FF;" title="Bank Transfer (Wire/SWIFT)"></i>
+                    <span style="font-size: 0.9rem; font-weight: bold; color: #FF4800; background: rgba(255,255,255,0.1); padding: 5px 12px; border-radius: 6px;" title="Payoneer">Payoneer</span>
+                    <span style="font-size: 0.9rem; font-weight: bold; color: #9FE870; background: rgba(255,255,255,0.1); padding: 5px 12px; border-radius: 6px;" title="Wise (TransferWise)">Wise</span>
+                    <i class="fab fa-bitcoin" style="color: #F7931A;" title="Crypto (USDT/USDC)"></i>
+                </div>
+            </div>
+
+            <!-- How We Work Section -->
+            <div class="catalog-cta" style="margin-top: 3rem;">
                 <h3><i class="fas fa-cogs"></i> How We Work</h3>
-                <p>Our proven 4-step process ensures project success</p>
+                <p>Simple process, stunning results</p>
                 
                 <div class="process-steps">
                     <div class="process-step">
                         <div class="process-step-number">1</div>
                         <h4>Discovery</h4>
-                        <p>We understand your goals</p>
+                        <p>We learn about your goals</p>
                     </div>
                     <div class="process-step">
                         <div class="process-step-number">2</div>
                         <h4>Design</h4>
-                        <p>We create the solution</p>
+                        <p>We create your solution</p>
                     </div>
                     <div class="process-step">
                         <div class="process-step-number">3</div>
@@ -656,14 +801,14 @@
 
             <!-- CTA Section -->
             <div class="catalog-cta">
-                <h3><i class="fas fa-rocket"></i> Ready to Start Your Project?</h3>
-                <p>Get a free quote. No commitment required.</p>
+                <h3><i class="fas fa-rocket"></i> Ready to Grow Your Business?</h3>
+                <p>Not sure which service you need? Let's talk. Free consultation, no commitment.</p>
                 <div class="cta-buttons">
                     <a href="contact.html" class="cta-btn cta-btn-primary">
                         <i class="fas fa-envelope"></i> Get Free Quote
                     </a>
                     <a href="Projects/projects.html" class="cta-btn cta-btn-secondary">
-                        <i class="fas fa-eye"></i> View Our Work
+                        <i class="fas fa-eye"></i> See Our Work
                     </a>
                 </div>
             </div>
@@ -671,7 +816,7 @@
             <!-- Connect Section -->
             <div class="catalog-cta" style="margin-top: 40px;">
                 <h3><i class="fas fa-share-alt"></i> Connect With Us</h3>
-                <p>Follow us for tips, updates, and insights</p>
+                <p>Follow for tips, insights, and behind-the-scenes</p>
                 <div class="social-connect-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin-top: 30px; max-width: 900px; margin-left: auto; margin-right: auto;">
                     <a href="mailto:eduardgildardoperezfranco@empathicweb.online" class="social-connect-card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(0,168,255,0.2); text-decoration: none; transition: all 0.3s ease;">
                         <i class="fas fa-envelope" style="font-size: 2rem; color: #00E5FF; margin-bottom: 10px;"></i>
@@ -689,7 +834,7 @@
                         <i class="fab fa-instagram" style="font-size: 2rem; color: #E4405F; margin-bottom: 10px;"></i>
                         <span style="color: #E0F7FA; font-size: 0.9rem;">Instagram</span>
                     </a>
-                    <a href="https://www.facebook.com/EduardGildardoPerezFranco" target="_blank" class="social-connect-card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(0,168,255,0.2); text-decoration: none; transition: all 0.3s ease;">
+                    <a href="https://www.facebook.com/profile.php?id=100064804840004" target="_blank" class="social-connect-card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(0,168,255,0.2); text-decoration: none; transition: all 0.3s ease;">
                         <i class="fab fa-facebook" style="font-size: 2rem; color: #1877F2; margin-bottom: 10px;"></i>
                         <span style="color: #E0F7FA; font-size: 0.9rem;">Facebook</span>
                     </a>
@@ -697,8 +842,21 @@
                         <i class="fab fa-github" style="font-size: 2rem; color: #6e5494; margin-bottom: 10px;"></i>
                         <span style="color: #E0F7FA; font-size: 0.9rem;">GitHub</span>
                     </a>
+                    <a href="https://x.com/FEgpf" target="_blank" class="social-connect-card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(0,168,255,0.2); text-decoration: none; transition: all 0.3s ease;">
+                        <i class="fab fa-x-twitter" style="font-size: 2rem; color: #000000; margin-bottom: 10px;"></i>
+                        <span style="color: #E0F7FA; font-size: 0.9rem;">X (Twitter)</span>
+                    </a>
+                    <a href="https://www.tiktok.com/@eduardg.perezfranco" target="_blank" class="social-connect-card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(0,168,255,0.2); text-decoration: none; transition: all 0.3s ease;">
+                        <i class="fab fa-tiktok" style="font-size: 2rem; color: #00f2ea; margin-bottom: 10px;"></i>
+                        <span style="color: #E0F7FA; font-size: 0.9rem;">TikTok</span>
+                    </a>
+                    <a href="https://www.youtube.com/@EduardGildardoPerezFrancq" target="_blank" class="social-connect-card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(0,168,255,0.2); text-decoration: none; transition: all 0.3s ease;">
+                        <i class="fab fa-youtube" style="font-size: 2rem; color: #FF0000; margin-bottom: 10px;"></i>
+                        <span style="color: #E0F7FA; font-size: 0.9rem;">YouTube</span>
+                    </a>
                 </div>
             </div>
+
         </section>
     </div>
 
@@ -711,16 +869,15 @@
                     <li><a href="about/about.html"><i class="fas fa-user"></i> About</a></li>
                     <li><a href="Projects/projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li>
                     <li><a href="services-catalog.html"><i class="fas fa-briefcase"></i> Services</a></li>
-                    <li><a href="cv.html"><i class="fas fa-file-alt"></i> CV</a></li>
                     <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
                 </ul>
             </nav>
             <div class="footer-info">
                 <p class="footer-copyright">© 2026 Eduard Gildardo Pérez Franco. All rights reserved.</p>
                 <p class="footer-links">
-                    <a href="legal.html">Legal</a>
-                    <span>•</span>
-                    <span>v0.3.0</span>
+                    <a href="legal.html">Legal Information</a>
+                    <span class="footer-separator">•</span>
+                    <span class="footer-version">v0.3.0</span>
                 </p>
             </div>
         </div>
@@ -731,8 +888,103 @@
     <script src="Script.js"></script>
     <script src="enhanced-navigation.js"></script>
     <script src="navbar-highlight.js"></script>
-    <link rel="stylesheet" href="enhanced-navigation.css">
-    <link rel="stylesheet" href="title-card-contrast.css">
+
+    <!-- Currency Toggle Script -->
+    <script>
+    (function() {
+        'use strict';
+
+        const EXCHANGE_RATE = 4000; // 1 USD = 4000 COP
+        const STORAGE_KEY = 'preferredCurrency';
+
+        // Original prices in USD (extracted from the HTML)
+        const originalPrices = {
+            'landing': 150,
+            'business': 350,
+            'ecommerce': 800,
+            'logo': 100,
+            '3d': 200,
+            'social': 80,
+            'social-mgmt': 280,
+            'seo': 200,
+            'google-ads': 160,
+            'email': 120,
+            'security': 120,
+            'maintenance': 60,
+            'training': 50,
+            'copywriting': 40,
+            'audio': 100
+        };
+
+        let currentCurrency = localStorage.getItem(STORAGE_KEY) || 'USD';
+
+        function formatPrice(usdPrice, currency) {
+            if (currency === 'USD') {
+                return `$${usdPrice} USD`;
+            } else {
+                const copPrice = Math.round(usdPrice * EXCHANGE_RATE / 1000) * 1000; // Round to nearest 1000
+                return `${copPrice.toLocaleString('es-CO')} COP`;
+            }
+        }
+
+        function updatePrices() {
+            // Select all price elements (they have various structures in the HTML)
+            const priceSpans = document.querySelectorAll('.service-price span');
+
+            priceSpans.forEach((span, index) => {
+                // Get the USD value from data attribute or calculate based on index
+                let usdPrice = span.dataset.usdPrice;
+                if (!usdPrice) {
+                    // Extract from current text if no data attribute
+                    const match = span.textContent.match(/\$?(\d+)/);
+                    if (match) {
+                        usdPrice = parseInt(match[1]);
+                        // Store for future reference
+                        span.dataset.usdPrice = usdPrice;
+                    }
+                }
+
+                if (usdPrice) {
+                    span.textContent = formatPrice(parseInt(usdPrice), currentCurrency);
+                }
+            });
+        }
+
+        function toggleCurrency() {
+            currentCurrency = currentCurrency === 'USD' ? 'COP' : 'USD';
+            localStorage.setItem(STORAGE_KEY, currentCurrency);
+            applyCurrencyState();
+        }
+
+        function applyCurrencyState() {
+            const toggleBtn = document.getElementById('currencyToggle');
+            const knob = toggleBtn?.querySelector('.toggle-knob');
+            const usdLabel = document.querySelector('.currency-label[data-currency="USD"]');
+            const copLabel = document.querySelector('.currency-label[data-currency="COP"]');
+
+            if (currentCurrency === 'COP') {
+                knob.style.transform = 'translateX(24px)';
+                usdLabel.style.opacity = '0.5';
+                copLabel.style.opacity = '1';
+            } else {
+                knob.style.transform = 'translateX(0)';
+                usdLabel.style.opacity = '1';
+                copLabel.style.opacity = '0.5';
+            }
+
+            updatePrices();
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleBtn = document.getElementById('currencyToggle');
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', toggleCurrency);
+                applyCurrencyState();
+            }
+        });
+    })();
+    </script>
 </body>
 
 </html>
