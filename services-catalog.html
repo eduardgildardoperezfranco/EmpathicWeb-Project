@@ -1,426 +1,45 @@
 <!DOCTYPE html>
-<html lang="en" data-i18n-lang>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords"
-        content="desarrollo web empático Colombia, diseño web 3D Colombia, ciberseguridad humana, servicios de seguridad personal, entrenamiento de empatía, integración IA Colombia, desarrollo blockchain, soluciones IoT, diseño web centrado en humano, servicios de tecnología empática, desarrollo web Colombia, web development Colombia, diseño web 3D, diseño web interactivo, servicios de ciberseguridad, seguridad personal inteligencia emocional, entrenamiento empresarial empatía, desarrollo de software empático, tecnología con enfoque humano">
-    <meta name="description"
-        content="Complete services catalog from EmpathicWeb: empathic web development, 3D design, cybersecurity, personal security, AI integration, blockchain, IoT, and empathy training. Human-centric technology solutions in Colombia.">
-    <title>Services Catalog | EmpathicWeb - Human-Centric Technology Solutions</title>
+    <meta name="description" content="Professional digital services: web development, branding, social media management, cybersecurity, and digital marketing.">
+    <title>Services Catalog | EmpathicWeb</title>
     <link rel="canonical" href="https://empathicweb.online/services-catalog.html">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://empathicweb.online/services-catalog.html">
-    <meta property="og:title" content="Services Catalog | EmpathicWeb - Human-Centric Technology Solutions">
-    <meta property="og:description"
-        content="Explore our complete services: empathic web development, 3D design, cybersecurity, personal security, AI integration, blockchain, IoT, and empathy training.">
-    <meta property="og:image" content="https://empathicweb.online/assets/Logo/Logo_3d-brain.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="EmpathicWeb Services Catalog - Human-Centric Technology">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:locale:alternate" content="es_CO">
-    <meta property="og:site_name" content="EmpathicWeb">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://empathicweb.online/services-catalog.html">
-    <meta name="twitter:title" content="Services Catalog | EmpathicWeb - Human-Centric Technology Solutions">
-    <meta name="twitter:description"
-        content="Explore our complete services: empathic web development, 3D design, cybersecurity, personal security, AI integration, blockchain, IoT, and empathy training.">
-    <meta name="twitter:image" content="https://empathicweb.online/assets/Logo/Logo_3d-brain.png">
-    <meta name="twitter:image:alt" content="EmpathicWeb Services Catalog - Human-Centric Technology">
-
-    <!-- Additional SEO Meta Tags -->
-    <meta name="theme-color" content="#010418">
-    <meta name="msapplication-TileColor" content="#010418">
-    <meta name="application-name" content="EmpathicWeb">
-    <meta name="apple-mobile-web-app-title" content="EmpathicWeb">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-    <!-- Structured Data - CollectionPage -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        "name": "EmpathicWeb Services Catalog",
-        "description": "Complete catalog of empathic technology services including web development, 3D design, cybersecurity, personal security, AI integration, blockchain, IoT, and empathy training",
-        "url": "https://empathicweb.online/services-catalog.html",
-        "about": [
-            {
-                "@type": "Thing",
-                "name": "Empathic Web Development"
-            },
-            {
-                "@type": "Thing",
-                "name": "3D Design Services"
-            },
-            {
-                "@type": "Thing",
-                "name": "Cybersecurity Services"
-            },
-            {
-                "@type": "Thing",
-                "name": "Personal Security Services"
-            },
-            {
-                "@type": "Thing",
-                "name": "AI Integration"
-            },
-            {
-                "@type": "Thing",
-                "name": "Blockchain Development"
-            },
-            {
-                "@type": "Thing",
-                "name": "IoT Solutions"
-            },
-            {
-                "@type": "Thing",
-                "name": "Empathy Training"
-            }
-        ]
-    }
-    </script>
-
     <link rel="stylesheet" href="Style.css">
-    <!-- Cross-Browser Responsive Fixes (Safari, macOS, iOS, Firefox, Edge) -->
     <link rel="stylesheet" href="css/cross-browser-fixes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Services Catalog Specific Styles */
-        .catalog-section {
-            padding: 60px 20px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .catalog-hero {
-            text-align: center;
-            margin-bottom: 50px;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, rgba(0, 168, 255, 0.1), rgba(0, 229, 255, 0.05));
-            border-radius: 20px;
-            border: 1px solid rgba(0, 168, 255, 0.2);
-        }
-
-        .catalog-hero h2 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: clamp(2rem, 5vw, 3rem);
-            color: #00E5FF;
-            margin-bottom: 20px;
-            text-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
-            animation: servicesTitleFloat 10s ease-in-out infinite;
-        }
-
-        @keyframes servicesTitleFloat {
-
-            0% {
-                transform: translateX(0px) translateY(0px);
-            }
-
-            20% {
-                transform: translateX(12px) translateY(-12px);
-            }
-
-            40% {
-                transform: translateX(-10px) translateY(-8px);
-            }
-
-            60% {
-                transform: translateX(8px) translateY(0px);
-            }
-
-            80% {
-                transform: translateX(-6px) translateY(-10px);
-            }
-
-            100% {
-                transform: translateX(0px) translateY(0px);
-            }
-        }
-
-        .catalog-hero p {
-            font-size: 1.2rem;
-            color: var(--text-color);
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.8;
-        }
-
-        .catalog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .catalog-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(0, 168, 255, 0.2);
-            border-radius: 15px;
-            padding: 30px;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .catalog-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--glow-color-1), var(--glow-color-2));
-        }
-
-        .catalog-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 40px rgba(0, 168, 255, 0.3);
-            border-color: var(--glow-color-1);
-        }
-
-        .catalog-card-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .catalog-card-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--glow-color-1), var(--glow-color-2));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            font-size: 1.5rem;
-            color: white;
-            box-shadow: 0 0 20px rgba(0, 168, 255, 0.4);
-        }
-
-        .catalog-card-title {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.3rem;
-            color: var(--text-color);
-        }
-
-        .catalog-card-subtitle {
-            font-size: 0.9rem;
-            color: rgba(224, 247, 250, 0.7);
-            margin-top: 5px;
-        }
-
-        .catalog-card-content {
-            color: var(--text-color);
-            line-height: 1.7;
-        }
-
-        .catalog-card-content h4 {
-            color: var(--glow-color-2);
-            font-size: 0.95rem;
-            margin: 15px 0 10px 0;
-            border-bottom: 1px solid rgba(0, 168, 255, 0.2);
-            padding-bottom: 8px;
-        }
-
-        .catalog-card-content ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .catalog-card-content li {
-            padding: 8px 0;
-            padding-left: 25px;
-            position: relative;
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-
-        .catalog-card-content li::before {
-            content: '▸';
-            position: absolute;
-            left: 0;
-            color: var(--glow-color-2);
-        }
-
-        /* Category Colors */
-        .catalog-card.multimedia {
-            --card-accent: #9C27B0;
-        }
-
-        .catalog-card.sound {
-            --card-accent: #E91E63;
-        }
-
-        .catalog-card.audience {
-            --card-accent: #2196F3;
-        }
-
-        .catalog-card.positioning {
-            --card-accent: #FF9800;
-        }
-
-        .catalog-card.monetization {
-            --card-accent: #4CAF50;
-        }
-
-        .catalog-card.socialmedia {
-            --card-accent: #00BCD4;
-        }
-
-        .catalog-card.educom {
-            --card-accent: #673AB7;
-        }
-
-        .catalog-card.peace {
-            --card-accent: #8BC34A;
-        }
-
-        .catalog-card.bots {
-            --card-accent: #F44336;
-        }
-
-        .catalog-card.polarization {
-            --card-accent: #795548;
-        }
-
-        .catalog-card.webdev {
-            --card-accent: #00BCD4;
-        }
-
-        .catalog-card.3d-design {
-            --card-accent: #FF9800;
-        }
-
-        .catalog-card.tech-integration {
-            --card-accent: #9C27B0;
-        }
-
-        .catalog-card.security {
-            --card-accent: #F44336;
-        }
-
-        .catalog-card.training {
-            --card-accent: #4CAF50;
-        }
-
-        /* CTA Section */
-        .catalog-cta {
-            text-align: center;
-            margin-top: 60px;
-            padding: 40px;
-            background: linear-gradient(135deg, rgba(0, 168, 255, 0.1), rgba(0, 229, 255, 0.05));
-            border-radius: 20px;
-            border: 1px solid rgba(0, 168, 255, 0.3);
-        }
-
-        .catalog-cta h3 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.8rem;
-            color: var(--glow-color-2);
-            margin-bottom: 20px;
-        }
-
-        .catalog-cta p {
-            color: var(--text-color);
-            margin-bottom: 30px;
-            font-size: 1.1rem;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .cta-btn {
-            padding: 15px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .cta-btn-primary {
-            background: linear-gradient(45deg, var(--glow-color-1), var(--glow-color-2));
-            color: white;
-            box-shadow: 0 0 20px rgba(0, 168, 255, 0.4);
-        }
-
-        .cta-btn-primary:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(0, 229, 255, 0.6);
-        }
-
-        .cta-btn-secondary {
-            background: transparent;
-            border: 2px solid var(--glow-color-1);
-            color: var(--glow-color-2);
-        }
-
-        .cta-btn-secondary:hover {
-            background: rgba(0, 168, 255, 0.1);
-            box-shadow: 0 0 20px rgba(0, 168, 255, 0.3);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .catalog-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
 </head>
 
 <body>
-    <nav class="navbar">
+    <!-- Navigation -->
+    <nav class="main-nav" id="mainNav">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo" data-i18n="nav.logo">
-                <video src="assets/Logo/VideoLogo_3d-brain.mp4" class="nav-logo-img" autoplay muted loop
-                    playsinline></video>
-                EmpathicWeb
+            <a href="index.html" class="logo">
+                <img src="assets/Logo/Logo_3d-brain.png" alt="EmpathicWeb Logo" width="40" height="40">
+                <span>EmpathicWeb</span>
             </a>
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
-                <li class="nav-item"><a href="about/about.html" class="nav-link" data-i18n="nav.about">About</a></li>
-                <li class="nav-item"><a href="Projects/projects.html" class="nav-link"
-                        data-i18n="nav.projects">Projects</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
-            </ul>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"
-                aria-controls="nav-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
             </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about/about.html">About</a></li>
+                <li><a href="Projects/projects.html">Projects</a></li>
+                <li><a href="services-catalog.html" class="active">Services</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
-    <!-- Background Video -->
-    <video id="bg-video" autoplay muted loop playsinline preload="metadata" poster="assets/Logo/Logo_3d-brain.png">
-        <source src="assets/Logo/VideoLogo_3d-brain.mp4" type="video/mp4">
-    </video>
-
-    <!-- WhatsApp Floating Button - Chat Experience -->
+    <!-- WhatsApp Floating Button -->
     <div class="whatsapp-container">
         <div class="whatsapp-icon">
-            <a href="https://wa.me/573108005004?text=Hi! I'm interested in your services. Can we chat?" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/573108005004?text=Hi! I'm interested in your services." target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-whatsapp"></i>
             </a>
         </div>
@@ -435,284 +54,280 @@
                     <div class="whatsapp-popup-status">Online</div>
                 </div>
             </div>
-            <p>Hi there! 👋 Let's chat about your project</p>
-            <a href="https://wa.me/573108005004?text=Hi! I'm interested in your services. Can we chat?" target="_blank" rel="noopener noreferrer" class="whatsapp-popup-cta">
+            <p>Hi there! Let's chat about your project</p>
+            <a href="https://wa.me/573108005004?text=Hi! I'm interested in your services." target="_blank" class="whatsapp-popup-cta">
                 <i class="fab fa-whatsapp"></i> Chat now
             </a>
         </div>
     </div>
 
+    <!-- Main Content -->
     <div class="container">
-        <!-- Catalog Section -->
         <section class="catalog-section" id="services-catalog">
             <div class="catalog-hero">
-                <h2><i class="fas fa-catalog"></i> Complete Services Catalog</h2>
-                <p>
-                    <strong>MULTIMEDIA + SOSTENIBILIDAD + DESAFIOS CIUDADANOS</strong><br>
-                    Comprehensive digital solutions combining technology, sustainability, and citizen engagement for
-                    impactful social transformation.
-                </p>
+                <h2><i class="fas fa-briefcase"></i> Our Services</h2>
+                <p>Professional digital solutions for your business growth.<br>Transparent pricing. Quality guaranteed.</p>
             </div>
 
             <div class="catalog-grid">
-                <!-- 1. Pagina Web -->
+                <!-- 1. Landing Page -->
                 <article class="catalog-card">
                     <div class="catalog-card-header">
                         <div class="catalog-card-icon">
                             <i class="fas fa-laptop-code"></i>
                         </div>
                         <div>
-                            <h3 class="catalog-card-title">Página Web</h3>
-                            <p class="catalog-card-subtitle">Landing Page</p>
+                            <h3 class="catalog-card-title">Landing Page</h3>
+                            <p class="catalog-card-subtitle">Single Page Website</p>
                         </div>
                     </div>
                     <div class="catalog-card-content">
                         <div class="service-price">
-                            <span>$650,000 COP</span>
-                            <p>Pago único</p>
+                            <span>$150 USD</span>
+                            <p>One-time payment</p>
                         </div>
-                        <p>Una página profesional para presentar tu negocio online.</p>
-                        <h4><i class="fas fa-check"></i> Incluye:</h4>
+                        <p>A professional page to showcase your business.</p>
+                        <h4><i class="fas fa-check"></i> Includes:</h4>
                         <ul>
-                            <li>Diseño para celular y PC</li>
-                            <li>Tu logo y colores de marca</li>
-                            <li>Formulario de contacto</li>
-                            <li>Aparece en Google</li>
-                            <li>Entrega en 5 días</li>
+                            <li>Mobile & desktop design</li>
+                            <li>Your logo and brand colors</li>
+                            <li>Contact form</li>
+                            <li>Google indexing</li>
+                            <li>Delivery in 5 days</li>
                         </ul>
                         <div class="service-note">
-                            <i class="fas fa-info-circle"></i> No incluye hosting ni dominio
+                            <i class="fas fa-info-circle"></i> Hosting and domain not included
                         </div>
                     </div>
                 </article>
 
-                <!-- 2. Sitio Web -->
+                <!-- 2. Business Website -->
                 <article class="catalog-card">
                     <div class="catalog-card-header">
                         <div class="catalog-card-icon">
                             <i class="fas fa-globe"></i>
                         </div>
                         <div>
-                            <h3 class="catalog-card-title">Sitio Web</h3>
-                            <p class="catalog-card-subtitle">Sitio Corporativo</p>
+                            <h3 class="catalog-card-title">Business Website</h3>
+                            <p class="catalog-card-subtitle">Up to 5 Pages</p>
                         </div>
                     </div>
                     <div class="catalog-card-content">
                         <div class="service-price">
-                            <span>$1,500,000 COP</span>
-                            <p>Pago único</p>
+                            <span>$350 USD</span>
+                            <p>One-time payment</p>
                         </div>
-                        <p>Hasta 5 páginas para tu empresa con diseño profesional.</p>
-                        <h4><i class="fas fa-check"></i> Incluye:</h4>
+                        <p>Complete website for your company.</p>
+                        <h4><i class="fas fa-check"></i> Includes:</h4>
                         <ul>
-                            <li>5 páginas (Inicio, Nosotros, Servicios, etc)</li>
-                            <li>Diseño profesional responsivo</li>
-                            <li>Posicionamiento SEO básico</li>
-                            <li>Formulario de contacto</li>
-                            <li>Entrega en 10 días</li>
+                            <li>5 pages (Home, About, Services, etc)</li>
+                            <li>Professional responsive design</li>
+                            <li>Basic SEO optimization</li>
+                            <li>Contact form</li>
+                            <li>Delivery in 10 days</li>
                         </ul>
                         <div class="service-note">
-                            <i class="fas fa-info-circle"></i> No incluye hosting ni dominio
+                            <i class="fas fa-info-circle"></i> Hosting and domain not included
                         </div>
                     </div>
                 </article>
 
-                <!-- 3. Tienda Online -->
+                <!-- 3. Online Store -->
                 <article class="catalog-card">
                     <div class="catalog-card-header">
                         <div class="catalog-card-icon">
                             <i class="fas fa-shopping-cart"></i>
                         </div>
                         <div>
-                            <h3 class="catalog-card-title">Tienda Online</h3>
+                            <h3 class="catalog-card-title">Online Store</h3>
                             <p class="catalog-card-subtitle">E-Commerce</p>
                         </div>
                     </div>
                     <div class="catalog-card-content">
                         <div class="service-price">
-                            <span>$3,500,000 COP</span>
-                            <p>Pago único</p>
+                            <span>$800 USD</span>
+                            <p>One-time payment</p>
                         </div>
-                        <p>Vende tus productos por internet las 24 horas.</p>
-                        <h4><i class="fas fa-check"></i> Incluye:</h4>
+                        <p>Sell your products online 24/7.</p>
+                        <h4><i class="fas fa-check"></i> Includes:</h4>
                         <ul>
-                            <li>Hasta 30 productos</li>
-                            <li>Pasarela de pagos</li>
-                            <li>Panel de administración</li>
-                            <li>Diseño responsivo</li>
-                            <li>Entrega en 15 días</li>
+                            <li>Up to 30 products</li>
+                            <li>Payment gateway integration</li>
+                            <li>Admin panel</li>
+                            <li>Mobile responsive design</li>
+                            <li>Delivery in 15 days</li>
                         </ul>
                         <div class="service-note">
-                            <i class="fas fa-info-circle"></i> Comisiones de pago no incluidas
+                            <i class="fas fa-info-circle"></i> Payment processor fees not included
                         </div>
                     </div>
                 </article>
 
-                <!-- 4. Logo -->
+                <!-- 4. Logo Design -->
                 <article class="catalog-card">
                     <div class="catalog-card-header">
                         <div class="catalog-card-icon" style="background: linear-gradient(135deg, #9b59b6, #8e44ad);">
                             <i class="fas fa-pen-nib"></i>
                         </div>
                         <div>
-                            <h3 class="catalog-card-title">Diseño de Logo</h3>
-                            <p class="catalog-card-subtitle">Identidad Visual</p>
+                            <h3 class="catalog-card-title">Logo Design</h3>
+                            <p class="catalog-card-subtitle">Brand Identity</p>
                         </div>
                     </div>
                     <div class="catalog-card-content">
                         <div class="service-price" style="border-color: #9b59b6; background: rgba(155,89,182,0.15);">
-                            <span style="color: #9b59b6;">$400,000 COP</span>
-                            <p>Pago único</p>
+                            <span style="color: #9b59b6;">$100 USD</span>
+                            <p>One-time payment</p>
                         </div>
-                        <p>Logo profesional que representa tu marca.</p>
-                        <h4><i class="fas fa-check"></i> Incluye:</h4>
+                        <p>Professional logo for your brand.</p>
+                        <h4><i class="fas fa-check"></i> Includes:</h4>
                         <ul>
-                            <li>3 propuestas diferentes</li>
-                            <li>Revisiones ilimitadas</li>
-                            <li>Todos los formatos (PNG, JPG, SVG)</li>
-                            <li>Entrega en 3 días</li>
+                            <li>3 different concepts</li>
+                            <li>Unlimited revisions</li>
+                            <li>All formats (PNG, JPG, SVG)</li>
+                            <li>Delivery in 3 days</li>
                         </ul>
                     </div>
                 </article>
 
-                <!-- 5. Redes Sociales -->
+                <!-- 5. Social Media Management -->
                 <article class="catalog-card">
                     <div class="catalog-card-header">
                         <div class="catalog-card-icon" style="background: linear-gradient(135deg, #E1306C, #C13584);">
                             <i class="fab fa-instagram"></i>
                         </div>
                         <div>
-                            <h3 class="catalog-card-title">Gestión de Redes</h3>
-                            <p class="catalog-card-subtitle">Community Manager</p>
+                            <h3 class="catalog-card-title">Social Media</h3>
+                            <p class="catalog-card-subtitle">Management</p>
                         </div>
                     </div>
                     <div class="catalog-card-content">
                         <div class="service-price">
-                            <span>$1,200,000 COP</span>
-                            <p>Por mes</p>
+                            <span>$280 USD</span>
+                            <p>Per month</p>
                         </div>
-                        <p>Deja que cuidemos tu presencia en redes sociales.</p>
-                        <h4><i class="fas fa-check"></i> Incluye:</h4>
+                        <p>We manage your social media presence.</p>
+                        <h4><i class="fas fa-check"></i> Includes:</h4>
                         <ul>
-                            <li>1 red social (Instagram o Facebook)</li>
-                            <li>12 publicaciones al mes</li>
-                            <li>Stories incluidos</li>
-                            <li>Respuesta a comentarios</li>
-                            <li>Reporte mensual</li>
+                            <li>1 platform (Instagram or Facebook)</li>
+                            <li>12 posts per month</li>
+                            <li>Stories included</li>
+                            <li>Comment responses</li>
+                            <li>Monthly report</li>
                         </ul>
                     </div>
                 </article>
 
-                <!-- 6. SEO -->
+                <!-- 6. SEO Positioning -->
                 <article class="catalog-card">
                     <div class="catalog-card-header">
                         <div class="catalog-card-icon" style="background: linear-gradient(135deg, #4285F4, #3367D6);">
                             <i class="fas fa-search"></i>
                         </div>
                         <div>
-                            <h3 class="catalog-card-title">Posicionamiento</h3>
-                            <p class="catalog-card-subtitle">SEO Google</p>
+                            <h3 class="catalog-card-title">SEO</h3>
+                            <p class="catalog-card-subtitle">Google Positioning</p>
                         </div>
                     </div>
                     <div class="catalog-card-content">
                         <div class="service-price" style="border-color: #4285F4; background: rgba(66,133,244,0.15);">
-                            <span style="color: #4285F4;">$800,000 COP</span>
-                            <p>Por mes</p>
+                            <span style="color: #4285F4;">$200 USD</span>
+                            <p>Per month</p>
                         </div>
-                        <p>Aparece primero en Google cuando te buscan.</p>
-                        <h4><i class="fas fa-check"></i> Incluye:</h4>
+                        <p>Appear first on Google searches.</p>
+                        <h4><i class="fas fa-check"></i> Includes:</h4>
                         <ul>
-                            <li>Optimización de tu web</li>
-                            <li>Palabras clave principales</li>
-                            <li>Google My Business</li>
-                            <li>Reporte mensual de resultados</li>
+                            <li>Website optimization</li>
+                            <li>Main keywords</li>
+                            <li>Google Business setup</li>
+                            <li>Monthly results report</li>
                         </ul>
                         <div class="service-note">
-                            <i class="fas fa-info-circle"></i> Primeros resultados desde 3 meses
+                            <i class="fas fa-info-circle"></i> First results from 3 months
                         </div>
                     </div>
                 </article>
 
-                <!-- 7. Seguridad Web -->
+                <!-- 7. Web Security -->
                 <article class="catalog-card">
                     <div class="catalog-card-header">
                         <div class="catalog-card-icon" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
                             <i class="fas fa-shield-alt"></i>
                         </div>
                         <div>
-                            <h3 class="catalog-card-title">Seguridad Web</h3>
-                            <p class="catalog-card-subtitle">Ciberseguridad</p>
+                            <h3 class="catalog-card-title">Web Security</h3>
+                            <p class="catalog-card-subtitle">Cybersecurity</p>
                         </div>
                     </div>
                     <div class="catalog-card-content">
                         <div class="service-price" style="border-color: #e74c3c; background: rgba(231,76,60,0.15);">
-                            <span style="color: #e74c3c;">$500,000 COP</span>
-                            <p>Auditoría</p>
+                            <span style="color: #e74c3c;">$120 USD</span>
+                            <p>One-time audit</p>
                         </div>
-                        <p>Análisis completo de vulnerabilidades de tu sitio.</p>
-                        <h4><i class="fas fa-check"></i> Incluye:</h4>
+                        <p>Complete vulnerability analysis.</p>
+                        <h4><i class="fas fa-check"></i> Includes:</h4>
                         <ul>
-                            <li>Escaneo de vulnerabilidades</li>
-                            <li>Recomendaciones de solución</li>
-                            <li>Reporte detallado</li>
-                            <li>Certificado SSL</li>
+                            <li>Vulnerability scanning</li>
+                            <li>Solution recommendations</li>
+                            <li>Detailed report</li>
+                            <li>SSL certificate</li>
                         </ul>
                     </div>
                 </article>
 
-                <!-- 8. Mantenimiento -->
+                <!-- 8. Website Maintenance -->
                 <article class="catalog-card">
                     <div class="catalog-card-header">
                         <div class="catalog-card-icon" style="background: linear-gradient(135deg, #95a5a6, #7f8c8d);">
                             <i class="fas fa-tools"></i>
                         </div>
                         <div>
-                            <h3 class="catalog-card-title">Mantenimiento</h3>
-                            <p class="catalog-card-subtitle">Soporte Web</p>
+                            <h3 class="catalog-card-title">Maintenance</h3>
+                            <p class="catalog-card-subtitle">Web Support</p>
                         </div>
                     </div>
                     <div class="catalog-card-content">
                         <div class="service-price" style="border-color: #95a5a6; background: rgba(149,165,166,0.15);">
-                            <span style="color: #95a5a6;">$250,000 COP</span>
-                            <p>Por mes</p>
+                            <span style="color: #95a5a6;">$60 USD</span>
+                            <p>Per month</p>
                         </div>
-                        <p>Tu web siempre actualizada y funcionando.</p>
-                        <h4><i class="fas fa-check"></i> Incluye:</h4>
+                        <p>Your website always updated and secure.</p>
+                        <h4><i class="fas fa-check"></i> Includes:</h4>
                         <ul>
-                            <li>Actualizaciones del sistema</li>
-                            <li>Backups diarios</li>
-                            <li>SSL siempre vigente</li>
-                            <li>Soporte por WhatsApp</li>
+                            <li>System updates</li>
+                            <li>Daily backups</li>
+                            <li>SSL always active</li>
+                            <li>WhatsApp support</li>
                         </ul>
                         <div class="service-note">
-                            <i class="fas fa-info-circle"></i> Contrato mínimo 3 meses
+                            <i class="fas fa-info-circle"></i> Minimum 3 months contract
                         </div>
                     </div>
                 </article>
 
-                <!-- 9. Contenido Digital -->
+                <!-- 9. Digital Content -->
                 <article class="catalog-card">
                     <div class="catalog-card-header">
                         <div class="catalog-card-icon" style="background: linear-gradient(135deg, #f39c12, #e67e22);">
                             <i class="fas fa-photo-video"></i>
                         </div>
                         <div>
-                            <h3 class="catalog-card-title">Contenido Digital</h3>
-                            <p class="catalog-card-subtitle">Gráficos para Redes</p>
+                            <h3 class="catalog-card-title">Digital Content</h3>
+                            <p class="catalog-card-subtitle">Graphics for Social</p>
                         </div>
                     </div>
                     <div class="catalog-card-content">
                         <div class="service-price" style="border-color: #f39c12; background: rgba(243,156,18,0.15);">
-                            <span style="color: #f39c12;">$350,000 COP</span>
-                            <p>10 posts</p>
+                            <span style="color: #f39c12;">$80 USD</span>
+                            <p>10 posts pack</p>
                         </div>
-                        <p>Gráficos profesionales listos para publicar.</p>
-                        <h4><i class="fas fa-check"></i> Incluye:</h4>
+                        <p>Professional graphics ready to post.</p>
+                        <h4><i class="fas fa-check"></i> Includes:</h4>
                         <ul>
-                            <li>10 imágenes para redes</li>
-                            <li>Con tu logo y colores</li>
-                            <li>Listos para publicar</li>
-                            <li>Entrega en 3 días</li>
+                            <li>10 social media images</li>
+                            <li>Your logo and colors</li>
+                            <li>Ready to publish</li>
+                            <li>Delivery in 3 days</li>
                         </ul>
                     </div>
                 </article>
@@ -725,714 +340,78 @@
                         </div>
                         <div>
                             <h3 class="catalog-card-title">Google Ads</h3>
-                            <p class="catalog-card-subtitle">Publicidad Online</p>
+                            <p class="catalog-card-subtitle">Online Advertising</p>
                         </div>
                     </div>
                     <div class="catalog-card-content">
                         <div class="service-price" style="border-color: #34A853; background: rgba(52,168,83,0.15);">
-                            <span style="color: #34A853;">$700,000 COP</span>
-                            <p>Gestión por mes</p>
+                            <span style="color: #34A853;">$160 USD</span>
+                            <p>Management per month</p>
                         </div>
-                        <p>Publicidad que aparece cuando te buscan.</p>
-                        <h4><i class="fas fa-check"></i> Incluye:</h4>
+                        <p>Advertising that appears when people search.</p>
+                        <h4><i class="fas fa-check"></i> Includes:</h4>
                         <ul>
-                            <li>Configuración de campañas</li>
-                            <li>Palabras clave optimizadas</li>
-                            <li>Seguimiento de resultados</li>
-                            <li>Optimización mensual</li>
+                            <li>Campaign setup</li>
+                            <li>Optimized keywords</li>
+                            <li>Results tracking</li>
+                            <li>Monthly optimization</li>
                         </ul>
                         <div class="service-note">
-                            <i class="fas fa-info-circle"></i> Presupuesto de ads separado
+                            <i class="fas fa-info-circle"></i> Ad budget separate
                         </div>
                     </div>
                 </article>
-            </div>
 
-            <!-- CTA Section -->
-            <div class="catalog-cta">
-                <h3><i class="fas fa-rocket"></i> ¿Listo para empezar?</h3>
-                <p>Contáctanos y te cotizamos sin compromiso.</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="cta-btn cta-btn-primary">
-                        <i class="fas fa-envelope"></i> Contactar
-                    </a>
-                    <a href="Projects/projects.html" class="cta-btn cta-btn-secondary">
-                        <i class="fas fa-eye"></i> Ver Proyectos
-                    </a>
-                </div>
-            </div>
-
-            <!-- Connect With Us Section -->
-            <div class="catalog-cta" style="margin-top: 40px;">
-                <h3><i class="fas fa-share-alt"></i> Síguenos</h3>
-                <p>Conecta con nosotros en redes sociales.</p>
-                            <i class="fas fa-chess-knight"></i>
-                        </div>
-                        <div>
-                            <h3 class="catalog-card-title">Posicionamiento y Estrategia</h3>
-                            <p class="catalog-card-subtitle">Digital Strategy & SEO</p>
-                        </div>
-                    </div>
-                    <div class="catalog-card-content">
-                        <div class="service-price" style="background: rgba(37,211,102,0.15); border: 1px solid #25D366; border-radius: 10px; padding: 12px; margin-bottom: 15px; text-align: center;">
-                            <span style="color: #25D366; font-size: 1.4rem; font-weight: bold;">Desde $1,000,000 COP/mes</span>
-                            <p style="color: var(--text-color); font-size: 0.8rem; margin: 5px 0 0 0;">SEO • Resultados desde 3 meses</p>
-                        </div>
-                        <h4><i class="fas fa-search"></i> SEO Básico:</h4>
-                        <ul>
-                            <li>Auditoría técnica completa</li>
-                            <li>Optimización on-page</li>
-                            <li>Contenido optimizado</li>
-                            <li>Reporte mensual</li>
-                        </ul>
-                        <h4><i class="fas fa-bullseye"></i> Estrategia Digital:</h4>
-                        <ul>
-                            <li>Análisis de competencia</li>
-                            <li>Selección de canales</li>
-                            <li>Plan de contenido</li>
-                            <li>Métricas y objetivos</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <!-- 4. 3D Design & Interactive Services -->
-                <article class="catalog-card 3d-design">
+                <!-- 11. Email Marketing -->
+                <article class="catalog-card">
                     <div class="catalog-card-header">
-                        <div class="catalog-card-icon">
-                            <i class="fas fa-cube"></i>
-                        </div>
-                        <div>
-                            <h3 class="catalog-card-title">Diseño 3D & Interactivo</h3>
-                            <p class="catalog-card-subtitle">3D Design & Interactive</p>
-                        </div>
-                    </div>
-                    <div class="catalog-card-content">
-                        <div class="service-price" style="background: rgba(37,211,102,0.15); border: 1px solid #25D366; border-radius: 10px; padding: 12px; margin-bottom: 15px; text-align: center;">
-                            <span style="color: #25D366; font-size: 1.4rem; font-weight: bold;">Desde $500,000 COP</span>
-                            <p style="color: var(--text-color); font-size: 0.8rem; margin: 5px 0 0 0;">Logo 3D • Entrega 1 semana</p>
-                        </div>
-                        <h4><i class="fas fa-shapes"></i> Logo 3D:</h4>
-                        <ul>
-                            <li>Diseño de logo animado</li>
-                            <li>Modelos 3D simples</li>
-                            <li>Iconos y gráficos 3D</li>
-                            <li>Animación básica</li>
-                        </ul>
-                        <h4><i class="fas fa-mouse-pointer"></i> Elementos Web 3D:</h4>
-                        <ul>
-                            <li>Elementos interactivos</li>
-                            <li>Visualización de productos</li>
-                            <li>Navegación 3D</li>
-                            <li>Galerías inmersivas</li>
-                        </ul>
-                        <h4><i class="fas fa-gamepad"></i> Experiencias Avanzadas:</h4>
-                        <ul>
-                            <li>Entorno web 3D completo</li>
-                            <li>Showroom virtual</li>
-                            <li>Integración de juegos</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <!-- 5. Monetization Techniques -->
-                <article class="catalog-card monetization">
-                    <div class="catalog-card-header">
-                        <div class="catalog-card-icon">
-                            <i class="fas fa-money-bill-wave"></i>
-                        </div>
-                        <div>
-                            <h3 class="catalog-card-title">Técnicas de Monetización</h3>
-                            <p class="catalog-card-subtitle">Revenue Generation</p>
-                        </div>
-                    </div>
-                    <div class="catalog-card-content">
-                        <h4><i class="fas fa-ad"></i> Digital Advertising:</h4>
-                        <ul>
-                            <li>Native advertising and banner ads</li>
-                            <li>Brand collaborations and sponsorships</li>
-                            <li>Increased reach and additional income streams</li>
-                        </ul>
-                        <h4><i class="fas fa-subscript"></i> Subscription Models:</h4>
-                        <p>Recurring revenue for audience loyalty and financial stability.</p>
-                        <h4><i class="fas fa-crowdfunding"></i> Crowdfunding Platforms:</h4>
-                        <ul>
-                            <li>Kickstarter, GoFundme, Indiegogo, Patreon</li>
-                            <li>Campaign pages, backer support, tiered rewards</li>
-                        </ul>
-                        <h4><i class="fas fa-handshake"></i> Affiliate Marketing:</h4>
-                        <p>Partnerships and collaborations for diversified income.</p>
-                        <h4><i class="fas fa-shield-alt"></i> Risk Diversification:</h4>
-                        <p>Multiple income sources reduce financial risk and ensure long-term stability.</p>
-                    </div>
-                </article>
-
-                <!-- Digital Content Creation -->
-                <article class="catalog-card content" style="border-color: #e74c3c;">
-                    <div class="catalog-card-header">
-                        <div class="catalog-card-icon" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);">
-                            <i class="fas fa-photo-video"></i>
-                        </div>
-                        <div>
-                            <h3 class="catalog-card-title">Contenido Digital</h3>
-                            <p class="catalog-card-subtitle">Creación de Contenido</p>
-                        </div>
-                    </div>
-                    <div class="catalog-card-content">
-                        <div class="service-price" style="background: rgba(231,76,60,0.2); border: 1px solid #e74c3c; border-radius: 10px; padding: 12px; margin-bottom: 15px; text-align: center;">
-                            <span style="color: #e74c3c; font-size: 1.4rem; font-weight: bold;">Desde $400,000 COP</span>
-                            <p style="color: var(--text-color); font-size: 0.8rem; margin: 5px 0 0 0;">10 posts gráficos</p>
-                        </div>
-                        <h4><i class="fas fa-images"></i> Posts para Redes:</h4>
-                        <ul>
-                            <li>Gráficos personalizados</li>
-                            <li>Plantillas de marca</li>
-                            <li>10 unidades mínimo</li>
-                        </ul>
-                        <h4><i class="fas fa-video"></i> Video:</h4>
-                        <ul>
-                            <li>Edición de video</li>
-                            <li>Animaciones explainer</li>
-                            <li>Subtitles y efectos</li>
-                        </ul>
-                        <h4><i class="fas fa-camera"></i> Fotografía:</h4>
-                        <ul>
-                            <li>Edición profesional</li>
-                            <li>Retoque de producto</li>
-                            <li>Corrección de color</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <!-- 5. Social Media Plans -->
-                <article class="catalog-card socialmedia">
-                    <div class="catalog-card-header">
-                        <div class="catalog-card-icon">
-                            <i class="fas fa-thumbs-up"></i>
-                        </div>
-                        <div>
-                            <h3 class="catalog-card-title">Planes Social Media</h3>
-                            <p class="catalog-card-subtitle">Gestión de Redes Sociales</p>
-                        </div>
-                    </div>
-                    <div class="catalog-card-content">
-                        <div class="service-price" style="background: rgba(37,211,102,0.15); border: 1px solid #25D366; border-radius: 10px; padding: 12px; margin-bottom: 15px; text-align: center;">
-                            <span style="color: #25D366; font-size: 1.4rem; font-weight: bold;">Desde $1,200,000 COP/mes</span>
-                            <p style="color: var(--text-color); font-size: 0.8rem; margin: 5px 0 0 0;">12 posts • 1 red social</p>
-                        </div>
-                        <h4><i class="fas fa-users-cog"></i> Plan Básico:</h4>
-                        <ul>
-                            <li>1 plataforma</li>
-                            <li>12 publicaciones al mes</li>
-                            <li>Engagement básico</li>
-                            <li>Reporte mensual</li>
-                        </ul>
-                        <h4><i class="fas fa-crown"></i> Plan Profesional:</h4>
-                        <ul>
-                            <li>2 plataformas</li>
-                            <li>20 publicaciones al mes</li>
-                            <li>Gestión completa de engagement</li>
-                            <li>Calendario de contenido</li>
-                        </ul>
-                        <h4><i class="fas fa-magic"></i> Contenido:</h4>
-                        <ul>
-                            <li>Contenido efímero (Stories, Reels)</li>
-                            <li>Filtros AR</li>
-                            <li>Gráficos personalizados</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <!-- 6. Educommunication -->
-                <article class="catalog-card educom">
-                    <div class="catalog-card-header">
-                        <div class="catalog-card-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div>
-                            <h3 class="catalog-card-title">Educomunicación</h3>
-                            <p class="catalog-card-subtitle">Media Education</p>
-                        </div>
-                    </div>
-                    <div class="catalog-card-content">
-                        <h4><i class="fas fa definition"></i> Definition:</h4>
-                        <p>Discipline promoting responsible and critical use of media for active, participatory
-                            citizenship learning.</p>
-                        <h4><i class="fas fa-globe"></i> Digital Relevance:</h4>
-                        <ul>
-                            <li>Develops critical thinking skills</li>
-                            <li>Enables informed information analysis</li>
-                            <li>Promotes conscious, ethical content creation</li>
-                        </ul>
-                        <h4><i class="fas fa-lightbulb"></i> Observed Benefits:</h4>
-                        <ul>
-                            <li>Enhanced critical thinking</li>
-                            <li>Improved communication abilities</li>
-                            <li>Greater active participation</li>
-                            <li>Potential social transformation</li>
-                        </ul>
-                        <h4><i class="fas fa-robot"></i> Technology Integration:</h4>
-                        <p>AI for personalized learning, AR for contextual understanding, gamification for engagement.
-                        </p>
-                    </div>
-                </article>
-
-                <!-- 8. Technology Integration -->
-                <article class="catalog-card tech-integration">
-                    <div class="catalog-card-header">
-                        <div class="catalog-card-icon">
-                            <i class="fas fa-microchip"></i>
-                        </div>
-                        <div>
-                            <h3 class="catalog-card-title">Integración Tecnológica</h3>
-                            <p class="catalog-card-subtitle">Technology Integration</p>
-                        </div>
-                    </div>
-                    <div class="catalog-card-content">
-                        <h4><i class="fas fa-robot"></i> AI Integration:</h4>
-                        <ul>
-                            <li>AI-powered chatbots</li>
-                            <li>Machine learning models</li>
-                            <li>Automated content generation</li>
-                            <li>Predictive analytics</li>
-                        </ul>
-                        <h4><i class="fas fa-link"></i> Blockchain Integration:</h4>
-                        <ul>
-                            <li>Smart contract development</li>
-                            <li>Cryptocurrency payment integration</li>
-                            <li>Decentralized applications</li>
-                            <li>Blockchain-based authentication</li>
-                        </ul>
-                        <h4><i class="fas fa-network-wired"></i> IoT Integration:</h4>
-                        <ul>
-                            <li>IoT device connectivity</li>
-                            <li>Real-time data monitoring</li>
-                            <li>Smart home integration</li>
-                            <li>Industrial IoT solutions</li>
-                        </ul>
-                        <h4><i class="fas fa-mobile-alt"></i> Mobile & Responsive Design:</h4>
-                        <ul>
-                            <li>Mobile-first approach</li>
-                            <li>Progressive Web Apps (PWA)</li>
-                            <li>Cross-platform compatibility</li>
-                            <li>Touch-optimized interfaces</li>
-                        </ul>
-                        <h4><i class="fas fa-globe"></i> Multilingual Support:</h4>
-                        <ul>
-                            <li>Multi-language websites</li>
-                            <li>Automatic translation</li>
-                            <li>Locale-specific content</li>
-                            <li>Cultural adaptation</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <!-- 9. Media Peace -->
-                <article class="catalog-card peace">
-                    <div class="catalog-card-header">
-                        <div class="catalog-card-icon">
-                            <i class="fas fa-dove"></i>
-                        </div>
-                        <div>
-                            <h3 class="catalog-card-title">Paz Mediática</h3>
-                            <p class="catalog-card-subtitle">Peaceful Media</p>
-                        </div>
-                    </div>
-                    <div class="catalog-card-content">
-                        <h4><i class="fas fa-balance-scale"></i> Definition:</h4>
-                        <p>Media landscape promoting understanding, respect, and constructive dialogue over
-                            sensationalism or hostility.</p>
-                        <h4><i class="fas fa-shield-alt"></i> Current Role:</h4>
-                        <ul>
-                            <li>Counter misinformation</li>
-                            <li>Reduce online toxicity</li>
-                            <li>Foster respectful discourse</li>
-                        </ul>
-                        <h4><i class="fas fa-newspaper"></i> Positive Practices:</h4>
-                        <ul>
-                            <li>Constructive journalism</li>
-                            <li>Balanced coverage</li>
-                            <li>Inclusive narratives promoting reconciliation</li>
-                        </ul>
-                        <h4><i class="fas fa-check-circle"></i> Combating Misinformation:</h4>
-                        <p>Source verification, media literacy education, and technology tools for fact-checking.</p>
-                    </div>
-                </article>
-
-                <!-- 8. Bot & Troll Identification -->
-                <article class="catalog-card bots">
-                    <div class="catalog-card-header">
-                        <div class="catalog-card-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div>
-                            <h3 class="catalog-card-title">Identificación de Bots</h3>
-                            <p class="catalog-card-subtitle">Bot & Troll Defense</p>
-                        </div>
-                    </div>
-                    <div class="catalog-card-content">
-                        <h4><i class="fas fa-bug"></i> Definitions:</h4>
-                        <ul>
-                            <li><strong>Bots:</strong> Automated programs for executing tasks</li>
-                            <li><strong>Trolls:</strong> Users provoking online conflicts</li>
-                        </ul>
-                        <h4><i class="fas fa-exclamation-triangle"></i> Impact:</h4>
-                        <p>Spread disinformation, manipulate opinions, increase toxicity, and undermine constructive
-                            discourse.</p>
-                        <h4><i class="fas fa-search"></i> Detection Signs:</h4>
-                        <ul>
-                            <li>Frequent posts and generic responses</li>
-                            <li>Repetitive patterns vs. varied human content</li>
-                        </ul>
-                        <h4><i class="fas fa-tools"></i> Detection Tools:</h4>
-                        <p>Botometer (automated analysis) combined with manual profile review.</p>
-                        <h4><i class="fas fa-users-cog"></i> Community Resilience:</h4>
-                        <p>Moderation bots, human administrators, and automatic filters working together.</p>
-                    </div>
-                </article>
-
-                <!-- 10. Security Services -->
-                <article class="catalog-card security">
-                    <div class="catalog-card-header">
-                        <div class="catalog-card-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <div>
-                            <h3 class="catalog-card-title">Servicios de Seguridad</h3>
-                            <p class="catalog-card-subtitle">Security Services</p>
-                        </div>
-                    </div>
-                    <div class="catalog-card-content">
-                        <h4><i class="fas fa-lock"></i> Cybersecurity Consulting:</h4>
-                        <ul>
-                            <li>Security audit and assessment</li>
-                            <li>Vulnerability scanning</li>
-                            <li>Penetration testing</li>
-                            <li>Security monitoring and response</li>
-                        </ul>
-                        <h4><i class="fas fa-user-shield"></i> Personal Security Services:</h4>
-                        <ul>
-                            <li>Executive protection</li>
-                            <li>Event security</li>
-                            <li>Personal escort services</li>
-                            <li>Security consultation</li>
-                        </ul>
-                        <h4><i class="fas fa-shield-virus"></i> Advanced Security Features:</h4>
-                        <ul>
-                            <li>Advanced threat detection</li>
-                            <li>Real-time monitoring systems</li>
-                            <li>Incident response protocols</li>
-                            <li>Security compliance auditing</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <!-- 11. Algorithmic Polarization -->
-                <article class="catalog-card polarization">
-                    <div class="catalog-card-header">
-                        <div class="catalog-card-icon">
-                            <i class="fas fa-project-diagram"></i>
-                        </div>
-                        <div>
-                            <h3 class="catalog-card-title">Polarización Algorítmica</h3>
-                            <p class="catalog-card-subtitle">Algorithm Awareness</p>
-                        </div>
-                    </div>
-                    <div class="catalog-card-content">
-                        <h4><i class="fas fa-filter"></i> Definition:</h4>
-                        <p>How recommendation algorithms reinforce existing viewpoints and create filter bubbles.</p>
-                        <h4><i class="fas fa-globe-americas"></i> Societal Impact:</h4>
-                        <ul>
-                            <li>Ideological divisions and echo chambers</li>
-                            <li>Limited exposure to diverse perspectives</li>
-                            <li>Reduced constructive debate affecting democracy</li>
-                        </ul>
-                        <h4><i class="fas fa-hand-paper"></i> Mitigation Strategies:</h4>
-                        <ul>
-                            <li>Diversify information sources</li>
-                            <li>Verify content before sharing</li>
-                            <li>Question algorithmic recommendations</li>
-                        </ul>
-                        <h4><i class="fas fa-eye"></i> Awareness:</h4>
-                        <p>Understanding algorithms helps users make informed choices about consumed content.</p>
-                    </div>
-                </article>
-
-                <!-- 10. Social Impact & Sustainability -->
-                <article class="catalog-card multimedia">
-                    <div class="catalog-card-header">
-                        <div class="catalog-card-icon">
-                            <i class="fas fa-leaf"></i>
-                        </div>
-                        <div>
-                            <h3 class="catalog-card-title">Ciudadanía Digital</h3>
-                            <p class="catalog-card-subtitle">Sustainability & Challenges</p>
-                        </div>
-                    </div>
-                    <div class="catalog-card-content">
-                        <h4><i class="fas fa-globe"></i> Multimedia Integration:</h4>
-                        <p>Combining audio, video, text, and interactive elements for comprehensive communication
-                            strategies.</p>
-                        <h4><i class="fas fa-leaf"></i> Sustainability Focus:</h4>
-                        <p>Eco-conscious digital practices reducing environmental impact while maximizing reach.</p>
-                        <h4><i class="fas fa-users"></i> Citizen Challenges:</h4>
-                        <ul>
-                            <li>Digital literacy and access equity</li>
-                            <li>Online safety and privacy protection</li>
-                            <li>Ethical technology adoption</li>
-                            <li>Community engagement for social good</li>
-                        </ul>
-                        <h4><i class="fas fa-handshake"></i> Holistic Approach:</h4>
-                        <p>Technology solutions that balance innovation with social responsibility and environmental
-                            consciousness.</p>
-                    </div>
-                </article>
-
-                <!-- Cybersecurity -->
-                <article class="catalog-card security" style="border-color: #e74c3c;">
-                    <div class="catalog-card-header">
-                        <div class="catalog-card-icon" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);">
-                            <i class="fas fa-lock"></i>
-                        </div>
-                        <div>
-                            <h3 class="catalog-card-title">Ciberseguridad</h3>
-                            <p class="catalog-card-subtitle">Cybersecurity</p>
-                        </div>
-                    </div>
-                    <div class="catalog-card-content">
-                        <div class="service-price" style="background: rgba(231,76,60,0.2); border: 1px solid #e74c3c; border-radius: 10px; padding: 12px; margin-bottom: 15px; text-align: center;">
-                            <span style="color: #e74c3c; font-size: 1.4rem; font-weight: bold;">Desde $500,000 COP</span>
-                            <p style="color: var(--text-color); font-size: 0.8rem; margin: 5px 0 0 0;">Auditoría • Entrega 1 semana</p>
-                        </div>
-                        <h4><i class="fas fa-search"></i> Auditoría de Seguridad:</h4>
-                        <ul>
-                            <li>Análisis de vulnerabilidades</li>
-                            <li>Evaluación de riesgos</li>
-                            <li>Reporte detallado</li>
-                        </ul>
-                        <h4><i class="fas fa-shield-alt"></i> Protección Web:</h4>
-                        <ul>
-                            <li>Certificados SSL</li>
-                            <li>Firewall y protecciones</li>
-                            <li>Monitoreo 24/7</li>
-                        </ul>
-                        <h4><i class="fas fa-user-shield"></i> Consultoría:</h4>
-                        <ul>
-                            <li>Recomendaciones de seguridad</li>
-                            <li>Protocolos de respuesta</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <!-- Google Ads -->
-                <article class="catalog-card ads" style="border-color: #4285f4;">
-                    <div class="catalog-card-header">
-                        <div class="catalog-card-icon" style="background: linear-gradient(135deg, #4285f4 0%, #3367d6 100%);">
-                            <i class="fas fa-ad"></i>
-                        </div>
-                        <div>
-                            <h3 class="catalog-card-title">Google Ads</h3>
-                            <p class="catalog-card-subtitle">Paid Advertising</p>
-                        </div>
-                    </div>
-                    <div class="catalog-card-content">
-                        <div class="service-price" style="background: rgba(66,133,244,0.2); border: 1px solid #4285f4; border-radius: 10px; padding: 12px; margin-bottom: 15px; text-align: center;">
-                            <span style="color: #4285f4; font-size: 1.4rem; font-weight: bold;">Desde $800,000 COP/mes</span>
-                            <p style="color: var(--text-color); font-size: 0.8rem; margin: 5px 0 0 0;">Gestión completa</p>
-                        </div>
-                        <h4><i class="fas fa-google"></i> Campañas Search:</h4>
-                        <ul>
-                            <li>Palabras clave otimizadas</li>
-                            <li>Anuncios optimizados</li>
-                            <li>Seguimiento de conversiones</li>
-                        </ul>
-                        <h4><i class="fas fa-video"></i> Campañas Display:</h4>
-                        <ul>
-                            <li>Remarketing</li>
-                            <li>Banneres personalizados</li>
-                        </ul>
-                        <h4><i class="fas fa-chart-line"></i> Reportes:</h4>
-                        <ul>
-                            <li>ROI detallado</li>
-                            <li>Mensual</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <!-- Email Marketing -->
-                <article class="catalog-card email" style="border-color: #f39c12;">
-                    <div class="catalog-card-header">
-                        <div class="catalog-card-icon" style="background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);">
-                            <i class="fas fa-envelope-open-text"></i>
+                        <div class="catalog-card-icon" style="background: linear-gradient(135deg, #1abc9c, #16a085);">
+                            <i class="fas fa-envelope"></i>
                         </div>
                         <div>
                             <h3 class="catalog-card-title">Email Marketing</h3>
-                            <p class="catalog-card-subtitle">Email Campaigns</p>
+                            <p class="catalog-card-subtitle">Newsletters</p>
                         </div>
                     </div>
                     <div class="catalog-card-content">
-                        <div class="service-price" style="background: rgba(243,156,18,0.2); border: 1px solid #f39c12; border-radius: 10px; padding: 12px; margin-bottom: 15px; text-align: center;">
-                            <span style="color: #f39c12; font-size: 1.4rem; font-weight: bold;">Desde $500,000 COP</span>
-                            <p style="color: var(--text-color); font-size: 0.8rem; margin: 5px 0 0 0;">Setup + primera campaña</p>
+                        <div class="service-price" style="border-color: #1abc9c; background: rgba(26,188,156,0.15);">
+                            <span style="color: #1abc9c;">$120 USD</span>
+                            <p>Setup + first campaign</p>
                         </div>
-                        <h4><i class="fas fa-cog"></i> Configuración:</h4>
+                        <p>Email campaigns that convert.</p>
+                        <h4><i class="fas fa-check"></i> Includes:</h4>
                         <ul>
-                            <li>Plataforma de email</li>
-                            <li>Plantillas profesionales</li>
-                            <li>Integración con web</li>
-                        </ul>
-                        <h4><i class="fas fa-pen"></i> Creación de Campañas:</h4>
-                        <ul>
-                            <li>Diseño de emails</li>
-                            <li>Copywriting</li>
-                            <li>Automatizaciones</li>
-                        </ul>
-                        <h4><i class="fas fa-tasks"></i> Gestión:</h4>
-                        <ul>
-                            <li>Lista de suscriptores</li>
-                            <li>Segmentación</li>
+                            <li>Email platform setup</li>
+                            <li>Professional templates</li>
+                            <li>Website integration</li>
+                            <li>First campaign design</li>
                         </ul>
                     </div>
                 </article>
 
-                <!-- Training & Workshops -->
-                <article class="catalog-card training" style="border-color: #1abc9c;">
+                <!-- 12. Training -->
+                <article class="catalog-card">
                     <div class="catalog-card-header">
-                        <div class="catalog-card-icon" style="background: linear-gradient(135deg, #1abc9c 0%, #16a085 100%);">
+                        <div class="catalog-card-icon" style="background: linear-gradient(135deg, #8e44ad, #9b59b6);">
                             <i class="fas fa-chalkboard-teacher"></i>
                         </div>
                         <div>
-                            <h3 class="catalog-card-title">Capacitación</h3>
-                            <p class="catalog-card-subtitle">Training & Workshops</p>
+                            <h3 class="catalog-card-title">Training</h3>
+                            <p class="catalog-card-subtitle">Workshops</p>
                         </div>
                     </div>
                     <div class="catalog-card-content">
-                        <div class="service-price" style="background: rgba(26,188,156,0.2); border: 1px solid #1abc9c; border-radius: 10px; padding: 12px; margin-bottom: 15px; text-align: center;">
-                            <span style="color: #1abc9c; font-size: 1.4rem; font-weight: bold;">Desde $200,000 COP/hora</span>
-                            <p style="color: var(--text-color); font-size: 0.8rem; margin: 5px 0 0 0;">Presencial o virtual</p>
+                        <div class="service-price" style="border-color: #8e44ad; background: rgba(142,68,173,0.15);">
+                            <span style="color: #8e44ad;">$50 USD</span>
+                            <p>Per hour</p>
                         </div>
-                        <h4><i class="fas fa-laptop-code"></i> Talleres Web:</h4>
+                        <p>Learn digital skills for your business.</p>
+                        <h4><i class="fas fa-check"></i> Includes:</h4>
                         <ul>
-                            <li>Gestión de contenido básico</li>
-                            <li>SEO para emprendedores</li>
-                            <li>Herramientas digitales</li>
-                        </ul>
-                        <h4><i class="fas fa-bullhorn"></i> Marketing Digital:</h4>
-                        <ul>
-                            <li>Redes sociales</li>
-                            <li>Google Ads básico</li>
-                            <li>Email marketing</li>
-                        </ul>
-                        <h4><i class="fas fa-users"></i> Para Empresas:</h4>
-                        <ul>
-                            <li>Capacitación grupal</li>
-                            <li>Materiales incluidos</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <!-- Website Maintenance -->
-                <article class="catalog-card maintenance" style="border-color: #95a5a6;">
-                    <div class="catalog-card-header">
-                        <div class="catalog-card-icon" style="background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);">
-                            <i class="fas fa-tools"></i>
-                        </div>
-                        <div>
-                            <h3 class="catalog-card-title">Mantenimiento Web</h3>
-                            <p class="catalog-card-subtitle">Website Maintenance</p>
-                        </div>
-                    </div>
-                    <div class="catalog-card-content">
-                        <div class="service-price" style="background: rgba(149,165,166,0.2); border: 1px solid #95a5a6; border-radius: 10px; padding: 12px; margin-bottom: 15px; text-align: center;">
-                            <span style="color: #95a5a6; font-size: 1.4rem; font-weight: bold;">Desde $300,000 COP/mes</span>
-                            <p style="color: var(--text-color); font-size: 0.8rem; margin: 5px 0 0 0;">Todo incluido</p>
-                        </div>
-                        <h4><i class="fas fa-sync"></i> Actualizaciones:</h4>
-                        <ul>
-                            <li>CMS actualizado</li>
-                            <li>Plugins al día</li>
-                            <li>Nuevas páginas</li>
-                        </ul>
-                        <h4><i class="fas fa-backup"></i> Respaldo:</h4>
-                        <ul>
-                            <li>Backups diarios</li>
-                            <li>Restauración gratis</li>
-                        </ul>
-                        <h4><i class="fas fa-shield-alt"></i> Seguridad:</h4>
-                        <ul>
-                            <li>Monitoreo 24/7</li>
-                            <li>SSL vigente</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <!-- Translation -->
-                <article class="catalog-card translation" style="border-color: #9b59b6;">
-                    <div class="catalog-card-header">
-                        <div class="catalog-card-icon" style="background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);">
-                            <i class="fas fa-language"></i>
-                        </div>
-                        <div>
-                            <h3 class="catalog-card-title">Traducciones</h3>
-                            <p class="catalog-card-subtitle">Spanish - English</p>
-                        </div>
-                    </div>
-                    <div class="catalog-card-content">
-                        <div class="service-price" style="background: rgba(155,89,182,0.2); border: 1px solid #9b59b6; border-radius: 10px; padding: 12px; margin-bottom: 15px; text-align: center;">
-                            <span style="color: #9b59b6; font-size: 1.4rem; font-weight: bold;">$80 - $150 COP/palabra</span>
-                            <p style="color: var(--text-color); font-size: 0.8rem; margin: 5px 0 0 0;">Según complejidad</p>
-                        </div>
-                        <h4><i class="fas fa-file-alt"></i> Contenido Web:</h4>
-                        <ul>
-                            <li>Páginas web</li>
-                            <li>Blogs y artículos</li>
-                            <li>Descripciones</li>
-                        </ul>
-                        <h4><i class="fas fa-copy"></i> Documentos:</h4>
-                        <ul>
-                            <li>Presentaciones</li>
-                            <li>Manuales</li>
-                            <li>Contratos</li>
-                        </ul>
-                        <h4><i class="fas fa-check-double"></i> Calidad:</h4>
-                        <ul>
-                            <li>Revisión profesional</li>
-                            <li>Adaptación cultural</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <!-- Copywriting -->
-                <article class="catalog-card copywriting" style="border-color: #e67e22;">
-                    <div class="catalog-card-header">
-                        <div class="catalog-card-icon" style="background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);">
-                            <i class="fas fa-pen-fancy"></i>
-                        </div>
-                        <div>
-                            <h3 class="catalog-card-title">Copywriting</h3>
-                            <p class="catalog-card-subtitle">Texto Profesional</p>
-                        </div>
-                    </div>
-                    <div class="catalog-card-content">
-                        <div class="service-price" style="background: rgba(230,126,34,0.2); border: 1px solid #e67e22; border-radius: 10px; padding: 12px; margin-bottom: 15px; text-align: center;">
-                            <span style="color: #e67e22; font-size: 1.4rem; font-weight: bold;">Desde $200,000 COP</span>
-                            <p style="color: var(--text-color); font-size: 0.8rem; margin: 5px 0 0 0;">Por página</p>
-                        </div>
-                        <h4><i class="fas fa-align-left"></i> Textos Web:</h4>
-                        <ul>
-                            <li>Páginas web</li>
-                            <li>Landing pages</li>
-                            <li>Sobre nosotros</li>
-                        </ul>
-                        <h4><i class="fas fa-bullhorn"></i> Marketing:</h4>
-                        <ul>
-                            <li>Posts para redes</li>
-                            <li>Email campaigns</li>
-                            <li>Descripciones de productos</li>
-                        </ul>
-                        <h4><i class="fas fa-search-dollar"></h4>
-                        <ul>
-                            <li>SEO optimizado</li>
-                            <li>Que vende</li>
+                            <li>Website management basics</li>
+                            <li>Social media training</li>
+                            <li>Digital tools training</li>
+                            <li>Online or in-person</li>
                         </ul>
                     </div>
                 </article>
@@ -1440,97 +419,71 @@
 
             <!-- CTA Section -->
             <div class="catalog-cta">
-                <h3><i class="fas fa-rocket"></i> Ready to Transform Your Digital Presence?</h3>
-                <p>From strategy to execution, we deliver comprehensive solutions tailored to your unique needs.</p>
+                <h3><i class="fas fa-rocket"></i> Ready to Start?</h3>
+                <p>Contact us for a free quote. No commitment required.</p>
                 <div class="cta-buttons">
                     <a href="contact.html" class="cta-btn cta-btn-primary">
-                        <i class="fas fa-envelope"></i> Start Your Project
+                        <i class="fas fa-envelope"></i> Contact Us
                     </a>
                     <a href="Projects/projects.html" class="cta-btn cta-btn-secondary">
-                        <i class="fas fa-eye"></i> View Our Work
+                        <i class="fas fa-eye"></i> View Projects
                     </a>
                 </div>
             </div>
 
-            <!-- Connect With Us Section -->
+            <!-- Connect Section -->
             <div class="catalog-cta" style="margin-top: 40px;">
-                <h3><i class="fas fa-share-alt"></i> Síguenos</h3>
-                <p>Conecta con nosotros en redes sociales.</p>
-                <div class="social-connect-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin-top: 30px; max-width: 900px; margin-left: auto; margin-right: auto;">
+                <h3><i class="fas fa-share-alt"></i> Connect With Us</h3>
+                <p>Follow us on social media for updates and insights.</p>
                 <div class="social-connect-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin-top: 30px; max-width: 900px; margin-left: auto; margin-right: auto;">
                     <a href="mailto:eduardgildardoperezfranco@empathicweb.online" class="social-connect-card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(0,168,255,0.2); text-decoration: none; transition: all 0.3s ease;">
                         <i class="fas fa-envelope" style="font-size: 2rem; color: #00E5FF; margin-bottom: 10px;"></i>
                         <span style="color: #E0F7FA; font-size: 0.9rem;">Email</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/eduard-perez-331470b7/" target="_blank" rel="noopener noreferrer" class="social-connect-card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(0,168,255,0.2); text-decoration: none; transition: all 0.3s ease;">
+                    <a href="https://www.linkedin.com/in/eduard-perez-331470b7/" target="_blank" class="social-connect-card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(0,168,255,0.2); text-decoration: none; transition: all 0.3s ease;">
                         <i class="fab fa-linkedin" style="font-size: 2rem; color: #0077B5; margin-bottom: 10px;"></i>
                         <span style="color: #E0F7FA; font-size: 0.9rem;">LinkedIn</span>
                     </a>
-                    <a href="https://wa.me/573108005004" target="_blank" rel="noopener noreferrer" class="social-connect-card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(0,168,255,0.2); text-decoration: none; transition: all 0.3s ease;">
+                    <a href="https://wa.me/573108005004" target="_blank" class="social-connect-card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(0,168,255,0.2); text-decoration: none; transition: all 0.3s ease;">
                         <i class="fab fa-whatsapp" style="font-size: 2rem; color: #25D366; margin-bottom: 10px;"></i>
                         <span style="color: #E0F7FA; font-size: 0.9rem;">WhatsApp</span>
                     </a>
-                    <a href="https://www.facebook.com/EduardGildardoPerezFranco" target="_blank" rel="noopener noreferrer" class="social-connect-card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(0,168,255,0.2); text-decoration: none; transition: all 0.3s ease;">
-                        <i class="fab fa-facebook" style="font-size: 2rem; color: #1877F2; margin-bottom: 10px;"></i>
-                        <span style="color: #E0F7FA; font-size: 0.9rem;">Facebook</span>
-                    </a>
-                    <a href="https://www.instagram.com/eduardgildardoperezfranco" target="_blank" rel="noopener noreferrer" class="social-connect-card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(0,168,255,0.2); text-decoration: none; transition: all 0.3s ease;">
+                    <a href="https://www.instagram.com/eduardgildardoperezfranco" target="_blank" class="social-connect-card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(0,168,255,0.2); text-decoration: none; transition: all 0.3s ease;">
                         <i class="fab fa-instagram" style="font-size: 2rem; color: #E4405F; margin-bottom: 10px;"></i>
                         <span style="color: #E0F7FA; font-size: 0.9rem;">Instagram</span>
                     </a>
-                    <a href="https://x.com/FEgpf" target="_blank" rel="noopener noreferrer" class="social-connect-card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(0,168,255,0.2); text-decoration: none; transition: all 0.3s ease;">
-                        <i class="fab fa-twitter" style="font-size: 2rem; color: #1DA1F2; margin-bottom: 10px;"></i>
-                        <span style="color: #E0F7FA; font-size: 0.9rem;">Twitter/X</span>
+                    <a href="https://www.facebook.com/EduardGildardoPerezFranco" target="_blank" class="social-connect-card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(0,168,255,0.2); text-decoration: none; transition: all 0.3s ease;">
+                        <i class="fab fa-facebook" style="font-size: 2rem; color: #1877F2; margin-bottom: 10px;"></i>
+                        <span style="color: #E0F7FA; font-size: 0.9rem;">Facebook</span>
                     </a>
-                    <a href="https://github.com/eduardgildardoperezfranco/EmpathicWeb" target="_blank" rel="noopener noreferrer" class="social-connect-card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(0,168,255,0.2); text-decoration: none; transition: all 0.3s ease;">
+                    <a href="https://github.com/eduardgildardoperezfranco/EmpathicWeb" target="_blank" class="social-connect-card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(0,168,255,0.2); text-decoration: none; transition: all 0.3s ease;">
                         <i class="fab fa-github" style="font-size: 2rem; color: #6e5494; margin-bottom: 10px;"></i>
                         <span style="color: #E0F7FA; font-size: 0.9rem;">GitHub</span>
                     </a>
-                    <a href="https://www.tiktok.com/@eduardg.perezfranco" target="_blank" rel="noopener noreferrer" class="social-connect-card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(0,168,255,0.2); text-decoration: none; transition: all 0.3s ease;">
-                        <i class="fab fa-tiktok" style="font-size: 2rem; color: #00f2ea; margin-bottom: 10px;"></i>
-                        <span style="color: #E0F7FA; font-size: 0.9rem;">TikTok</span>
-                    </a>
-                    <a href="https://www.youtube.com/@EduardGildardoPerezFrancq" target="_blank" rel="noopener noreferrer" class="social-connect-card" style="display: flex; flex-direction: column; align-items: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(0,168,255,0.2); text-decoration: none; transition: all 0.3s ease;">
-                        <i class="fab fa-youtube" style="font-size: 2rem; color: #FF0000; margin-bottom: 10px;"></i>
-                        <span style="color: #E0F7FA; font-size: 0.9rem;">YouTube</span>
-                    </a>
                 </div>
-                <style>
-                    .social-connect-card:hover {
-                        transform: translateY(-5px);
-                        box-shadow: 0 10px 30px rgba(0, 168, 255, 0.3);
-                        border-color: var(--glow-color-1);
-                        background: rgba(0, 168, 255, 0.1);
-                    }
-                </style>
             </div>
         </section>
     </div>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <nav class="footer-nav" aria-label="Footer navigation">
+            <nav class="footer-nav">
                 <ul>
-                    <li><a href="index.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
-                    <li><a href="about/about.html"><i class="fas fa-user"></i> <span>About</span></a></li>
-                    <li><a href="Projects/projects.html"><i class="fas fa-project-diagram"></i>
-                            <span>Projects</span></a></li>
-                    <li><a href="services-catalog.html"><i class="fas fa-shield-alt"></i> <span>Services</span></a></li>
-                    <li><a href="cv.html"><i class="fas fa-file-alt"></i> <span>CV</span></a></li>
-                    <li><a href="contact.html"><i class="fas fa-envelope"></i> <span>Contact</span></a></li>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="about/about.html"><i class="fas fa-user"></i> About</a></li>
+                    <li><a href="Projects/projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                    <li><a href="services-catalog.html"><i class="fas fa-briefcase"></i> Services</a></li>
+                    <li><a href="cv.html"><i class="fas fa-file-alt"></i> CV</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
                 </ul>
             </nav>
-
             <div class="footer-info">
                 <p class="footer-copyright">© 2026 Eduard Gildardo Pérez Franco. All rights reserved.</p>
                 <p class="footer-links">
-                    <a href="legal.html">Legal Information</a>
-                    <span class="footer-separator">•</span>
-                    <span class="footer-version" title="SemVer: Major.Minor.Patch | 0=Major features, 3=Feature updates, 0=Bug fixes">v0.3.0</span>
-                    <span class="footer-separator">•</span>
-                    <span class="footer-updated">Updated: March 2026</span>
-                    <span class="footer-separator">•</span>
-                    <span class="footer-build">Static Build</span>
+                    <a href="legal.html">Legal</a>
+                    <span>•</span>
+                    <span>v0.3.0</span>
                 </p>
             </div>
         </div>
