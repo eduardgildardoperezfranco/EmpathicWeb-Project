@@ -2766,6 +2766,306 @@ html {
     background: rgba(0, 168, 255, 0.1);
 }
 
+/* Enhanced Card Effects */
+.catalog-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: left 0.5s;
+}
+
+.catalog-card:hover::before {
+    left: 100%;
+}
+
+.catalog-card {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Feature Tags */
+.feature-tag {
+    display: inline-block;
+    padding: 4px 10px;
+    background: rgba(37, 211, 102, 0.2);
+    border: 1px solid #25D366;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    color: #25D366;
+    margin: 2px;
+}
+
+.feature-tag.popular {
+    background: rgba(255, 193, 7, 0.2);
+    border-color: #FFC107;
+    color: #FFC107;
+}
+
+.feature-tag.new {
+    background: rgba(0, 229, 255, 0.2);
+    border-color: var(--glow-color-2);
+    color: var(--glow-color-2);
+}
+
+/* Service Level Badge */
+.service-level {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.service-level.basic {
+    background: rgba(149, 165, 166, 0.3);
+    color: #95a5a6;
+}
+
+.service-level.pro {
+    background: rgba(155, 89, 182, 0.3);
+    color: #9b59b6;
+}
+
+.service-level.enterprise {
+    background: rgba(231, 76, 60, 0.3);
+    color: #e74c3c;
+}
+
+/* Compare Table Styles */
+.compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background: var(--glass-bg);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.compare-table th,
+.compare-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.compare-table th {
+    background: rgba(0, 168, 255, 0.1);
+    color: var(--glow-color-2);
+    font-weight: bold;
+}
+
+.compare-table tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* Package Comparison Cards */
+.package-card {
+    position: relative;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.package-card.recommended {
+    border-color: #25D366;
+    box-shadow: 0 0 30px rgba(37, 211, 102, 0.2);
+}
+
+.package-card.recommended::after {
+    content: 'RECOMMENDED';
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #25D366;
+    color: white;
+    padding: 4px 15px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+/* Hover Effects for Icons */
+.catalog-card-icon {
+    transition: all 0.3s ease;
+}
+
+.catalog-card:hover .catalog-card-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
+}
+
+/* Animated Price Tag */
+.service-price {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-price::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 70%
+    );
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) rotate(45deg); }
+}
+
+/* Service Category Headers */
+.category-header {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+.category-header h3 {
+    color: var(--glow-color-2);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.category-header p {
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+/* FAQ Section */
+.faq-item {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background: rgba(0, 168, 255, 0.05);
+}
+
+.faq-question h4 {
+    margin: 0;
+    color: var(--glow-color-2);
+}
+
+.faq-answer {
+    padding: 0 1.5rem 1.5rem;
+    color: var(--text-color);
+    display: none;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* Process Steps */
+.process-steps {
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 0;
+    position: relative;
+}
+
+.process-steps::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--glow-color-1), var(--glow-color-2));
+}
+
+.process-step {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.process-step-number {
+    width: 60px;
+    height: 60px;
+    background: var(--glass-bg);
+    border: 2px solid var(--glow-color-1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--glow-color-2);
+    margin: 0 auto 1rem;
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.testimonial-author {
+    color: var(--glow-color-2);
+    font-weight: bold;
+}
+
+/* Trust Badges */
+.trust-badges {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.trust-badge i {
+    color: #25D366;
+    font-size: 1.2rem;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .catalog-section {
         padding: 2rem 1rem;
@@ -2785,5 +3085,14 @@ html {
     
     .catalog-card-content {
         padding: 1rem;
+    }
+    
+    .process-steps {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .process-steps::before {
+        display: none;
     }
 }
